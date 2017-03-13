@@ -23,7 +23,10 @@
 ### Decks
 * `GET api/decks`
   - params: none, implicit currentUser id
-  - return: all decks the
+  - return: all decks
+* `GET api/deck/:id`
+  - params: none
+  - return: deck with specified id
 * `POST api/decks`
   - params: title, author id and subject id nested under deck key
   - return: created deck if successful
@@ -40,6 +43,12 @@
   - return: deleted card if successful
 
 ### Subjects
+* `GET api/subjects`
+  - params: none
+  - return: all subjects
+* `GET api/subject/:id`
+  - params: id of subject to fetch
+  - return: all decks and current learners in the subject
 * `POST api/subjects`
   - params: title and category id nested under subject key
   - return: created subject if successful
