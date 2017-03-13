@@ -41,12 +41,15 @@
 * `DELETE api/cards`
   - params: card id
   - return: deleted card if successful
+* `PATCH api/cards/:id`
+  - params: card id
+  - return: patched card
 
 ### Subjects
 * `GET api/category/:category_id/subjects`
   - params: category id
   - return: all subjects for the given category id
-* `GET api/subject/:id`
+* `GET api/subjects/:id`
   - params: id of subject to fetch
   - return: all decks and current learners in the subject
 * `POST api/subjects`
@@ -59,4 +62,7 @@
 ### Categories
 * `GET api/categories`
   - params: none
+  - return: all categories with their corresponding subjects
+* `GET api/categories/:id`
+  - params: category id
   - return: all categories with their corresponding subjects
