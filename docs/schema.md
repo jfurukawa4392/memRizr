@@ -29,7 +29,6 @@ column name     | data type | details
 ----------------|-----------|-----------------------
 id              | integer   | not null, primary key
 title           | string    | not null
-category_id     | integer   | not null, foreign key
 creator_id      | integer   | not null, foreign key
 
 ## cardRatings
@@ -45,3 +44,10 @@ column name     | data type | details
 ----------------|-----------|-----------------------
 id              | integer   | not null, primary key
 name            | string    | not null
+
+## categoryTaggings  
+column name     | data type | details
+----------------|-----------|-----------------------
+id              | integer   | not null, primary key
+category_id     | integer   | not null, foreign key
+subject_id      | integer   | not null, foreign key
