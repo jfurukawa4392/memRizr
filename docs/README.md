@@ -40,10 +40,14 @@ memRizr is a web application to help you study and learn using SRS. It should, a
 
 ###Phase 3: Tags/Categories (Subjects) (2 days)
 * Subject Model
+* Category Model
 * Subject components and redux loops
 * Style subject components
 
 ###Phase 4: Study Decks (2 days)
+* CardRating model
+* DeckStudyContainer
+* Style progress sidebar and card/reveal buttons
 
 ###Phase 5: Search (2 days)
 * Search components and respective redux loops

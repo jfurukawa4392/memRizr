@@ -9,12 +9,16 @@
     errors: []
   }
 
-  decks: {
+  subject: {
     1: {
-      title: 'State shape deck'
-    },
-    2: {
-      title: 'ipsum'
+      decks: {
+        1: {
+          title: 'State shape deck'
+          },
+        2: {
+          title: 'ipsum'
+        }
+      }
     }
   }
 

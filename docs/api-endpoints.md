@@ -55,3 +55,8 @@
 * `DELETE api/subjects`
   - params: none
   - return: deleted subject if successful
+
+### Categories
+* `GET api/categories`
+  - params: none
+  - return: all categories with their corresponding subjects

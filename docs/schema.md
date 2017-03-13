@@ -41,14 +41,7 @@ user_id         | integer   | not null, foreign key, indexed
 card_id         | integer   | not null, foreign key, indexed
 rating          | integer   | not null
 
-## taggings
-column name     | data type | details
-----------------|-----------|-----------------------
-id              | integer   | not null, primary key
-subject_id      | integer   | not null, foreign key, indexed
-tag_id          | integer   | not null, foreign key, indexed
-
-## tags    
+## categories   
 column name     | data type | details
 ----------------|-----------|-----------------------
 id              | integer   | not null, primary key
