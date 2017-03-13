@@ -15,13 +15,36 @@
    + CurrentLearnerIndex
     - CurrentLearnerIndexItem
 
-**DeckStudy**
- - StudyDetailContainer
+**SubjectDetailContainer**
+ - SubjectDetail
+  + DecksIndex
+   - DeckIndexItem
+ - CurrentLearnerIndex
+  + CurrentLearnerIndexItem
+
+**SubjectCreateFormContainer**
+ - SubjectForm
+
+**DeckStudyContainer**
+ - StudyDetail
   + Card
- - StudySidebarContainer
+ - StudySidebar
   + StudyProgress
 
+**DecksIndex**
+ - DeckIndexItem
+
+**DeckCreateFormContainer**
+ - DeckForm
+
+**CardCreateFormContainer**
+ - CardCreateForm
+
+**CurrentLearnerIndex**
+ - CurrentLearnerIndexItems
+
 **Search**
+ - NavbarContainer
  - SearchResultsContainer
 
 
@@ -32,5 +55,10 @@
 | "/sign-up" | "AuthFormContainer" |
 | "/sign-in" | "AuthFormContainer" |
 | "/library" | "LibraryContainer" |
-| "/search/results" | "SearchResultsContainer"
+| "/library/new" | "SubjectCreateFormContainer" |
+| "/library/:subject_id" | "SubjectDetailContainer" |
+| "/library/:subject_id/new" | "DeckCreateFormContainer" |
+| "/decks/:deck_id/new" | "CardCreateFormContainer" |
+| "/study/:deck_id" | "DeckStudyContainer" |
+| "/search/results" | "SearchResultsContainer" |
 | "/search" | "Search" |
