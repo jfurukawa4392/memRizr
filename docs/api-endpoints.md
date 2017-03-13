@@ -43,9 +43,9 @@
   - return: deleted card if successful
 
 ### Subjects
-* `GET api/subjects`
-  - params: none
-  - return: all subjects
+* `GET api/category/:category_id/subjects`
+  - params: category id
+  - return: all subjects for the given category id
 * `GET api/subject/:id`
   - params: id of subject to fetch
   - return: all decks and current learners in the subject

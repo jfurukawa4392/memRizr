@@ -7,7 +7,33 @@
       id: 1
     },
     errors: []
-  }
+  },
+
+  categories: {
+    1: {
+      title: "Computer Programming",
+      subjects: {
+        1: {
+          title: "Ruby on Rails"
+        },
+        2: {
+          title: "Javascript"
+        }
+      }
+    }
+
+    2: {
+      title: "Defense Against the Dark Arts",
+      subjects: {
+        1: {
+          title: "Voldemort"
+        },
+        2: {
+          title: "Counter-Curses"
+        }
+      }
+    }
+  },
 
   subject: {
     1: {
@@ -20,7 +46,7 @@
         }
       }
     }
-  }
+  },
 
   cards: {
     studyDeck: {

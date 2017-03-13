@@ -2,6 +2,7 @@
 
 ## Minimum Viable Product
 memRizr is a web application to help you study and learn using SRS. It should, at a minimum, allow for the smooth navigation to and execution of the following features/characteristics:
+
 1. User authentication including signup/login/demo login
 2. Production README
 3. Heroku hosting
