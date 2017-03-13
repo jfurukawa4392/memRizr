@@ -14,7 +14,7 @@
       title: 'State shape deck'
     },
     2: {
-      title: 'lorem'
+      title: 'ipsum'
     }
   }
 

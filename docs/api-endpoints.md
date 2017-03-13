@@ -2,24 +2,47 @@
 
 ## HTML API
 ### Root
-* `GET /` - returns React web app
+* `GET /`
+  - params: none
+  - returns: React web app
 
 ## JSON API - all below endpoints nested under api namespace
 ### Users
-* `POST api/users` - returns current user if successful signup
+* `POST api/users`
+  - params: username and password nested under user key
+  - return: current user if successful signup
 
 ### Sessions
-* `POST api/session` - returns current user if successful login
-* `DELETE api/session` - returns current user if successful logout
+* `POST api/session`
+  - params: username and password nested under user key
+  - return: current user if successful signup
+* `DELETE api/session`
+  - params: none
+  - return: current user if successful logout
 
 ### Decks
-* `POST api/decks` - returns created deck if successful
-* `DELETE api/decks` - returns deleted deck if successful
+* `GET api/decks`
+  - params: none, implicit currentUser id
+  - return: all decks the
+* `POST api/decks`
+  - params: title, author id and subject id nested under deck key
+  - return: created deck if successful
+* `DELETE api/decks`
+  - params: deck id
+  - return: deleted deck if successful
 
 ### Cards
-* `POST api/cards` - returns created card if successful
-* `DELETE api/cards` - returns deleted card if successful
+* `POST api/cards`
+  - params: deck id, question, answer nested under card key
+  - return: created card if successful
+* `DELETE api/cards`
+  - params: card id
+  - return: deleted card if successful
 
 ### Subjects
-* `POST api/subjects` - returns created subject if successful
-* `DELETE api/subjects` - returns deleted subject if successful
+* `POST api/subjects`
+  - params: title and category id nested under subject key
+  - return: created subject if successful
+* `DELETE api/subjects`
+  - params: none
+  - return: deleted subject if successful

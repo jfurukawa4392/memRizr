@@ -45,7 +45,7 @@ rating          | integer   | not null
 column name     | data type | details
 ----------------|-----------|-----------------------
 id              | integer   | not null, primary key
-deck_id         | integer   | not null, foreign key, indexed
+subject_id      | integer   | not null, foreign key, indexed
 tag_id          | integer   | not null, foreign key, indexed
 
 ## tags    
