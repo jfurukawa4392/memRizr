@@ -46,6 +46,11 @@
 **Search**
  - NavbarContainer
  - SearchResultsContainer
+ - BrowseSubjectsContainer
+ - CategoryIndex
+  + CategoryIndexItem
+   - SubjectIndex
+    + SubjectIndexItem
 
 
 ## Routes
