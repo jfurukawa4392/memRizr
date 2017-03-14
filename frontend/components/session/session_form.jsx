@@ -40,6 +40,7 @@ class SessionForm extends React.Component {
     return (
       <div>
         <h1>{ header }</h1>
+        <h4>{this.props.errors}</h4>
         <form onSubmit={this.handleSubmit}>
           <label>
             Username
