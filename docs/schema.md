@@ -51,3 +51,10 @@ column name     | data type | details
 id              | integer   | not null, primary key
 category_id     | integer   | not null, foreign key
 subject_id      | integer   | not null, foreign key
+
+## subjectFollows
+column name     | data type | details
+----------------|-----------|-----------------------
+id              | integer   | not null, primary key
+user_id         | integer   | not null, foreign key
+subject_id      | integer   | not null, foreign key 
