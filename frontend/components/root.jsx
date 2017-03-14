@@ -33,8 +33,6 @@ const Root = ({store}) => {
                  component={SessionFormContainer} />
           <Route path="/signup"
                  component={SessionFormContainer} />
-          <Route path="/search"
-                 component={SearchContainer} />
         </Route>
       </Router>
     </Provider>
