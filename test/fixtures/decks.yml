@@ -1,0 +1,23 @@
+# == Schema Information
+#
+# Table name: decks
+#
+#  id         :integer          not null, primary key
+#  subject_id :integer          not null
+#  author_id  :integer          not null
+#  title      :string           not null
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  subject_id: 1
+  author_id: 1
+  title: MyString
+
+two:
+  subject_id: 1
+  author_id: 1
+  title: MyString
