@@ -40,7 +40,6 @@ class SessionForm extends React.Component {
     return (
       <div>
         <h1>{ header }</h1>
-        <Link to={link}>{link.slice(1)}</Link>
         <form onSubmit={this.handleSubmit}>
           <label>
             Username

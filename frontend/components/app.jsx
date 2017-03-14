@@ -1,8 +1,13 @@
 import React from 'react';
+import NavBarContainer from './navbar_container';
 
 const App = ({children}) => (
   <content>
-    <h1>Memrizr</h1>
+    <NavBarContainer />
+    <div className="spacer">
+      &nbsp;
+      <p></p>
+    </div>
     { children }
   </content>
 );

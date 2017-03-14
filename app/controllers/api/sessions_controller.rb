@@ -4,7 +4,7 @@ class Api::SessionsController < ApplicationController
     @user = User.find_by_credentials(params[:user][:username],
                                      params[:user][:password])
     if @user
-      login!(user)
+      login!(@user)
       render 'api/users/show'
     else
       render(
@@ -18,7 +18,7 @@ class Api::SessionsController < ApplicationController
     @user = current_user
 
     if logged_in?
-      logout
+      logout!
       render json: {}
     else
       render(

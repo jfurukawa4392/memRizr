@@ -7,8 +7,24 @@ import { Router,
 import { Provider } from 'react-redux';
 import App from './app';
 import SessionFormContainer from './session/session_form_container';
+import SearchContainer from './search/search_container';
 
 const Root = ({store}) => {
+
+  const _ensureLoggedIn = (nextState, replace) => {
+  const currentUser = store.getState().session.currentUser;
+    if (!currentUser) {
+      replace('/home');
+    }
+  };
+
+  const _redirectIfLoggedIn = (nextState, replace) => {
+    const currentUser = store.getState().session.currentUser;
+    if (currentUser) {
+      replace('/subjects');
+    }
+  };
+
   return (
     <Provider store={store}>
       <Router history={hashHistory}>
@@ -17,6 +33,8 @@ const Root = ({store}) => {
                  component={SessionFormContainer} />
           <Route path="/signup"
                  component={SessionFormContainer} />
+          <Route path="/search"
+                 component={SearchContainer} />
         </Route>
       </Router>
     </Provider>

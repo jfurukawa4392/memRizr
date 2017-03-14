@@ -1,0 +1,32 @@
+.top-menu {
+  background: gray;
+  position: fixed;
+  width: 100%;
+  display: block;
+}
+
+nav{
+  justify-content: space-around;
+}
+
+nav>ul{
+  list-style: none;
+}
+
+nav.left{
+  float: left;
+}
+
+nav.right{
+  float: right;
+}
+
+nav li {
+  display: inline;
+  padding: inherit;
+  margin: inherit;
+}
+
+nav #last{
+  padding-right: 20px;
+}

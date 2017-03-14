@@ -12,7 +12,7 @@ export const login = (user) => (dispatch) => (
 
 export const logout = () => (dispatch) => (
   SessionAPI.logout()
-            .then(res => dispatch(receiveCurrentUser(res)))
+            .then(() => dispatch(removeCurrentUser()))
             .fail(res => dispatch(receiveErrors(res)))
 );
 
@@ -30,4 +30,8 @@ export const receiveCurrentUser = (user) => ({
 export const receiveErrors = (errArr) => ({
   type: RECEIVE_ERRORS,
   errors: errArr
+});
+
+export const removeCurrentUser = () => ({
+  type: LOGOUT
 });
