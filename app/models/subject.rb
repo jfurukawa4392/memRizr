@@ -10,4 +10,19 @@
 #
 
 class Subject < ApplicationRecord
+  validates :title, :creator_id, presence: true
+
+  has_many(
+    :decks,
+    class_name: 'Deck',
+    foreign_key: :subject_id,
+    primary_key: :id
+  )
+
+  belongs_to(
+    :creator,
+    class_name: 'User',
+    foreign_key: :creator_id,
+    primary_key: :id
+  )
 end

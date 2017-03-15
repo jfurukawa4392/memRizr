@@ -18,6 +18,20 @@ class User < ActiveRecord::Base
 
   after_initialize :ensure_session_token
 
+  has_many(
+    :created_subjects,
+    class_name: 'Subject',
+    foreign_key: :creator_id,
+    primary_key: :id
+  )
+
+  has_many(
+    :created_decks,
+    class_name: 'Deck',
+    foreign_key: :author_id,
+    primary_key: :id
+  )
+
   def self.find_by_credentials(name, pw)
     user = User.find_by_username(name)
     return nil unless user
