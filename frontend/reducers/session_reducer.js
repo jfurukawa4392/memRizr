@@ -14,11 +14,14 @@ const SessionReducer = (state = _nullUser, action) => {
   let newState;
   switch(action.type){
     case(RECEIVE_CURRENT_USER):
-      console.log(action);
-      newState = { currentUser: action.user};
-      return merge({}, state, newState);
+      newState = {
+                   currentUser: action.user,
+                   errors: []
+                 };
+      return merge({}, newState);
     case(RECEIVE_ERRORS):
-      newState = action.errors;
+      console.log(action);
+      newState = {errors: action.errors};
       return merge({}, state, newState);
     case(LOGOUT):
       newState = _nullUser;

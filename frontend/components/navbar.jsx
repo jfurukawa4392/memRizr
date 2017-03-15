@@ -10,6 +10,7 @@ class NavBar extends React.Component {
   render(){
     let loggedIn = Boolean(this.props.currentUser);
     let auth_nav;
+    let myLib;
     if(loggedIn){
       // show account and logout buttons
       auth_nav = (
@@ -19,6 +20,12 @@ class NavBar extends React.Component {
             <li id="last"><button onClick={this.props.logout}>Logout</button></li>
           </ul>
         </nav>
+      );
+      //my library link if logged in
+      myLib = (
+        <li>
+          <Link to="/my-subjects">My Subjects</Link>
+        </li>
       );
     } else {
       auth_nav= (
@@ -36,11 +43,15 @@ class NavBar extends React.Component {
       <header className="top-menu">
         <nav className="left">
           <ul>
+            {myLib}
             <li>
               <Link to='/'>Home</Link>
             </li>
             <li>
               <Link to='/'>About</Link>
+            </li>
+            <li>
+
             </li>
           </ul>
         </nav>
