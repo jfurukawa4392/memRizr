@@ -27,6 +27,6 @@ nav li {
   margin: inherit;
 }
 
-nav #last{
+nav.right #last{
   padding-right: 20px;
 }

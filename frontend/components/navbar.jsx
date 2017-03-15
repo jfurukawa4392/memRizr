@@ -16,7 +16,7 @@ class NavBar extends React.Component {
         <nav className="right">
           <ul>
             <li>{this.props.currentUser.username}</li>
-            <li><button onClick={this.props.logout}>Logout</button></li>
+            <li id="last"><button onClick={this.props.logout}>Logout</button></li>
           </ul>
         </nav>
       );
