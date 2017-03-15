@@ -7,7 +7,9 @@ class Api::UsersController < ApplicationController
       login!(@user)
       render 'api/users/show'
     else
-      render :show, status: 422
+      puts "user save failed:"
+      p @user.errors.full_messages
+      render json: @user.errors.full_messages, status: 422
     end
   end
 
