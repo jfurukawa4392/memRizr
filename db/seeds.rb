@@ -14,6 +14,9 @@ user_arr = []
   user_arr << User.create!(username: username, password: "wedemboyz")
 end
 
+#create my test user
+User.create!(username: "Jesse", password: "password")
+
 #Create Subjects
 subject1 = Subject.create!(title: 'Pokemon', creator_id: user_arr.last.id)
 subject2 = Subject.create!(title: 'Harry Potter', creator_id: user_arr.first.id)
