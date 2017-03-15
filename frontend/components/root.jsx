@@ -8,7 +8,8 @@ import { Provider } from 'react-redux';
 import App from './app';
 import SessionFormContainer from './session/session_form_container';
 import SearchContainer from './search/search_container';
-import SubjectIndexContainer from './subjects/subject_index_container';
+import { receiveErrors } from '../actions/session_actions';
+// import SubjectIndexContainer from './subjects/subject_index_container';
 import Home from './home';
 
 const Root = ({store}) => {
@@ -23,8 +24,12 @@ const Root = ({store}) => {
   const _redirectIfLoggedIn = (nextState, replace) => {
     const currentUser = store.getState().session.currentUser;
     if (currentUser) {
-      replace('/subjects');
+      replace('/');
     }
+  };
+
+  const _clearErrors = () => {
+    store.dispatch(receiveErrors([]));
   };
 
   return (
@@ -32,12 +37,14 @@ const Root = ({store}) => {
       <Router history={hashHistory}>
         <Route path="/" component={App}>
           <IndexRoute component={Home}/>
-          <Route path="my-subjects"
-                 component={SubjectIndexContainer} />
           <Route path="/login"
-                 component={SessionFormContainer} />
+                 component={SessionFormContainer}
+                 onEnter={_redirectIfLoggedIn}
+                 onLeave={_clearErrors}/>
           <Route path="/signup"
-                 component={SessionFormContainer} />
+                 component={SessionFormContainer}
+                 onEnter={_redirectIfLoggedIn}
+                 onLeave={_clearErrors}/>
         </Route>
       </Router>
     </Provider>

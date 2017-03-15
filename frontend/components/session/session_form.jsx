@@ -25,6 +25,10 @@ class SessionForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state);
+    this.setState({
+        username: "",
+        password: ""
+    });
     this.props.processForm(user);
   }
 
@@ -36,7 +40,6 @@ class SessionForm extends React.Component {
 
   render() {
     let header = this.props.formType;
-    let link = (header === 'login' ? '/signup' : '/login');
     return (
       <div>
         <h1>{ header }</h1>

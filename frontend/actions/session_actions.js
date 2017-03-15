@@ -19,10 +19,7 @@ export const logout = () => (dispatch) => (
 export const signup = (user) => (dispatch) => (
   SessionAPI.signup(user)
             .then(res => dispatch(receiveCurrentUser(res)))
-            .fail(res => {
-              console.log(res);
-              dispatch(receiveErrors(res.responseJSON));
-            })
+            .fail(res => dispatch(receiveErrors(res.responseJSON)))
 );
 
 export const receiveCurrentUser = (user) => ({
