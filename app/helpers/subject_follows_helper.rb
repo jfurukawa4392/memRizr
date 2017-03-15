@@ -1,0 +1,2 @@
+module SubjectFollowsHelper
+end

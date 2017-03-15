@@ -33,6 +33,19 @@ class User < ActiveRecord::Base
     primary_key: :id
   )
 
+  has_many(
+    :subject_follows,
+    class_name: 'SubjectFollow',
+    foreign_key: :user_id,
+    primary_key: :id
+  )
+
+  has_many(
+    :followed_subjects,
+    through: :subject_follows,
+    source: :subject
+  )
+
   def self.find_by_credentials(name, pw)
     user = User.find_by_username(name)
     return nil unless user

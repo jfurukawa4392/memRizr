@@ -25,4 +25,17 @@ class Subject < ApplicationRecord
     foreign_key: :creator_id,
     primary_key: :id
   )
+
+  has_many(
+    :subject_follows,
+    class_name: 'SubjectFollow',
+    foreign_key: :subject_id,
+    primary_key: :id
+  )
+
+  has_many(
+    :followers,
+    through: :subject_follows,
+    source: :user
+  )
 end

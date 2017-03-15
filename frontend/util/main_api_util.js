@@ -18,7 +18,7 @@ export const fetchAllSubjects = () => (
 );
 
 //fetch only those subjects that the current user follows
-export const fetchSubjectFollows = () => (
+export const fetchFollowedSubjects = () => (
   $.ajax({
     url: 'api/subject_follows'
   })

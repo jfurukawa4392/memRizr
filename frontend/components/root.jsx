@@ -39,11 +39,9 @@ const Root = ({store}) => {
           <IndexRoute component={Home}/>
           <Route path="/login"
                  component={SessionFormContainer}
-                 onEnter={_redirectIfLoggedIn}
                  onLeave={_clearErrors}/>
           <Route path="/signup"
                  component={SessionFormContainer}
-                 onEnter={_redirectIfLoggedIn}
                  onLeave={_clearErrors}/>
         </Route>
       </Router>
