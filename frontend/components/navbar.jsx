@@ -108,6 +108,11 @@ class NavBar extends React.Component {
         <nav className="left">
           <ul>
             <li>
+              <div className="site-logo">
+
+              </div>
+            </li>
+            <li>
               <Link to='/' className="site-title">memRizr</Link>
             </li>
             {myLib}

@@ -35,7 +35,7 @@ class SessionForm extends React.Component {
 	}
 
   render() {
-    let header = this.props.formType;
+    let header = this.props.formType === 'login' ? "Log In" : "Sign Up";
     return (
       <div className="auth-input-form">
         <h1>{ header }</h1>
