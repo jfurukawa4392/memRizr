@@ -12,7 +12,7 @@
     "npm": "3.9.3"
   },
   "scripts": {
-    "postinstall": "webpack"
+    "heroku-postbuild": "webpack --config webpack.config.prod.js"
   },
   "repository": {
     "type": "git",
