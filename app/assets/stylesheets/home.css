@@ -1,25 +1,33 @@
 .home-outer{
-  position: relative;
-  top: 200px;
-  left: 45%;
-  justify-content: center;
-  align-items: center;
+  /*display: flex;*/
 }
 
 form {
-                width:500px;
-                /*margin:50px auto;*/
+  position: relative;
+  top: 150px;
+  left: 43%;
+  width:500px;
+  /*margin:50px auto;*/
+}
+
+.greetHeader {
+  position: relative;
+  top: 125px;
+  left: 15px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .search-input {
-                padding:8px 15px;
-                background:rgba(50, 50, 50, 0.2);
-                border:0px solid #dbdbdb;
+  padding:8px 15px;
+  background:rgba(50, 50, 50, 0.2);
+  border:0px solid #dbdbdb;
 }
 
 .search-button {
-                padding:6px 15px;
-                border:2px solid #207cca;
-                background-color:#207cca;
-                color:#fafafa;
+  padding:6px 15px;
+  border:2px solid #207cca;
+  background-color:#207cca;
+  color:#fafafa;
 }

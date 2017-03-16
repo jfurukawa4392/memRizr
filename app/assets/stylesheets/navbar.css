@@ -1,8 +1,16 @@
+body {
+  font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
 .top-menu {
-  background: gray;
+  background: #333333;
   position: fixed;
+  top: 0px;
+  left: 0px;
   width: 100%;
   display: block;
+  border-bottom: 1px solid #D96C06;
+  height: 60px;
 }
 
 nav{
@@ -17,6 +25,12 @@ nav.left{
   float: left;
 }
 
+.site-title {
+  text-decoration: none;
+  font-family: sans-serif;
+  font-weight: bolder;
+}
+
 nav.right{
   float: right;
 }
@@ -25,6 +39,26 @@ nav li {
   display: inline;
   padding: inherit;
   margin: inherit;
+  color: white;
+  text-decoration: none;
+}
+
+nav li a{
+  color: white;
+  text-decoration: none;
+}
+
+nav li a:hover{
+  color: #2292A4;
+}
+
+button {
+  background-color: #F5EFED;
+  border-radius: 3px;
+}
+
+button:hover {
+  background-color: #2292A4
 }
 
 nav.right #last{
