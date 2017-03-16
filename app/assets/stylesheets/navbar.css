@@ -3,7 +3,6 @@ body {
 }
 
 .site-logo {
-  background-image: url(asset_path('logo_icon.png'));
   height: 25px;
   width: 25px;
 }
