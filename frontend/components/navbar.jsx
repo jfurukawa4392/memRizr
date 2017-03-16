@@ -3,17 +3,6 @@ import { Link, withRouter } from 'react-router';
 import Modal from 'react-modal';
 import SessionFormContainer from './session/session_form_container';
 
-const customStyles = {
-  content : {
-    top                   : '50%',
-    left                  : '50%',
-    right                 : 'auto',
-    bottom                : 'auto',
-    marginRight           : '-50%',
-    transform             : 'translate(-50%, -50%)'
-  }
-};
-
 class NavBar extends React.Component {
   constructor(props){
     super(props);
@@ -49,8 +38,9 @@ class NavBar extends React.Component {
       auth_nav = (
         <nav className="right">
           <ul>
-            <li>{this.props.currentUser.username}</li>
-            <li id="last"><button onClick={this.props.logout}>Logout</button></li>
+            <li>User: {this.props.currentUser.username}</li>
+            <li id="last">
+              <button onClick={this.props.logout}>Logout</button></li>
           </ul>
         </nav>
       );
@@ -80,6 +70,9 @@ class NavBar extends React.Component {
       <header className="top-menu">
         <nav className="left">
           <ul>
+            <li>
+              <Link to='/' className="site-title">memRizr</Link>
+            </li>
             {myLib}
             <li>
               <Link to='/'>Home</Link>
