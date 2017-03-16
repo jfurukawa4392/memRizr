@@ -1,6 +1,6 @@
 import React from 'react';
 import { withRouter, Link } from 'react-router';
-
+import Modal from 'react-modal';
 
 class SessionForm extends React.Component {
   constructor(props) {
@@ -12,19 +12,10 @@ class SessionForm extends React.Component {
       this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  componentDidUpdate() {
-  		this.redirectIfLoggedIn();
-  	}
-
   componentWillUnmount() {
     this.props.receiveErrors([]);
+    this.props.closeModal();
   }
-
-	redirectIfLoggedIn() {
-		if (this.props.loggedIn) {
-			this.props.router.push("/");
-		}
-	}
 
   handleSubmit(e) {
     e.preventDefault();
@@ -33,6 +24,7 @@ class SessionForm extends React.Component {
         username: "",
         password: ""
     });
+    this.props.closeModal();
     this.props.processForm(user);
   }
 
@@ -45,7 +37,7 @@ class SessionForm extends React.Component {
   render() {
     let header = this.props.formType;
     return (
-      <div>
+      <div className="auth-input-form">
         <h1>{ header }</h1>
         <h4>{this.props.errors}</h4>
         <form onSubmit={this.handleSubmit}>

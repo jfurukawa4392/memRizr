@@ -26,12 +26,12 @@ class Home extends React.Component{
         <form className="search"
               onSubmit={this.handleSubmit}>
           <input type="text"
-                 onChange={this.handleChange}
-                 value={this.state.searchString}
-                 className="search-input"/>
+            onChange={this.handleChange}
+            value={this.state.searchString}
+            className="search-input"/>
           <input type="submit"
-                 value="Search"
-                 className="search-button"/>
+            value="Search"
+            className="search-button"/>
         </form>
       </main>
     );

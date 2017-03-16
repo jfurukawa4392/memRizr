@@ -3,30 +3,67 @@ import { Link, withRouter } from 'react-router';
 import Modal from 'react-modal';
 import SessionFormContainer from './session/session_form_container';
 
+const style = {
+  overlay : {
+    position        : 'fixed',
+    top             : 0,
+    left            : 0,
+    right           : 0,
+    bottom          : 0,
+    backgroundColor : 'rgba(255, 255, 255, 0.75)',
+    zIndex          : 10
+  },
+  content : {
+    position        : 'fixed',
+    top             : '100px',
+    left            : '150px',
+    right           : '150px',
+    bottom          : '100px',
+    border          : '1px solid #ccc',
+    padding         : '20px',
+    zIndex          : 11
+  }
+};
+
 class NavBar extends React.Component {
   constructor(props){
     super(props);
 
     this.state = {
-      modalIsOpen: false
+      modalOpen: false,
+      sessionFormType: undefined
     };
 
     this.openModal = this.openModal.bind(this);
-    this.afterOpenModal = this.afterOpenModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
+    this.loginClick = this.loginClick.bind(this);
+    this.signupClick = this.signupClick.bind(this);
   }
 
   openModal() {
-    this.setState({modalIsOpen: true});
-  }
-
-  afterOpenModal() {
-    // references are now sync'd and can be accessed.
-    this.refs.subtitle.style.color = '#f00';
+    this.setState({modalOpen: true});
   }
 
   closeModal() {
-    this.setState({modalIsOpen: false});
+    console.log('closing modal in navbar');
+    this.setState({modalOpen: false});
+  }
+
+  componentDidUpdate() {
+  }
+
+  loginClick() {
+    this.setState({
+      sessionFormType: 'login',
+      modalOpen: true
+    });
+  }
+
+  signupClick() {
+    this.setState({
+      sessionFormType: 'signup',
+      modalOpen: true
+    });
   }
 
   render(){
@@ -55,10 +92,10 @@ class NavBar extends React.Component {
         <nav className="right">
           <ul>
             <li id="login-button">
-              <Link to="/login">Login</Link>
+              <button onClick={this.loginClick}>Login</button>
             </li>
             <li id="last">
-              <Link to='/signup'>Sign Up</Link>
+              <button onClick={this.signupClick}>Sign Up</button>
             </li>
           </ul>
         </nav>
@@ -85,6 +122,20 @@ class NavBar extends React.Component {
             </li>
           </ul>
         </nav>
+        <div id="auth-modal">
+          <Modal
+            isOpen={this.state.modalOpen}
+            onRequestClose={this.closeModal}
+            contentLabel="Auth Modal"
+            style={style}
+            >
+            <button onClick={this.closeModal}
+                    className='close-modal'>X</button>
+            <SessionFormContainer
+              closeModal={this.closeModal}
+              formType={this.state.sessionFormType}/>
+          </Modal>
+        </div>
         {auth_nav}
       </header>
     );
