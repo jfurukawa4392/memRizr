@@ -1,16 +1,18 @@
 import { connect } from 'react-redux';
 import FollowedSubjectIndex from './subject_index';
-import { fetchSubjects } from '../actions/subject_actions';
+import { fetchSubjects, fetchSubject } from '../actions/subject_actions';
 
 
 const mapStateToProps = (state, ownProps) => ({
-  subjects: state.subjects,
-  subjectDetail: state.subjectDetail
+  subjects: state.subjects.titles,
+  activeSubject: state.activeSubject,
+  currentUser: state.session.currentUser
 });
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
-    getSubjects: (user) => dispatch(fetchSubjects(user))
+    getSubjects: (user) => dispatch(fetchSubjects(user)),
+    getSubject: (id) => dispatch(fetchSubject(id))
   };
 };
 

@@ -23,3 +23,9 @@ export const fetchFollowedSubjects = () => (
     url: 'api/subject_follows'
   })
 );
+
+export const fetchSubjectDetail = (id) => (
+  $.ajax({
+    url: `api/subjects/${id}`
+  })
+);

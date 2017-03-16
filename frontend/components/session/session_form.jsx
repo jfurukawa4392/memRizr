@@ -17,6 +17,12 @@ class SessionForm extends React.Component {
     this.props.closeModal();
   }
 
+  componentDidUpdate() {
+    if(this.props.loggedIn){
+      this.props.closeModal();
+    }
+  }
+
   handleSubmit(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state);
@@ -24,7 +30,6 @@ class SessionForm extends React.Component {
         username: "",
         password: ""
     });
-    this.props.closeModal();
     this.props.processForm(user);
   }
 

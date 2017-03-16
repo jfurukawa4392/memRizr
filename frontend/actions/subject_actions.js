@@ -13,7 +13,17 @@ export const fetchSubjects = (user = null) => (dispatch) => {
   }
 };
 
+export const fetchSubject = (id) => (dispatch) => {
+  MainAPIUtil.fetchSubjectDetail(id)
+             .then(res => dispatch(receiveSubject(res)));
+};
+
 export const receiveSubjects = (subjects) => ({
   type: RECEIVE_SUBJECTS,
   subjects
+});
+
+export const receiveSubject = (subject) => ({
+  type: RECEIVE_SUBJECT,
+  subject
 });
