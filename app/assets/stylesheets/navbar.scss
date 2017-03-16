@@ -12,6 +12,10 @@ body {
   background-size: cover;
 }
 
+#auth-modal{
+  border-radius: 15px;
+}
+
 .top-menu {
   background: #333333;
   position: fixed;
@@ -34,10 +38,11 @@ nav>ul{
 }
 
 nav.left{
-  float: left;
-  position: relative;
-  right: 80px;
-  padding: 0px;
+  // float: left;
+  align-items: flex-start;
+  // position: relative;
+  // right: 80px;
+  // padding: 0px;
 }
 
 .site-title {

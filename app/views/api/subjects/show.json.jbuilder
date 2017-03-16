@@ -1,3 +1,6 @@
-json.partial! 'api/subjects/subject', subject: @subject
+json.subjectDetail do
+  json.id @subject.id
+  json.title @subject.title
+end
 
 json.decks @subject.decks, :title
