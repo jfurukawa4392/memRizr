@@ -1,13 +1,14 @@
 import { connect } from 'react-redux';
-import FollowedSubjectIndex from './subject_index';
-import { fetchSubjects, fetchSubject } from '../actions/subject_actions';
+import SubjectIndex from './subject_index';
+import { fetchSubjects, fetchSubject } from '../../actions/subject_actions';
 
 
-const mapStateToProps = (state, ownProps) => ({
-  subjects: state.subjects.titles,
-  activeSubject: state.activeSubject,
-  currentUser: state.session.currentUser
-});
+const mapStateToProps = (state, ownProps) => {
+  return {
+    subjects: state.subjects,
+    currentUser: state.session.currentUser
+  };
+};
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
@@ -19,4 +20,4 @@ const mapDispatchToProps = (dispatch, ownProps) => {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(FollowedSubjectIndex);
+)(SubjectIndex);

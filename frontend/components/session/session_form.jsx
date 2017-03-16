@@ -41,24 +41,28 @@ class SessionForm extends React.Component {
 
   render() {
     let header = this.props.formType === 'login' ? "Log In" : "Sign Up";
+    let errors = this.props.errors.map((err) => (<li>{err}</li>));
     return (
-      <div>
-
+      <div className="modal-box">
+        <button onClick={() => this.props.closeModal()}
+                className='close-modal'>X</button>
         <div className="auth-input-form">
           <h1>{ header }</h1>
-          <h4>{this.props.errors}</h4>
+          <h4 className="errors">{errors}</h4>
           <form onSubmit={this.handleSubmit}>
             <label>
-              Username
+              Username:
               <input
+                className="username-input"
                 type="text"
                 value={this.state.username}
                 onChange={this.update("username")} />
             </label>
             <br />
-            <label>
-              Password
+            <label className="password-input">
+              Password:
               <input
+                className="password-input"
                 type="password"
                 value={this.state.password}
                 onChange={this.update("password")} />

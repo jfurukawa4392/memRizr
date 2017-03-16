@@ -13,15 +13,20 @@ const style = {
     backgroundColor : 'rgba(255, 255, 255, 0.75)',
     zIndex          : 10
   },
-  content : {
-    position        : 'fixed',
-    top             : '100px',
-    left            : '150px',
-    right           : '150px',
-    bottom          : '100px',
-    border          : '1px solid #ccc',
-    padding         : '20px',
-    zIndex          : 11
+  content: {
+    border: '0',
+    borderRadius: '10px',
+    bottom: 'auto',
+    minHeight: '0rem',
+    left: '50%',
+    padding: '0rem',
+    position: 'fixed',
+    right: 'auto',
+    top: '50%',
+    transform: 'translate(-50%,-50%)',
+    minWidth: '20rem',
+    width: '20%',
+    maxWidth: '60rem'
   }
 };
 
@@ -45,7 +50,6 @@ class NavBar extends React.Component {
   }
 
   closeModal() {
-    console.log('closing modal in navbar');
     this.setState({modalOpen: false});
   }
 
@@ -134,8 +138,7 @@ class NavBar extends React.Component {
             contentLabel="Auth Modal"
             style={style}
             >
-            <button onClick={this.closeModal}
-                    className='close-modal'>X</button>
+
             <SessionFormContainer
               closeModal={this.closeModal}
               formType={this.state.sessionFormType}/>

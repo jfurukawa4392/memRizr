@@ -4,16 +4,10 @@ import {
 } from '../actions/subject_actions';
 import merge from 'lodash/merge';
 
-const _nullSubjects = {
-  titles: []
-};
-
 const SubjectsReducer = (state = {}, action) => {
-  let newState;
   switch(action.type){
     case(RECEIVE_SUBJECTS):
-      newState = { titles: action.subjects };
-      return merge({}, state, newState);
+      return action.subjects;
     default:
       return state;
   }
