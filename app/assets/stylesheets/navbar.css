@@ -2,6 +2,12 @@ body {
   font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+.site-logo {
+  background-image: url(asset_path('logo_icon.png'));
+  height: 25px;
+  width: 25px;
+}
+
 .top-menu {
   background: #333333;
   position: fixed;
