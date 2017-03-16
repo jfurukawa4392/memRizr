@@ -1,9 +1,17 @@
-.home-outer{
-  background-image: image('head-icon.png') no-repeat center center fixed;
-  // background-color: black;
-  // opacity: .3;
+.home-inner{
+  opacity: .3;
   position: relative;
+  top: 100px;
+  width: 60%;
+  background-color: black;
+  z-index: 1;
+}
 
+.contrast-block{
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  opacity: .5;
 }
 
 html {
@@ -28,7 +36,7 @@ form.search {
 .greetHeader {
   /*position: relative;*/
   width: 100%;
-  padding-top: 100px;
+  // padding-top: 100px;
   /*top: 125px;
   left: 15px;*/
   color: white;

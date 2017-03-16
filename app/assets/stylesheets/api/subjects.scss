@@ -1,3 +1,50 @@
 // Place all the styles related to the API::Subjects controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.subjects-sidebar{
+  display: flex;
+  position: absolute;
+  top: 62px;
+  left: 0px;
+  background-color: gray;
+  width: 25%;
+  height: 100%;
+  flex-direction: column;
+}
+
+.subject-list-title{
+  text-align: center;
+  color: white;
+  padding-top: 5px;
+}
+
+.subject-list-content{
+  height: 100%;
+  display: flex;
+}
+
+.subject-list-ul{
+  list-style: none;
+  width: 100%;
+  padding: 0;
+}
+
+.subject-index-item {
+  // display: block;
+  max-width: 100%;
+  align-items: stretch;
+}
+
+.subject-index-item{
+  display: flex;
+}
+
+.getSubject-btn{
+  align-self: stretch;
+  max-width: 100%;
+  &:hover{
+    background-color: #EEEEEE;
+    border-width: thick;
+    // border-color: #333333;
+  }
+}
