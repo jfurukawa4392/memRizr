@@ -11,20 +11,19 @@ class SubjectIndex extends React.Component{
   }
 
   componentWillMount(){
-    console.log(this.props.location);
-    if(this.props.location === '/my-subjects'){
-      this.getSubjects(this.props.currentUser);
+    if(this.props.location.pathname === '/my-subjects'){
+      this.props.getSubjects(this.props.currentUser);
     } else {
       console.log('non-followed subjects');
     }
   }
 
-  componentWillReceiveProps() {
+  componentWillReceiveProps(nextProps) {
 
   }
-  
+
   subjectItemClick(id){
-    this.getSubject(id);
+    this.props.getSubject(id);
   }
 
   componentdidUpdate(){
@@ -35,11 +34,11 @@ class SubjectIndex extends React.Component{
 
     let indexItems = (<div className="empty-subject-holder"></div>);
     if(this.props.subjects){
-      indexItems = this.props.subjects.map((subject, idx) => {
+      indexItems = Object.keys(this.props.subjects).map((id, index) => {
         return(
           <SubjectIndexItem
-            key={idx}
-            subject={subject}
+            key={id}
+            subject={this.props.subjects[id]}
             clickHandler={this.subjectItemClick.bind(this)}/>
         );
       });
@@ -49,9 +48,9 @@ class SubjectIndex extends React.Component{
 
     return(
       <aside className="subjects-sidebar">
-        <header className="subject-list-title">
+        <section className="subject-list-title">
           Subjects
-        </header>
+        </section>
         <content className="subject-list-content">
           <ul className="subject-list-ul">
             {indexItems}
