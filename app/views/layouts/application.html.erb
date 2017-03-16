@@ -7,11 +7,6 @@
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
     <script type="text/javascript" src='http://widget.cloudinary.com/global/all.js'></script>
-    <script type="text/javascript">
-      window.asset_path = {
-        cloud_name: '<%= ENV['CLOUD_NAME'] %>',
-        upload_preset: '<%= ENV['UPLOAD_PRESET'] %>'
-      };
     </script>
   </head>
 

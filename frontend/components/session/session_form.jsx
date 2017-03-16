@@ -37,28 +37,31 @@ class SessionForm extends React.Component {
   render() {
     let header = this.props.formType === 'login' ? "Log In" : "Sign Up";
     return (
-      <div className="auth-input-form">
-        <h1>{ header }</h1>
-        <h4>{this.props.errors}</h4>
-        <form onSubmit={this.handleSubmit}>
-          <label>
-            Username
-            <input
-              type="text"
-              value={this.state.username}
-              onChange={this.update("username")} />
-          </label>
-          <br />
-          <label>
-            Password
-            <input
-              type="password"
-              value={this.state.password}
-              onChange={this.update("password")} />
-          </label>
-          <br />
-          <input type="submit" value={ header }/>
-        </form>
+      <div>
+
+        <div className="auth-input-form">
+          <h1>{ header }</h1>
+          <h4>{this.props.errors}</h4>
+          <form onSubmit={this.handleSubmit}>
+            <label>
+              Username
+              <input
+                type="text"
+                value={this.state.username}
+                onChange={this.update("username")} />
+            </label>
+            <br />
+            <label>
+              Password
+              <input
+                type="password"
+                value={this.state.password}
+                onChange={this.update("password")} />
+            </label>
+            <br />
+            <input type="submit" value={ header }/>
+          </form>
+        </div>
       </div>
     );
   }

@@ -37,12 +37,6 @@ const Root = ({store}) => {
       <Router history={hashHistory}>
         <Route path="/" component={App}>
           <IndexRoute component={Home}/>
-          <Route path="/login"
-                 component={SessionFormContainer}
-                 onLeave={_clearErrors}/>
-          <Route path="/signup"
-                 component={SessionFormContainer}
-                 onLeave={_clearErrors}/>
         </Route>
       </Router>
     </Provider>

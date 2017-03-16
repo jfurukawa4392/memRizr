@@ -1,7 +1,18 @@
 .home-outer{
-  /*display: flex;*/
-  // background: image-url();
+  background-image: image('head-icon.png') no-repeat center center fixed;
+  // background-color: black;
+  // opacity: .3;
+  position: relative;
+
 }
+
+html {
+    background: url(http://res.cloudinary.com/dq4hfogl5/image/upload/v1489680494/031715-students_k3becg.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+}
+// $body-bg: transparent;
 
 form.search {
   /*position: relative;*/
@@ -10,6 +21,7 @@ form.search {
   top: 150px;
   align-items: center;
   width: 100%;
+  opacity: .99;
   /*margin:50px auto;*/
 }
 
@@ -19,6 +31,8 @@ form.search {
   padding-top: 100px;
   /*top: 125px;
   left: 15px;*/
+  color: white;
+  font-size: 26px;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -27,12 +41,18 @@ form.search {
 .search-input {
   padding: 8px 15px;
   background:rgba(50, 50, 50, 0.2);
-  border:0px solid #dbdbdb;
+  border: 2px solid #dbdbdb;
+  border-right: 0px;
+}
+
+.search-input:focus{
+  outline : none;
 }
 
 .search-button {
-  padding: 6px 15px;
-  border:2px solid #207cca;
+  padding: 8px 15px;
+  border:2px solid #dbdbdb;
   background-color:#207cca;
   color:#fafafa;
+  border-left: 0px;
 }

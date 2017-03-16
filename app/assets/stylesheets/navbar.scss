@@ -3,9 +3,13 @@ body {
 }
 
 .site-logo {
-  background: image-url("http://res.cloudinary.com/dq4hfogl5/image/upload/v1489641094/icon_045720_256_mwqsja.png") left center / auto 30px no-repeat;
-  height: 50px;
-  width: 50px;
+  // background: image-url("http://res.cloudinary.com/dq4hfogl5/image/upload/v1489641094/icon_045720_256_mwqsja.png") left center / auto 30px no-repeat;
+  height: 30px;
+  width: 30px;
+  background: url(https://cloudinary.com/console/media_library#/dialog/image/upload/icon_045720_256_mwqsja) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
 }
 
 .top-menu {
@@ -14,13 +18,15 @@ body {
   top: 0px;
   left: 0px;
   width: 100%;
-  display: block;
-  border-bottom: 1px solid #D96C06;
+  display: flex;
+  border-bottom: 2px solid #D96C06;
   height: 60px;
 }
 
 nav{
   justify-content: space-around;
+  flex: 1;
+  display: flex;
 }
 
 nav>ul{
@@ -29,6 +35,8 @@ nav>ul{
 
 nav.left{
   float: left;
+  position: relative;
+  right: 80px;
 }
 
 .site-title {
@@ -43,6 +51,14 @@ nav.right{
 }
 
 nav li {
+  display: inline;
+  padding: inherit;
+  margin: inherit;
+  color: white;
+  text-decoration: none;
+}
+
+nav li:hover {
   display: inline;
   padding: inherit;
   margin: inherit;
@@ -73,7 +89,8 @@ button {
 }
 
 button:hover {
-  background-color: #2292A4
+  background-color: #2292A4;
+  cursor: pointer;
 }
 
 nav.right #last{

@@ -20,8 +20,8 @@ class Home extends React.Component{
     return (
       <main className="home-outer">
         <section className="greetHeader">
-          <h2>Keep your memory sharp</h2>
-          <h4>Get started below!</h4>
+          <h1>Keep your memory sharp</h1>
+          <h3>Get started below!</h3>
         </section>
         <form className="search"
               onSubmit={this.handleSubmit}>
