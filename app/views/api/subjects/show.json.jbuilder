@@ -3,4 +3,4 @@ json.subjectDetail do
   json.title @subject.title
 end
 
-json.decks @subject.decks, :title
+json.decks @subject.decks, :title, :id

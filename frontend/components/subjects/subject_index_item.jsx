@@ -1,16 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router';
 
-const SubjectIndexItem = function({ subject, clickHandler }) {
-  console.log(subject);
+const SubjectIndexItem = function({ subject }) {
   return(
     <li className="subject-index-item">
-      <button
-        className="getSubject-btn"
-        onClick={() => clickHandler(subject.id)}>
-        <h4 className="subject-list-item-title">
-          {subject.title}
-        </h4>
-      </button>
+      <Link to={`my-subjects/${subject.id}`}>
+        {subject.title}
+      </Link>
     </li>
   );
 };

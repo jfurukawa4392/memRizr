@@ -10,6 +10,8 @@ import SessionFormContainer from './session/session_form_container';
 import SearchContainer from './search/search_container';
 import { receiveErrors } from '../actions/session_actions';
 import SubjectIndexContainer from './subjects/subject_index_container';
+import LibraryContainer from './subjects/library_container';
+import SubjectDetailContainer from './subjects/subject_detail_container';
 import Home from './home';
 
 const Root = ({store}) => {
@@ -39,8 +41,15 @@ const Root = ({store}) => {
           <IndexRoute component={Home}/>
           <Route
             path="/my-subjects"
-            component={SubjectIndexContainer}
-            onEnter={_ensureLoggedIn}/>
+            component={LibraryContainer}
+            onEnter={_ensureLoggedIn}>
+            
+            <Route
+              path="/my-subjects/:subjectId"
+              component={SubjectDetailContainer}>
+
+            </Route>
+          </Route>
         </Route>
       </Router>
     </Provider>

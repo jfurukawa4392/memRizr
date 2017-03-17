@@ -1,33 +1,18 @@
 import React from 'react';
 import SubjectIndexItem from './subject_index_item';
+import SubjectDetail from './subject_detail';
 
 class SubjectIndex extends React.Component{
   constructor(){
     super();
-
-    this.state = {
-      activeSubjectId: 0
-    };
   }
 
-  componentWillMount(){
-    if(this.props.location.pathname === '/my-subjects'){
-      this.props.getSubjects(this.props.currentUser);
-    } else {
-      console.log('non-followed subjects');
-    }
-  }
-
-  componentWillReceiveProps(nextProps) {
-
+  componentDidMount(){
+    this.props.getSubjects(this.props.currentUser);
   }
 
   subjectItemClick(id){
     this.props.getSubject(id);
-  }
-
-  componentdidUpdate(){
-    // this.props.getSubject(this.props.subj)
   }
 
   render(){
@@ -38,8 +23,7 @@ class SubjectIndex extends React.Component{
         return(
           <SubjectIndexItem
             key={id}
-            subject={this.props.subjects[id]}
-            clickHandler={this.subjectItemClick.bind(this)}/>
+            subject={this.props.subjects[id]}/>
         );
       });
     } else {

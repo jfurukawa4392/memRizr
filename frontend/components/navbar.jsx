@@ -53,9 +53,6 @@ class NavBar extends React.Component {
     this.setState({modalOpen: false});
   }
 
-  componentDidUpdate() {
-  }
-
   loginClick() {
     this.setState({
       sessionFormType: 'login',
@@ -79,7 +76,9 @@ class NavBar extends React.Component {
       auth_nav = (
         <nav className="right">
           <ul>
-            <li>User: {this.props.currentUser.username}</li>
+            <li>
+              User: {this.props.currentUser.username}
+            </li>
             <li id="last">
               <button onClick={this.props.logout}>Logout</button></li>
           </ul>
@@ -112,23 +111,14 @@ class NavBar extends React.Component {
         <nav className="left">
           <ul>
             <li>
-              <div className="site-logo">
-
+              <div className="">
+                <img className="site-logo" src="http://res.cloudinary.com/dq4hfogl5/image/upload/v1489641094/icon_045720_256_mwqsja.png"/>
               </div>
             </li>
             <li>
               <Link to='/' className="site-title">memRizr</Link>
             </li>
             {myLib}
-            <li>
-              <Link to='/'>Home</Link>
-            </li>
-            <li>
-              <Link to='/'>About</Link>
-            </li>
-            <li>
-
-            </li>
           </ul>
         </nav>
         <div id="auth-modal">

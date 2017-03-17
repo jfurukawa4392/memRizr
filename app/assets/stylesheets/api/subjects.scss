@@ -4,7 +4,7 @@
 .subjects-sidebar{
   display: flex;
   position: absolute;
-  top: 62px;
+  top: 64px;
   left: 0px;
   background-color: gray;
   width: 25%;
@@ -29,22 +29,8 @@
   padding: 0;
 }
 
-.subject-index-item {
-  // display: block;
-  max-width: 100%;
-  align-items: stretch;
-}
-
 .subject-index-item{
-  display: flex;
-}
-
-.getSubject-btn{
-  align-self: stretch;
-  max-width: 100%;
-  &:hover{
-    background-color: #EEEEEE;
-    border-width: thick;
-    // border-color: #333333;
-  }
+  text-align: center;
+  padding: 3px 0px 3px 0px;
+  border-bottom: 1px solid black;
 }

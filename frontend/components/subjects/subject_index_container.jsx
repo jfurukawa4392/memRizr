@@ -6,7 +6,8 @@ import { fetchSubjects, fetchSubject } from '../../actions/subject_actions';
 const mapStateToProps = (state, ownProps) => {
   return {
     subjects: state.subjects,
-    currentUser: state.session.currentUser
+    currentUser: state.session.currentUser,
+    activeSubject: state.activeSubject
   };
 };
 
