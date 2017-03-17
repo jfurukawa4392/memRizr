@@ -3,11 +3,11 @@ import { Link } from 'react-router';
 
 const SubjectIndexItem = function({ subject }) {
   return(
-    <li className="subject-index-item">
-      <Link to={`my-subjects/${subject.id}`}>
+    <Link to={`my-subjects/${subject.id}`}>
+      <li className="subject-index-item">
         {subject.title}
-      </Link>
-    </li>
+      </li>
+    </Link>
   );
 };
 

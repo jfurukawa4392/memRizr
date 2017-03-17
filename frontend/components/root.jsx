@@ -9,7 +9,6 @@ import App from './app';
 import SessionFormContainer from './session/session_form_container';
 import SearchContainer from './search/search_container';
 import { receiveErrors } from '../actions/session_actions';
-import SubjectIndexContainer from './subjects/subject_index_container';
 import LibraryContainer from './subjects/library_container';
 import SubjectDetailContainer from './subjects/subject_detail_container';
 import Home from './home';

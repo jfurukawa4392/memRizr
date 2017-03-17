@@ -1,5 +1,5 @@
 import React from 'react';
-import SubjectIndexContainer from './subject_index_container';
+import SubjectIndex from './subject_index';
 import SubjectDetail from './subject_detail';
 
 class Library extends React.Component{
@@ -8,12 +8,17 @@ class Library extends React.Component{
   }
 
   render(){
-    const subjects = this.props.subjects;
+    const { subjects, currentUser, subjectDetail, getSubject, createSubject } = this.props;
     if(subjects){
       let firstSubjectId = Object.keys(subjects)[0];
       return(
         <main className="user-main-library">
-          <SubjectIndexContainer />
+          <SubjectIndex
+            subjects={subjects}
+            currentUser={currentUser}
+            activeSubject={subjectDetail}
+            getSubject={getSubject}
+            createSubject={createSubject}/>
           {this.props.children}
         </main>
       );

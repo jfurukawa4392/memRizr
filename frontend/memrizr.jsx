@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
   window.login = login;
   window.getSubj = SubjectActions.fetchSubject;
   window.getSubjects = SubjectActions.fetchSubjects;
+  window.createSubject = SubjectActions.createSubject;
 
   ReactDOM.render(<Root store={store}/>, root);
 });

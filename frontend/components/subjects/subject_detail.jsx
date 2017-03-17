@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router';
+import CurrentLearners from './current_learners';
 
 class SubjectDetail extends React.Component{
   constructor(props){
@@ -20,6 +22,7 @@ class SubjectDetail extends React.Component{
   render() {
     const { subjectDetail, decks } = this.props;
     let deckList, subjectTitle;
+    let currentLearners = (<div className="no-learners-div">No Current Learners</div>);
 
     if(decks.length > 0 && subjectDetail){
       deckList = decks.map((deck, idx) => {
@@ -33,24 +36,35 @@ class SubjectDetail extends React.Component{
                 Study
               </button>
             </div>
+            <div className="deck-card-count">
+              {deck.cardCount}
+            </div>
           </li>
         );
       });
       subjectTitle = subjectDetail.title;
+      currentLearners = <CurrentLearners subjectDetail={subjectDetail}/>;
     } else {
       deckList = <div className="no-decks-found">No Decks Found</div>;
     }
 
     return(
       <article className="subject-detail-outer">
-        <header className="subject-title-header">
-          {subjectTitle}
-        </header>
-        <section className="deck-list-container">
-          <ul className="deck-list-ul">
-            {deckList}
-          </ul>
-        </section>
+        <div className="subject-detail-inner">
+          <header className="subject-title-header">
+            {subjectTitle}
+          </header>
+          <section className="deck-list-container">
+            <ul className="deck-list-ul">
+              {deckList}
+            </ul>
+          </section>
+        </div>
+        <div className="current-learners-outer">
+          <aside className="current-learners">
+            {currentLearners}
+          </aside>
+        </div>
       </article>
     );
   }

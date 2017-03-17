@@ -111,7 +111,7 @@ class NavBar extends React.Component {
           <ul>
             <li>
               <div className="">
-                <img className="site-logo" src="http://res.cloudinary.com/dq4hfogl5/image/upload/v1489641094/icon_045720_256_mwqsja.png"/>
+                <img className="site-logo" src="http://res.cloudinary.com/dq4hfogl5/image/upload/v1489785890/brain_jhirqr.jpg"/>
               </div>
             </li>
             <li>

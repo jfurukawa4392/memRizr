@@ -7,14 +7,7 @@
   position: relative;
   bottom: 80px;
   width: 80vw;
-
-}
-
-.contrast-block{
-  justify-content: center;
-  align-items: center;
-  background-color: black;
-  opacity: .5;
+  // background-color: $off-white;
 }
 
 .home-outer {
@@ -43,7 +36,7 @@ form.search {
 .greetHeader {
   font-family: 'Nunito', sans-serif;
   width: 100%;
-  color: white;
+  color: $off-white;
   font-size: 64px;
   justify-content: center;
   align-items: center;

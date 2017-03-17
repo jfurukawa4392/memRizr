@@ -5,10 +5,10 @@ import SubjectDetail from './subject_detail';
 class SubjectIndex extends React.Component{
   constructor(props){
     super(props);
-  }
 
-  componentDidMount(){
-    this.props.getSubjects(this.props.currentUser);
+    this.state ={
+      showForm: false
+    };
   }
 
   subjectItemClick(id){
@@ -16,7 +16,6 @@ class SubjectIndex extends React.Component{
   }
 
   render(){
-
     let indexItems = (<div className="empty-subject-holder"></div>);
     if(this.props.subjects){
       indexItems = Object.keys(this.props.subjects).map((id, index) => {
@@ -26,8 +25,6 @@ class SubjectIndex extends React.Component{
             subject={this.props.subjects[id]}/>
         );
       });
-    } else {
-
     }
 
     return(
