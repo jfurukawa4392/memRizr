@@ -15,7 +15,6 @@ const style = {
   },
   content: {
     border: '0',
-    borderRadius: '10px',
     bottom: 'auto',
     minHeight: '0rem',
     left: '50%',

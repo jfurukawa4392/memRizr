@@ -44,11 +44,14 @@ class SessionForm extends React.Component {
     let errors = this.props.errors.map((err) => (<li>{err}</li>));
     return (
       <div className="modal-box">
-        <button onClick={() => this.props.closeModal()}
-                className='close-modal'>X</button>
+        <div className="close-modal-button">
+          <button
+            onClick={() => this.props.closeModal()}
+            className='close-modal'>X</button>
+        </div>
         <div className="auth-input-form">
           <h1>{ header }</h1>
-          <h4 className="errors">{errors}</h4>
+          <p className="errors">{errors}</p>
           <form onSubmit={this.handleSubmit}>
             <label>
               Username:

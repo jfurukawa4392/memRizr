@@ -7,7 +7,10 @@ export const RECEIVE_SUBJECT_ERRORS = 'RECEIVE_SUBJECT_ERRORS';
 export const fetchSubjects = (user = null) => (dispatch) => {
   if(user){
     MainAPIUtil.fetchFollowedSubjects()
-               .then(res => dispatch(receiveSubjects(res)));
+               .then(res => {
+                 dispatch(fetchSubject(Object.keys(res)[0]));
+                 dispatch(receiveSubjects(res));
+               });
   } else {
     MainAPIUtil.fetchAllSubjects()
                .then(res => dispatch(receiveSubjects(res)));

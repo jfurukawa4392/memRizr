@@ -3,10 +3,8 @@ import SubjectIndexItem from './subject_index_item';
 import SubjectDetail from './subject_detail';
 
 class SubjectIndex extends React.Component{
-  constructor(){
-    super();
-
-    this.showSubjectCreateForm = this.showSubjectCreateForm.bind(this);
+  constructor(props){
+    super(props);
   }
 
   componentDidMount(){
@@ -15,10 +13,6 @@ class SubjectIndex extends React.Component{
 
   subjectItemClick(id){
     this.props.getSubject(id);
-  }
-
-  showSubjectCreateForm(){
-
   }
 
   render(){

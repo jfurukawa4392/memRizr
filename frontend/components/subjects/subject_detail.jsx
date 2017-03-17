@@ -6,7 +6,9 @@ class SubjectDetail extends React.Component{
   }
 
   componentDidMount(){
-    this.props.fetchSubject(this.props.params.subjectId);
+    if(this.props.params.subjectId){
+      this.props.fetchSubject(this.props.params.subjectId);
+    }
   }
 
   componentWillReceiveProps(nextProps){

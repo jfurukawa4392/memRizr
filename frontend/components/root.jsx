@@ -43,7 +43,7 @@ const Root = ({store}) => {
             path="/my-subjects"
             component={LibraryContainer}
             onEnter={_ensureLoggedIn}>
-            
+            <IndexRoute component={SubjectDetailContainer} />
             <Route
               path="/my-subjects/:subjectId"
               component={SubjectDetailContainer}>
