@@ -8,11 +8,13 @@
 
 #Create 20 users
 user_arr = []
+Faker::HarryPotter.unique.clear
 10.times do |num|
   name = Faker::HarryPotter.unique.character.split(" ")
   username = name.first[0] + name.last
   user_arr << User.create!(username: username, password: "wedemboyz")
 end
+Faker::HarryPotter.unique.clear
 
 #Create Subjects
 subject1 = Subject.create!(title: 'Pokemon', creator_id: user_arr.last.id)
