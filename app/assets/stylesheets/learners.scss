@@ -1,0 +1,20 @@
+@import "variables";
+
+.learners-ul{
+  margin: 15px;
+  display: flex;
+  flex-direction: column;
+  // justify-content: center;
+  h4{
+    text-align: center;
+    font-weight: 400;
+    color: $off-black;
+    background-color: $off-white;
+    padding: 15px;
+  }
+  li{
+    text-align: center;
+    padding: 8px 25px 8px 25px;
+    border: 2px solid $off-white;
+  }
+}

@@ -13,6 +13,11 @@
  *= require_self
  */
 @import "reset";
+@import "variables";
+
+body{
+  font-family: $nunito;
+}
 
 @import "navbar";
 @import "sessions";
@@ -20,3 +25,4 @@
 @import "library";
 @import "api/subjects";
 @import "subject_detail";
+@import "learners";

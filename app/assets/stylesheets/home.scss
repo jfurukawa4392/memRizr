@@ -61,10 +61,13 @@ form.search {
   background:rgba(50, 50, 50, 0.2);
   border: 2px solid #dbdbdb;
   border-right: 0px;
+  color: black;
 }
 
 .search-input:focus{
   outline : none;
+  background-color: $off-white;
+  opacity: .8;
 }
 
 .search-button {

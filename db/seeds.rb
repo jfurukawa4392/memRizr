@@ -20,7 +20,7 @@ subject2 = Subject.create!(title: 'Harry Potter', creator_id: user_arr.first.id)
 subject3 = Subject.create!(title: 'Game of Thrones', creator_id: user_arr[1].id)
 
 #Create 4 pokemon decks of 30 cards each under Pokemon subject
-pokemonRegions = %w(kanto johto hoenn sinnoh)
+pokemonRegions = %w(Kanto Johto Hoenn Sinnoh)
 
 decks = []
 pokemonRegions.each_with_index do |region, idx|
@@ -30,7 +30,8 @@ pokemonRegions.each_with_index do |region, idx|
 end
 
 decks.each do |deck|
-  30.times do |num|
+  card_count = (10..25).to_a.sample
+  card_count.times do |num|
     name = Faker::Pokemon.unique.name
     location = Faker::Pokemon.location
     Card.create!(deck_id: deck.id,
@@ -80,3 +81,4 @@ end
 jesse = User.create!(username: "Jesse", password: "password")
 SubjectFollow.create(user_id: jesse.id, subject_id: subject2.id)
 SubjectFollow.create(user_id: jesse.id, subject_id: subject1.id)
+SubjectFollow.create(user_id: jesse.id, subject_id: subject3.id)

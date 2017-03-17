@@ -3,32 +3,30 @@
 .subjects-sidebar{
   display: flex;
   background-color: $off-white;
-  width: 25vw;
+  width: 22vw;
   height: calc(100vh-64px);
-  flex-direction: column; //
+  flex-direction: column;
   align-self: flex-start;
-  overflow: auto;
-  > ul {
+  margin-left: 8px;
+  ul {
     padding: 0 10px 0 0;
     width: 300px;
     height: calc(100% - 20px);
-    overflow: scroll;
-
-    > li {
-      a {
-        display: block;
+    a{
+      text-decoration: none;
+      li:hover{
+        color: $off-white;
+        background-color: $lighter-blue;
       }
-
-      // &:active {
-      //   background-color: gray;
-      // }
     }
   }
 }
 
+
 .subject-list-title{
   font-size: 28px;
   text-align: left;
+  margin: 10px;
   color: $off-black;
   padding-top: 5px;
 }
@@ -45,8 +43,16 @@
 }
 
 .subject-index-item{
+  width: 75%;
   text-align: center;
   color: $light-blue;
   padding: 3px 0px 3px 0px;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid gray;
+  a{
+    color: $light-blue;
+    text-decoration: none;
+    &:hover{
+
+    }
+  }
 }
