@@ -1,6 +1,10 @@
 import { connect } from 'react-redux';
 import SubjectIndex from './subject_index';
-import { fetchSubjects, fetchSubject } from '../../actions/subject_actions';
+import {
+  fetchSubjects,
+  fetchSubject,
+  createSubject
+} from '../../actions/subject_actions';
 
 
 const mapStateToProps = (state, ownProps) => {
@@ -14,7 +18,8 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
     getSubjects: (user) => dispatch(fetchSubjects(user)),
-    getSubject: (id) => dispatch(fetchSubject(id))
+    getSubject: (id) => dispatch(fetchSubject(id)),
+    createSubject: (subject) => dispatch(createSubject(subject))
   };
 };
 

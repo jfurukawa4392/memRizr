@@ -14,7 +14,7 @@ class Api::SubjectsController < ApplicationController
     if @subject.save
       render 'api/subjects/show'
     else
-      render json: @subect.errors.full_messages, status: 422
+      render json: @subject.errors.full_messages, status: 422
     end
   end
 

@@ -10,6 +10,7 @@ class Library extends React.Component{
   render(){
     const subjects = this.props.subjects;
     if(subjects){
+      let firstSubjectId = Object.keys(subjects)[0];
       return(
         <main className="user-main-library">
           <SubjectIndexContainer />

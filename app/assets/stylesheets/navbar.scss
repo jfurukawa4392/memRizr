@@ -1,12 +1,8 @@
-body {
-  font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
+@import "variables";
 
 .site-logo {
-  // background: image-url("http://res.cloudinary.com/dq4hfogl5/image/upload/v1489641094/icon_045720_256_mwqsja.png") left center / auto 30px no-repeat;
   height: 30px;
   width: 30px;
-  // background
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -23,46 +19,45 @@ body {
   left: 0px;
   width: 100%;
   display: flex;
+  justify-content: space-between;
   border-bottom: 4px solid #D96C06;
   height: 60px;
 }
 
 nav{
-  justify-content: space-around;
-  flex: 1;
   display: flex;
+  margin: 10px;
+  ul{
+    list-style: none;
+    display: inline;
+  }
 }
 
-nav>ul{
-  list-style: none;
-  display: inline;
-}
-
-nav.left>ul>li{
-  float: left;
-  width: auto;
-  padding: 0px 5px 0px 5px;
-  // align-items: flex-start;
-  // position: relative;
-  // right: 80px;
-  // padding: 0px;
+nav.left{
+  display: flex;
+  justify-content: flex-start;
 }
 
 .site-title {
   text-decoration: none;
   font-family: sans-serif;
   font-weight: bolder;
-  padding-left: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 nav.right{
-  float: right;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 nav li {
   display: inline;
   padding: inherit;
   margin: inherit;
+  margin-left: 5px;
+  margin-right: 5px;
   color: white;
   text-decoration: none;
 }
@@ -70,7 +65,6 @@ nav li {
 nav li:hover {
   display: inline;
   padding: inherit;
-  margin: inherit;
   color: white;
   text-decoration: none;
 }
@@ -86,20 +80,18 @@ nav li div {
 nav li a{
   color: white;
   text-decoration: none;
-}
-
-nav li a:hover{
-  color: #4BB3E1;
+  &:hover{
+    color: $light-blue;
+  }
 }
 
 button {
-  background-color: #F5EFED;
+  background-color: $light-blue;
   border-radius: 3px;
-}
-
-button:hover {
-  background-color: #4BB3E1;
-  cursor: pointer;
+  &:hover{
+    background-color: $lighter-blue;
+    cursor: pointer;
+  }
 }
 
 nav.right #last{

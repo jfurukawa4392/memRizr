@@ -11,6 +11,9 @@
 .ReactModal__Content .ReactModal__Content--after-open {
   height: 80px;
   width: 100px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
 
 .errors {
@@ -30,7 +33,7 @@
 }
 
 .username-input .password-input{
-  padding-left: 4px !important;
+  margin: 8px;
 }
 
 .auth-input-form label{

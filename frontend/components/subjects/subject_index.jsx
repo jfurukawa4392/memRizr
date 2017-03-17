@@ -5,6 +5,8 @@ import SubjectDetail from './subject_detail';
 class SubjectIndex extends React.Component{
   constructor(){
     super();
+
+    this.showSubjectCreateForm = this.showSubjectCreateForm.bind(this);
   }
 
   componentDidMount(){
@@ -13,6 +15,10 @@ class SubjectIndex extends React.Component{
 
   subjectItemClick(id){
     this.props.getSubject(id);
+  }
+
+  showSubjectCreateForm(){
+
   }
 
   render(){

@@ -29,3 +29,11 @@ export const fetchSubjectDetail = (id) => (
     url: `api/subjects/${id}`
   })
 );
+
+export const createSubject = (subject) => (
+  $.ajax({
+    url: `api/subjects/`,
+    method: 'POST',
+    data: {subject}
+  })
+);

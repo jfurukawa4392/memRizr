@@ -1,17 +1,10 @@
+@import "variables";
+
 .user-main-library{
-  position: static;
-  // display: flex;
-  top: 64px;
-  left: 0px;
-  background-color: gray;
+  display: flex;
+  margin-top: 64px;
+  background-color: $off-white;
   overflow: auto;
   width: 100%;
   height: 100%;
-  justify-content: space-around;
-}
-
-.user-main-library:after{
-    clear: both;
-    content: "";
-    display: block;
 }

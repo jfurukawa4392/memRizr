@@ -1,6 +1,5 @@
 import React from 'react';
 
-//props should be state.activeSubject
 class SubjectDetail extends React.Component{
   constructor(props){
     super(props);
@@ -11,9 +10,8 @@ class SubjectDetail extends React.Component{
   }
 
   componentWillReceiveProps(nextProps){
-    console.log(this.props.params.subjectId);
-    if(this.props.params.subjectId !== nextProps.params.pokemonId){
-      this.props.fetchSubject(this.props.params.subjectId);
+    if(this.props.params.subjectId !== nextProps.params.subjectId){
+      this.props.fetchSubject(nextProps.params.subjectId);
     }
   }
 
