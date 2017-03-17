@@ -40,7 +40,8 @@ nav.left{
 
 .site-title {
   text-decoration: none;
-  font-family: sans-serif;
+  font-family: $nunito;
+  font-size: 18px;
   font-weight: bolder;
   margin-left: 10px;
   margin-right: 10px;
@@ -87,7 +88,12 @@ nav li a{
 
 button {
   background-color: $light-blue;
-  border-radius: 3px;
+  font-family: $nunito;
+  font-weight: bold;
+  padding: 5px 10px 5px 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 0px;
   &:hover{
     background-color: $lighter-blue;
     cursor: pointer;

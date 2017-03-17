@@ -1,10 +1,19 @@
-// Place all the styles related to the API::Sessions controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "variables";
+
 .auth-input-form {
   text-align: center;
   height: 200px;
   color: black;
+  h1{
+    font-size: 24px;
+    padding: 10px;
+    font-weight: bold;
+    font-family: $nunito;
+  }
+  label{
+    font-family: $nunito;
+    font-size: 16px;
+  }
 }
 
 
@@ -18,21 +27,32 @@
 
 .errors {
   color: red;
+  font-size: 12px;
+}
+
+.close-modal-button{
+  display: flex;
+  justify-content: flex-end;
 }
 
 .modal-box {
-   background: white;
+   background: $off-white;
    opacity: .7;
    color: #fdfdfd;
    font-size: 21px;
    font-weight: bold;
    line-height: 1.3em;
-   border: 4px solid #55B7E3;
-   border-radius: 4px;
+   border: 4px solid $light-blue;
    font-weight: normal;
+   display: flex;
+   flex-direction: column;
 }
 
-.username-input .password-input{
+.username-input {
+  margin: 8px;
+}
+
+.password-input{
   margin: 8px;
 }
 

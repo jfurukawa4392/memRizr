@@ -6,6 +6,8 @@
   flex-direction: column;
   position: relative;
   bottom: 80px;
+  width: 80vw;
+
 }
 
 .contrast-block{
@@ -21,6 +23,7 @@
     -moz-background-size: cover;
     background-size: cover;
     display: flex;
+    opacity: .7;
     justify-content: center;
     align-items: center;
     margin-top: 64px;
@@ -32,20 +35,16 @@ form.search {
   display: flex;
   justify-content: center;
   top: 150px;
+  margin-top: 15px;
   align-items: center;
   width: 100%;
-  opacity: .99;
-  /*margin:50px auto;*/
 }
 
 .greetHeader {
-  /*position: relative;*/
+  font-family: 'Nunito', sans-serif;
   width: 100%;
-  // padding-top: 100px;
-  /*top: 125px;
-  left: 15px;*/
   color: white;
-  font-size: 26px;
+  font-size: 64px;
   justify-content: center;
   align-items: center;
   text-align: center;
