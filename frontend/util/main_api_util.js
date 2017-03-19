@@ -37,3 +37,11 @@ export const createSubject = (subject) => (
     data: {subject}
   })
 );
+
+export const createDeck = (deck) => (
+  $.ajax({
+      url: `api/decks`,
+      method: 'POST',
+      data: {deck}
+  })
+);

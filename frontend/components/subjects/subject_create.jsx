@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from 'react-router';
 
 //need currentUser and createSubject action as props
 class SubjectForm extends React.Component{
@@ -21,6 +22,7 @@ class SubjectForm extends React.Component{
 
   submitForm(){
     let userId = this.props.currentUser.id;
+    console.log(this.state.title);
     this.props.createSubject({
       title: this.state.title,
       creator_id: userId
@@ -30,20 +32,23 @@ class SubjectForm extends React.Component{
   render(){
     let { createSubject, currentUser } = this.props;
     return(
-      <form
-        className="new-subject-form"
-        onSubmit={() => this.submitForm()}>
-        <input
-          className="new-form-title-input"
-          type="text"
-          onChange={() => this.update()}
-          value={this.state.title} />
-        <input
-          type="submit"
-          value="Create"/>
-      </form>
+      <li>
+        <form
+          className="new-subject-form"
+          onSubmit={() => this.submitForm()}>
+          <input
+            className="new-subject-form-title-input"
+            type="text"
+            onChange={(e) => this.update(e)}
+            value={this.state.title} />
+          <input
+            className="new-subject-form-btn"
+            type="submit"
+            value="Create"/>
+        </form>
+      </li>
     );
   }
 }
 
-export default SubjectForm;
+export default withRouter(SubjectForm);

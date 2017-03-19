@@ -24,7 +24,13 @@ export const fetchSubject = (id) => (dispatch) => {
 
 export const createSubject = (subject) => (dispatch) => {
   MainAPIUtil.createSubject(subject)
-             .then(res => dispatch(receiveSubject(res)));
+             .then(res => {
+               MainAPIUtil.fetchFollowedSubjects()
+                          .then(subs => {
+                            dispatch(receiveSubjects(subs));
+                            dispatch(receiveSubject(res));
+                          });
+             });
 };
 
 export const receiveSubjects = (subjects) => ({

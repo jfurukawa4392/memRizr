@@ -45,9 +45,7 @@ const Root = ({store}) => {
             <IndexRoute component={SubjectDetailContainer} />
             <Route
               path="/my-subjects/:subjectId"
-              component={SubjectDetailContainer}>
-
-            </Route>
+              component={SubjectDetailContainer} />
           </Route>
         </Route>
       </Router>
