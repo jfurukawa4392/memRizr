@@ -11,7 +11,7 @@ class Api::DecksController < ApplicationController
   def create
     @deck = Deck.new(deck_params)
     @deck.author_id = current_user.id
-    
+
     if @deck.save
       render 'api/decks/show'
     else
@@ -29,10 +29,10 @@ class Api::DecksController < ApplicationController
     end
   end
 
-  def delete
+  def destroy
     @deck = Deck.find(params[:id])
     @deck.destroy
-    render json: 'api/decks/show'
+    render json: @deck
   end
 
   private

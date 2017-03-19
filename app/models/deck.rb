@@ -27,10 +27,9 @@ class Deck < ApplicationRecord
     primary_key: :id
   )
 
-  has_many(
-    :cards,
-    class_name: 'Card',
-    foreign_key: :deck_id,
-    primary_key: :id
-  )
+  has_many :cards, dependent: :destroy
+
+  def getCardRatings(user_id)
+    self.cards.left_outer_joins(:ratings).where("card_ratings.user_id = #{user_id}").select('cards.id', 'cards.question', 'cards.answer', :rating)
+  end
 end

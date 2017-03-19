@@ -46,6 +46,13 @@ class User < ActiveRecord::Base
     source: :subject
   )
 
+  has_many(
+    :ratings,
+    class_name: 'CardRating',
+    foreign_key: :user_id,
+    primary_key: :id
+  )
+
   def self.find_by_credentials(name, pw)
     user = User.find_by_username(name)
     return nil unless user
