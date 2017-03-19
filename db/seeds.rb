@@ -8,7 +8,6 @@
 
 #Create 20 users
 user_arr = []
-Faker::HarryPotter.unique.clear
 10.times do |num|
   name = Faker::HarryPotter.unique.character.split(" ")
   username = name.first[0] + name.last
@@ -16,14 +15,17 @@ Faker::HarryPotter.unique.clear
 end
 Faker::HarryPotter.unique.clear
 
+#create my test users
+jesse = User.create!(username: "Jesse", password: "password")
+guest = User.create!(username: "Guest", password: "password")
+
 #Create Subjects
-subject1 = Subject.create!(title: 'Pokemon', creator_id: user_arr.last.id)
-subject2 = Subject.create!(title: 'Harry Potter', creator_id: user_arr.first.id)
-subject3 = Subject.create!(title: 'Game of Thrones', creator_id: user_arr[1].id)
+subject1 = Subject.create!(title: 'Pokemon', creator_id: guest.id)
+subject2 = Subject.create!(title: 'Harry Potter', creator_id: guest.id)
+subject3 = Subject.create!(title: 'Game of Thrones', creator_id: guest.id)
 
 #Create 4 pokemon decks of 30 cards each under Pokemon subject
 pokemonRegions = %w(Kanto Johto Hoenn Sinnoh)
-
 decks = []
 pokemonRegions.each_with_index do |region, idx|
   decks << Deck.create!(author_id: user_arr[idx].id,
@@ -31,14 +33,16 @@ pokemonRegions.each_with_index do |region, idx|
                         title: region)
 end
 
+#Create cards and cardRatings for each card for guest user
 decks.each do |deck|
   card_count = (10..25).to_a.sample
   card_count.times do |num|
     name = Faker::Pokemon.unique.name
     location = Faker::Pokemon.location
-    Card.create!(deck_id: deck.id,
+    card = Card.create!(deck_id: deck.id,
                  question: "Where can #{name} be found?",
                  answer: "#{location}")
+    CardRating.create!(user_id: guest.id, card_id: card.id, rating: (1..5).to_a.sample)
   end
   Faker::Pokemon.unique.clear
 end
@@ -50,9 +54,10 @@ deck = Deck.create!(author_id: user_arr[1].id,
 20.times do |num|
   name = Faker::GameOfThrones.unique.character
   house = Faker::GameOfThrones.house
-  Card.create!(deck_id: deck.id,
+  card = Card.create!(deck_id: deck.id,
                question: "What house is #{name} in?",
                answer: "#{house}")
+  CardRating.create!(user_id: guest.id, card_id: card.id, rating: (1..5).to_a.sample)
 end
 
 #Create 7 Harry Potter decks with 15 cards each
@@ -72,15 +77,18 @@ decks.each do |deck|
   15.times do |num|
     character = Faker::HarryPotter.character
     quote = Faker::HarryPotter.unique.quote
-    Card.create!(deck_id: deck.id,
+    card = Card.create!(deck_id: deck.id,
                  question: "Who said: \n #{quote}?",
                  answer: "#{character}")
+    CardRating.create!(user_id: guest.id, card_id: card.id, rating: (1..5).to_a.sample)
   end
   Faker::HarryPotter.unique.clear
 end
 
-#create my test user
-jesse = User.create!(username: "Jesse", password: "password")
 SubjectFollow.create(user_id: jesse.id, subject_id: subject2.id)
 SubjectFollow.create(user_id: jesse.id, subject_id: subject1.id)
 SubjectFollow.create(user_id: jesse.id, subject_id: subject3.id)
+
+SubjectFollow.create(user_id: guest.id, subject_id: subject2.id)
+SubjectFollow.create(user_id: guest.id, subject_id: subject1.id)
+SubjectFollow.create(user_id: guest.id, subject_id: subject3.id)
