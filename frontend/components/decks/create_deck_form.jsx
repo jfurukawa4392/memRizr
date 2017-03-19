@@ -4,14 +4,14 @@ class DeckForm extends React.Component{
   constructor(props){
     super(props);
     this.state = {
-      deckTitle: "",
+      title: "",
       subject_id: this.props.subjectId
     };
   }
 
   update(e){
     this.setState({
-      deckTitle: e.target.value
+      title: e.target.value
     });
   }
 
@@ -25,11 +25,14 @@ class DeckForm extends React.Component{
 
       <div className="new-deck-form-div">
         <h3>New Deck</h3>
-        <input
-          className="deck-title-input"
-          type="text"
-          onChange={(e) => this.update(e)}
-          />
+        <label>
+          Deck Name:
+          <input
+            className="deck-title-input"
+            type="text"
+            onChange={(e) => this.update(e)}
+            />
+        </label>
         <div className="deck-action-btns">
           <button
             className="new-deck-submit-btn"

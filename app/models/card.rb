@@ -19,4 +19,9 @@ class Card < ApplicationRecord
     foreign_key: :deck_id,
     primary_key: :id
   )
+  # has many ratings
+
+  def getUserRating(user_id)
+    # @rating = CardRating.find_by()
+  end
 end

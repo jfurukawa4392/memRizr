@@ -4,10 +4,10 @@ import React from 'react';
 const CurrentLearners = ( { subjectDetail } ) => {
   let learnersList = <div>Please wait</div>;
   if(subjectDetail.currentLearners){
-    learnersList = subjectDetail.currentLearners.map((user) => {
+    learnersList = subjectDetail.currentLearners.map((user, idx) => {
 
       return(
-        <li key={user.id}>
+        <li key={idx}>
           <a href="#">
             { user.username }
           </a>
