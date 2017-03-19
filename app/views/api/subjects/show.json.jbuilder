@@ -1,6 +1,7 @@
 json.subjectDetail do
   json.id @subject.id
   json.title @subject.title
+  json.creator @subject.creator_id
   learners = @subject.followers.map do |learner|
     json.extract learner, :id, :username
   end

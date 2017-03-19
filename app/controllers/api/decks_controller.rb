@@ -10,7 +10,8 @@ class Api::DecksController < ApplicationController
 
   def create
     @deck = Deck.new(deck_params)
-
+    @deck.author_id = current_user.id
+    
     if @deck.save
       render 'api/decks/show'
     else
@@ -36,6 +37,6 @@ class Api::DecksController < ApplicationController
 
   private
   def deck_params
-    params.require(:deck).permit(:subject_id, :author_id, :title)
+    params.require(:deck).permit(:subject_id, :title)
   end
 end

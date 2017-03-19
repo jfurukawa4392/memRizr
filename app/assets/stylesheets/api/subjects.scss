@@ -14,18 +14,45 @@
     height: calc(100% - 20px);
     a{
       text-decoration: none;
+      display: flex;
+      justify-content: flex-end;
       li:hover{
         color: $off-white;
         background-color: $lighter-blue;
+      }
+    }
+    .new-subject-form{
+      padding: 5px;
+      input{
+        margin: 5px;
       }
     }
   }
 }
 
 
+.new-btn-img{
+  height: 15px;
+  width: 15px;
+}
+
+.render-newSubject-btn{
+  margin-top: 5px;
+  padding: 0;
+  height: 15px;
+  width: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2px;
+}
+
 .subject-list-title{
   font-size: 28px;
   text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
   margin: 10px;
   color: $off-black;
   padding-top: 5px;

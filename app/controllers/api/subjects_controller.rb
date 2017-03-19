@@ -12,6 +12,7 @@ class Api::SubjectsController < ApplicationController
     @subject = Subject.new(subject_params)
 
     if @subject.save
+      SubjectFollow.create(user_id: @subject.creator_id, subject_id: @subject.id)
       render 'api/subjects/show'
     else
       render json: @subject.errors.full_messages, status: 422

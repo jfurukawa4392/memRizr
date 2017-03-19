@@ -1,3 +1,62 @@
-// Place all the styles related to the API::Decks controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "variables";
+
+.deck-list-header{
+  color: $light-blue;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  border-bottom: 2px solid $off-black;
+  .deck-list-options{
+    padding-bottom: 4px;
+  }
+  .deck-header{
+    display: flex;
+    align-self: center;
+  }
+}
+
+.deck-list-ul{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  color: $light-blue;
+  width: 100%;
+  li{
+    border-bottom: 1px solid gray;
+    display: flex;
+    justify-content: space-between;
+    .deck-title{
+      align-self: flex-start;
+      font-weight: bold;
+      font-family: $nunito;
+    }
+    .deck-study-button{
+      align-self: flex-end;
+    }
+    .deck-card-count{
+      opacity: .6;
+    }
+  }
+}
+
+.new-deck-form-div{
+  margin: 8px;
+  display: flex;
+  flex-direction: column;
+  .deck-title-input{
+    width: 60%;
+  }
+  .deck-action-btns{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    button{
+      margin: 5px 5px 5px 0px;
+    }
+  }
+}
+
+.deck-item-li{
+  padding-top: 5px;
+  padding-bottom: 5px;
+}

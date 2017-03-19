@@ -4,7 +4,7 @@
   padding: 10px;
   color: white;
   display: flex;
-  align-self: flex-end;
+  align-self: flex-start;
   flex-direction: row;
   width: 75vw;
   height: 100%;
@@ -32,35 +32,5 @@
   color: $orange;
   font-size: 36px;
   margin-bottom: 15px;
-}
-
-.deck-list-ul{
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  color: $light-blue;
-  width: 100%;
-  li{
-    border-bottom: 1px solid gray;
-    .deck-item-inner{
-      display: flex;
-      justify-content: space-between;
-      .deck-title{
-        align-self: flex-start;
-        font-weight: bold;
-        font-family: $nunito;
-      }
-      .deck-study-button{
-        align-self: flex-end;
-      }
-    }
-    .deck-card-count{
-      opacity: .6;
-    }
-  }
-}
-
-.deck-item-li{
-  padding-top: 5px;
-  padding-bottom: 5px;
+  margin: 5px 0px 15px 5px;
 }
