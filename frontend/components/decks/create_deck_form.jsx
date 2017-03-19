@@ -17,6 +17,9 @@ class DeckForm extends React.Component{
 
   submitDeck(){
     this.props.createDeck(this.state);
+    this.setState({
+      title: ""
+    });
   }
 
   render(){

@@ -1,16 +1,16 @@
 import { connect } from 'react-redux';
 import DeckIndex from './deck_index';
-// import {
-//
-// } from '../../actions/deck_actions';
+import {
+  deleteDeck
+} from '../../actions/deck_actions';
 
-const mapStateToProps = (state, ownProps) => {
+const mapStateToProps = (state, ownProps) => ({
 
-};
+});
 
-const mapDispatchToProps = (dispatch, ownProps) => {
-
-};
+const mapDispatchToProps = (dispatch, ownProps) => ({
+  deleteDeck: (deckId) => dispatch(deleteDeck(deckId)),
+});
 
 export default connect(
   mapStateToProps,

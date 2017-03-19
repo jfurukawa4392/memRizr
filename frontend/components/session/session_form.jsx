@@ -10,6 +10,7 @@ class SessionForm extends React.Component {
           password: ""
       };
       this.handleSubmit = this.handleSubmit.bind(this);
+      this.guestLogin = this.guestLogin.bind(this);
   }
 
   componentWillUnmount() {
@@ -33,6 +34,14 @@ class SessionForm extends React.Component {
     this.props.processForm(user);
   }
 
+  guestLogin(){
+    const user = {
+      username: "Guest",
+      password: "password"
+    };
+    this.props.processForm(user);
+  }
+
   update(field) {
 		return e => this.setState({
 			[field]: e.currentTarget.value
@@ -40,8 +49,17 @@ class SessionForm extends React.Component {
 	}
 
   render() {
-    let header = this.props.formType === 'login' ? "Log In" : "Sign Up";
-    let errors = this.props.errors.map((err) => (<li>{err}</li>));
+    let { formType } = this.props;
+    let header = formType === 'login' ? "Log In" : "Sign Up";
+    let errors = this.props.errors.map((err, idx) => (<li key={idx}>{err}</li>));
+    let guestButton;
+    if(formType === 'login'){
+      guestButton = <button
+        className="demo-login-btn"
+        onClick={() => this.guestLogin()}>
+        Demo
+      </button>;
+    }
     return (
       <div className="modal-box">
         <div className="close-modal-button">
@@ -75,6 +93,7 @@ class SessionForm extends React.Component {
               <input
                 type="submit"
                 value={ header }/>
+              {guestButton}
             </div>
           </form>
         </div>

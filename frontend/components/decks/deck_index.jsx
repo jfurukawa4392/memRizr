@@ -19,21 +19,39 @@ class DeckIndex extends React.Component{
     });
   }
 
+  componentWillReceiveProps(nextProps){
+    this.setState({
+      showNewDeckForm: false
+    });
+  }
+
   render(){
-    let { decks, createDeck, subjectId } = this.props;
+    let { decks, createDeck, subjectDetail, deleteDeck, currentUser } = this.props;
     let deckList = <div className="no-decks-found">No Decks Found</div>;
     let deckForm = <div className="new-deck-form-placeholder"></div>;
+    let admin = (currentUser.id === subjectDetail.creator);
+    let optionsBtn = null;
+
+    if(admin){
+      optionsBtn = <button onClick={() => this.showForm()}>
+        New Deck
+      </button>;
+    }
 
     if(this.state.showNewDeckForm){
       deckForm = <DeckForm
         cancelForm={this.showForm.bind(this)}
         createDeck={createDeck}
-        subjectId={subjectId}/>;
+        subjectId={subjectDetail.id}/>;
     }
 
     if(decks.length > 0){
       deckList = decks.map((deck, idx) => {
-        return <DeckIndexItem key={idx} deck={deck}/>;
+        return <DeckIndexItem
+          key={idx}
+          deck={deck}
+          deleteDeck={deleteDeck}
+          admin={admin}/>;
       });
     }
 
@@ -44,9 +62,7 @@ class DeckIndex extends React.Component{
             Decks
           </div>
           <div className="deck-list-options">
-            <button onClick={() => this.showForm()}>
-              New Deck
-            </button>
+            {optionsBtn}
           </div>
         </div>
         <ul className="deck-list-ul">

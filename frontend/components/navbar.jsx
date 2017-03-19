@@ -42,6 +42,7 @@ class NavBar extends React.Component {
     this.closeModal = this.closeModal.bind(this);
     this.loginClick = this.loginClick.bind(this);
     this.signupClick = this.signupClick.bind(this);
+    this.logoutRedirect = this.logoutRedirect.bind(this);
   }
 
   openModal() {
@@ -57,6 +58,11 @@ class NavBar extends React.Component {
       sessionFormType: 'login',
       modalOpen: true
     });
+  }
+
+  logoutRedirect(){
+    this.props.logout();
+    this.props.router.push('/');
   }
 
   signupClick() {
@@ -79,7 +85,7 @@ class NavBar extends React.Component {
               User: {this.props.currentUser.username}
             </li>
             <li id="last">
-              <button onClick={this.props.logout}>Logout</button></li>
+              <button onClick={this.logoutRedirect}>Logout</button></li>
           </ul>
         </nav>
       );
@@ -139,4 +145,4 @@ class NavBar extends React.Component {
   }
 }
 
-export default NavBar;
+export default withRouter(NavBar);

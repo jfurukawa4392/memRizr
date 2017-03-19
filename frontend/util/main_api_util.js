@@ -1,6 +1,12 @@
-export const fetchDecks = () => (
+// export const fetchDecks = (subjectId) => (
+//   $.ajax({
+//     url: 'api/decks?'
+//   })
+// );
+export const deleteDeck = (id) => (
   $.ajax({
-    url: 'api/decks'
+    url: `api/decks/${id}`,
+    method: 'DELETE'
   })
 );
 

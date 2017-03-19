@@ -21,13 +21,18 @@ class SubjectDetail extends React.Component{
   }
 
   render() {
-    const { subjectDetail, decks, createDeck } = this.props;
+    const { subjectDetail, decks, createDeck, deleteDeck, currentUser } = this.props;
     let deckList = <div className="no-decks-found">No Decks Found</div>;
     let subjectTitle;
     let currentLearners = (<div className="no-learners-div">No Current Learners</div>);
 
     if(subjectDetail){
-      deckList = <DeckIndex subjectId={subjectDetail.id} decks={decks} createDeck={createDeck}/>;
+      deckList = <DeckIndex
+        subjectDetail={subjectDetail}
+        decks={decks}
+        createDeck={createDeck}
+        deleteDeck={deleteDeck}
+        currentUser={currentUser}/>;
       subjectTitle = subjectDetail.title;
       currentLearners = <CurrentLearners subjectDetail={subjectDetail}/>;
     } else {
