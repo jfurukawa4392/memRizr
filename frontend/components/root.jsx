@@ -12,6 +12,7 @@ import { receiveErrors } from '../actions/session_actions';
 import LibraryContainer from './subjects/library_container';
 import SubjectDetailContainer from './subjects/subject_detail_container';
 import Home from './home';
+import DeckStudyContainer from './study/deck_study_container';
 
 const Root = ({store}) => {
 
@@ -47,6 +48,9 @@ const Root = ({store}) => {
               path="/my-subjects/:subjectId"
               component={SubjectDetailContainer} />
           </Route>
+          <Route
+            path="/study/:deckId"
+            component={DeckStudyContainer} />
         </Route>
       </Router>
     </Provider>

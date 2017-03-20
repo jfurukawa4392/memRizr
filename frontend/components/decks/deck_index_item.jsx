@@ -12,16 +12,20 @@ const DeckIndexItem = (props) => {
           Options
         </button>
         <div className="dropdown-content">
-          <Link
-            to="/"
-            className="deck-edit-link">
-            Edit
-          </Link>
-          <button
-            className="deck-delete-btn"
-            onClick={() => deleteDeck(deck.id)}>
-            Delete
-          </button>
+          <div className="deck-link-wrapper">
+            <Link
+              to="/"
+              className="deck-edit-link">
+              Edit
+            </Link>
+          </div>
+          <div className="deck-link-wrapper">
+            <button
+              className="deck-delete-btn"
+              onClick={() => deleteDeck(deck.id)}>
+              Delete
+            </button>
+          </div>
         </div>
       </div>
     );
@@ -36,14 +40,11 @@ const DeckIndexItem = (props) => {
         {deck.cardCount}
       </div>
       <div className="deck-options">
-        <button
-          className="deck-study-button"
-          onClick={(e) => console.log(e)}>
+        <Link
+          to={`/study/${deck.id}`}>
           Study
-        </button>
-        <div className="dropdown">
-          {options}
-        </div>
+        </Link>
+        {options}
       </div>
     </li>
   );

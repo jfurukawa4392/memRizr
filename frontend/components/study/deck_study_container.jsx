@@ -1,14 +1,17 @@
 import { connect } from 'react-redux';
 import DeckStudy from './deck_study';
-import { createCardRating } from '../../actions/deck_actions';
+import { fetchDeck, createCardRating } from '../../actions/deck_actions';
 
 const mapStateToProps = (state, ownProps) => ({
-  deckId: ownProps.params.deckId
+  deckId: ownProps.params.deckId,
+  activeDeck: state.activeDeck,
+  lastSubject: state.activeSubject.subjectDetail.id,
+  otherDecks: state.activeSubject.decks
 });
 
-const mapDispatchToProps = (dispatch) => {
-
-};
+const mapDispatchToProps = (dispatch) => ({
+  fetchDeck: (id) => dispatch(fetchDeck(id)),
+});
 
 export default connect(
   mapStateToProps,

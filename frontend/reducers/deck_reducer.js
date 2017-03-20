@@ -6,11 +6,11 @@ import merge from 'lodash/merge';
 const _nullDeck = {
   id: null,
   title: "",
-  cards: {},
+  cards: [],
   cardCount: 0,
 };
 
-const DeckReducer = (state = {}, action) => {
+const DeckReducer = (state = _nullDeck, action) => {
   let newState;
   switch (action.type){
     case(RECEIVE_DECK):
@@ -20,3 +20,5 @@ const DeckReducer = (state = {}, action) => {
       return state;
     }
   };
+
+export default DeckReducer;

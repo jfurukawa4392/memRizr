@@ -1,4 +1,5 @@
 import React from 'react';
+import NavBarContainer from './navbar_container';
 
 class Home extends React.Component{
 
@@ -18,25 +19,28 @@ class Home extends React.Component{
 
   render(){
     return (
-      <main className="home-outer">
-        <div className="contrast-block"></div>
-        <content className="home-inner">
-          <section className="greetHeader">
-            <h1>Keep your memory sharp</h1>
-            <h3>Get started below!</h3>
-          </section>
-          <form className="search"
-            onSubmit={this.handleSubmit}>
-            <input type="text"
-              onChange={this.handleChange}
-              value={this.state.searchString}
-              className="search-input"/>
-            <input type="submit"
-              value="Search"
-              className="search-button"/>
-          </form>
-        </content>
-      </main>
+      <div>
+        <NavBarContainer />
+        <main className="home-outer">
+          <div className="contrast-block"></div>
+          <content className="home-inner">
+            <section className="greetHeader">
+              <h1>Keep your memory sharp</h1>
+              <h3>Get started below!</h3>
+            </section>
+            <form className="search"
+              onSubmit={this.handleSubmit}>
+              <input type="text"
+                onChange={this.handleChange}
+                value={this.state.searchString}
+                className="search-input"/>
+              <input type="submit"
+                value="Search"
+                className="search-button"/>
+            </form>
+          </content>
+        </main>
+      </div>
     );
   }
 }

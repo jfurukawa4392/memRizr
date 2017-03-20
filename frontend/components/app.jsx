@@ -3,7 +3,6 @@ import NavBarContainer from './navbar_container';
 
 const App = ({children}) => (
   <content>
-    <NavBarContainer />
     { children }
   </content>
 );

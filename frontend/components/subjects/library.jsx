@@ -1,6 +1,7 @@
 import React from 'react';
 import SubjectIndex from './subject_index';
 import SubjectDetail from './subject_detail';
+import NavBarContainer from '../navbar_container';
 
 class Library extends React.Component{
   componentDidMount(){
@@ -12,15 +13,18 @@ class Library extends React.Component{
     if(subjects){
       let firstSubjectId = Object.keys(subjects)[0];
       return(
-        <main className="user-main-library">
-          <SubjectIndex
-            subjects={subjects}
-            currentUser={currentUser}
-            activeSubject={subjectDetail}
-            getSubject={getSubject}
-            createSubject={createSubject}/>
-          {this.props.children}
-        </main>
+        <div>
+          <NavBarContainer />
+          <main className="user-main-library">
+            <SubjectIndex
+              subjects={subjects}
+              currentUser={currentUser}
+              activeSubject={subjectDetail}
+              getSubject={getSubject}
+              createSubject={createSubject}/>
+            {this.props.children}
+          </main>
+        </div>
       );
     } else{
       return (<div className="loading">No Subjects...</div>);
