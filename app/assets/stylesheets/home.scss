@@ -4,9 +4,11 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  bottom: 80px;
-  width: 80vw;
-  // background-color: $off-white;
+  bottom: 60px;
+  width: 90vw;
+  padding: 5vh 5vw 5vh 5vw;
+  background-color: black;
+  opacity: .9;
 }
 
 .home-outer {

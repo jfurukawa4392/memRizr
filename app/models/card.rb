@@ -28,7 +28,7 @@ class Card < ApplicationRecord
   )
 
   def getUserRating(user_id)
-    @rating = CardRating.find_by(user_id: user_id)
+    @rating = self.ratings.find_by(user_id: user_id)
     @rating.nil? ? 0 : @rating
   end
 end
