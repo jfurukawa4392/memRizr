@@ -5,7 +5,6 @@ import { fetchDeck, createCardRating } from '../../actions/deck_actions';
 const mapStateToProps = (state, ownProps) => ({
   deckId: ownProps.params.deckId,
   activeDeck: state.activeDeck,
-  lastSubject: state.activeSubject.subjectDetail.id,
   otherDecks: state.activeSubject.decks
 });
 

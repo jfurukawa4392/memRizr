@@ -22,7 +22,6 @@ class SubjectForm extends React.Component{
 
   submitForm(){
     let userId = this.props.currentUser.id;
-    console.log(this.state.title);
     this.props.createSubject({
       title: this.state.title,
       creator_id: userId
@@ -30,9 +29,10 @@ class SubjectForm extends React.Component{
   }
 
   render(){
-    let { createSubject, currentUser } = this.props;
+    let { createSubject, currentUser, cancel } = this.props;
     return(
-      <li>
+      <li className="new-subject-form-wrapper">
+        <h4>New Subject:</h4>
         <form
           className="new-subject-form"
           onSubmit={() => this.submitForm()}>
@@ -41,10 +41,17 @@ class SubjectForm extends React.Component{
             type="text"
             onChange={(e) => this.update(e)}
             value={this.state.title} />
-          <input
-            className="new-subject-form-btn"
-            type="submit"
-            value="Create"/>
+          <div className="subject-create-btn-wrapper">
+            <input
+              className="new-subject-btn"
+              type="submit"
+              value="Create"/>
+            <button
+              className="new-subject-btn"
+              onClick={() => cancel()}>
+              Cancel
+            </button>
+          </div>
         </form>
       </li>
     );

@@ -10,6 +10,8 @@ class SubjectIndex extends React.Component{
     this.state ={
       showForm: false
     };
+
+    this.newFormClick = this.newFormClick.bind(this);
   }
 
   subjectItemClick(id){
@@ -27,7 +29,8 @@ class SubjectIndex extends React.Component{
 
     let newSubjectForm = this.state.showForm ? <SubjectForm
       createSubject={createSubject}
-      currentUser={currentUser}/> : <div className="hide-subject-form"></div>;
+      currentUser={currentUser}
+      cancel={this.newFormClick}/> : <div className="hide-subject-form"></div>;
 
     let indexItems = (<div className="empty-subject-holder"></div>);
     if(this.props.subjects){
@@ -47,9 +50,7 @@ class SubjectIndex extends React.Component{
           <button
             className="render-newSubject-btn"
             onClick={() => this.newFormClick()}>
-            <img
-              className="new-btn-img"
-              src="http://res.cloudinary.com/dq4hfogl5/image/upload/v1489641094/icon-plus-round-128_wegbfi.png" />
+            <i className="fa fa-plus"></i>
           </button>
         </section>
         <content className="subject-list-content">
