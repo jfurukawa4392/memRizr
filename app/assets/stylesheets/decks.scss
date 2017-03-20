@@ -4,7 +4,7 @@
   color: $light-blue;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 8px;
+  margin-bottom: 2px;
   border-bottom: 2px solid $off-black;
   .deck-list-options{
     padding-bottom: 4px;
@@ -13,6 +13,12 @@
     display: flex;
     align-self: center;
   }
+}
+
+.deck-options{
+  padding: 3px;
+  position: relative;
+  top: 10px;
 }
 
 .deck-list-ul{
@@ -34,6 +40,7 @@
       align-self: flex-end;
     }
     .deck-card-count{
+      display: block;
       opacity: .6;
     }
   }
@@ -45,6 +52,7 @@
   flex-direction: column;
   .deck-title-input{
     width: 60%;
+    margin-left: 5px;
   }
   .deck-action-btns{
     display: flex;
@@ -61,6 +69,7 @@
   display: inline-block;
   margin-left: 4px;
   .dropdown-btn{
+    border-radius: 2px;
     border: none;
     cursor: pointer;
   }
@@ -68,20 +77,20 @@
     display: none;
     position: absolute;
     background-color: $light-blue;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     .deck-link-wrapper{
       color: black;
       text-decoration: none;
       display: block;
-      border-top: 1px solid black;
+      border: 1px solid black;
+      padding-bottom: 4px;
       display: flex;
       justify-content: center;
       &:hover{
         background-color: $lighter-blue;
       }
       a{
-        padding: 5px 10px 5px 10px;
+        padding: 5px;
         font-family: $nunito;
         font-weight: bold;
         text-align: center;
@@ -94,10 +103,26 @@
 }
 
 .dropdown:hover .dropdown-content {
-    display: block;
+  display: block;
 }
 
 .deck-item-outer{
   padding-top: 5px;
   padding-bottom: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .deck-item-inner{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    .deck-title{
+      display: flex;
+      align-self: center;
+    }
+  }
+}
+
+.fa-play-circle-o{
+  padding: 3px;
 }

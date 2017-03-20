@@ -19,6 +19,7 @@ body{
   font-family: $nunito;
 }
 
+
 @import "navbar";
 @import "sessions";
 @import "home";
@@ -28,3 +29,4 @@ body{
 @import "learners";
 @import "decks";
 @import "study";
+@import "cards";

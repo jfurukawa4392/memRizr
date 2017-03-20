@@ -1,3 +1,26 @@
-// Place all the styles related to the API::Cards controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "variables";
+
+.cards-list-table-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 64px;
+  padding: 10vh 20vw 10vh 20vw;
+  td{
+    vertical-align: middle;
+    padding: 4px;
+  }
+}
+
+.delete-icon{
+  vertical-align: middle;
+  .card-delete-btn{
+    background-color: $delete-red;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+  }
+}

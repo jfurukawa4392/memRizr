@@ -36,6 +36,11 @@
   width: 15px;
 }
 
+.fa-plus{
+  height: 100%;
+  width: 100%;
+}
+
 .render-newSubject-btn{
   margin-top: 5px;
   padding: 0;
@@ -67,6 +72,27 @@
   list-style: none;
   width: 100%;
   padding: 0;
+  .new-subject-form-wrapper{
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+    >h4{
+      margin-left: 10px;
+    }
+    .subject-create-btn-wrapper{
+      display: flex;
+      flex-direction: row;
+      .new-subject-btn{
+        background-color: $light-blue;
+        box-sizing: border-box;
+        border-style: outset;
+        margin: 5px;
+        border: 2px solid;
+        font-family: $nunito;
+        font-weight: normal;
+      }
+    }
+  }
 }
 
 .subject-index-item{
