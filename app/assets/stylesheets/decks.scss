@@ -56,6 +56,47 @@
   }
 }
 
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-left: 4px;
+  .dropdown-btn{
+    border: none;
+    cursor: pointer;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: $light-blue;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    .deck-link-wrapper{
+      color: black;
+      text-decoration: none;
+      display: block;
+      border-top: 1px solid black;
+      display: flex;
+      justify-content: center;
+      &:hover{
+        background-color: $lighter-blue;
+      }
+      a{
+        padding: 5px 10px 5px 10px;
+        font-family: $nunito;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+        color: black;
+        font-size: 11px;
+      }
+    }
+  }
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
 .deck-item-outer{
   padding-top: 5px;
   padding-bottom: 5px;
