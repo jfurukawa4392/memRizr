@@ -2,10 +2,10 @@ json.subjectDetail do
   json.id @subject.id
   json.title @subject.title
   json.creator @subject.creator_id
-  learners = @subject.followers.map do |learner|
-    json.extract learner, :id, :username
+  json.currentLearners @subject.followers.map do |learner|
+    json.id learner.id
+    json.username learner.username
   end
-  json.currentLearners learners
 end
 
 json.decks @subject.decks.map do |deck|
