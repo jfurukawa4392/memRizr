@@ -38,11 +38,12 @@ decks.each do |deck|
   card_count = (10..25).to_a.sample
   card_count.times do |num|
     name = Faker::Pokemon.unique.name
+    rating = (1..5).to_a.sample
     location = Faker::Pokemon.location
     card = Card.create!(deck_id: deck.id,
                  question: "Where can #{name} be found?",
                  answer: "#{location}")
-    CardRating.create!(user_id: guest.id, card_id: card.id, rating: (1..5).to_a.sample)
+    CardRating.create!(user_id: guest.id, card_id: card.id, rating: rating)
   end
   Faker::Pokemon.unique.clear
 end
