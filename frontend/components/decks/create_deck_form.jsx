@@ -27,7 +27,6 @@ class DeckForm extends React.Component{
     return(
 
       <div className="new-deck-form-div">
-        <h3>New Deck</h3>
         <label>
           Deck Name:
           <input

@@ -9,12 +9,12 @@ const DeckIndexItem = (props) => {
     options = (
       <div className="dropdown">
         <button className="dropdown-btn">
-          Options
+          <i className="fa fa-cog fa-lg"></i>
         </button>
         <div className="dropdown-content">
           <div className="deck-link-wrapper">
             <Link
-              to="/"
+              to={`/deck/${deck.id}/edit`}
               className="deck-edit-link">
               Edit
             </Link>
@@ -33,18 +33,21 @@ const DeckIndexItem = (props) => {
 
   return(
     <li key={deck.id} className="deck-item-outer">
-      <div className="deck-title">
-        <h4>{deck.title}</h4>
+      <div className="deck-item-inner">
+        <div className="deck-title">
+          <h4>{deck.title}</h4>
+        </div>
+        <div className="deck-options">
+          <Link
+            to={`/study/${deck.id}`}>
+            <i className="fa fa-play-circle-o"></i>
+            Study
+          </Link>
+          {options}
+        </div>
       </div>
       <div className="deck-card-count">
-        {deck.cardCount}
-      </div>
-      <div className="deck-options">
-        <Link
-          to={`/study/${deck.id}`}>
-          Study
-        </Link>
-        {options}
+        {deck.cardCount} Cards
       </div>
     </li>
   );
