@@ -13,6 +13,7 @@ import LibraryContainer from './subjects/library_container';
 import SubjectDetailContainer from './subjects/subject_detail_container';
 import Home from './home';
 import DeckStudyContainer from './study/deck_study_container';
+import DeckEditFormContainer from './decks/deck_edit_form_container';
 
 const Root = ({store}) => {
 
@@ -50,7 +51,12 @@ const Root = ({store}) => {
           </Route>
           <Route
             path="/study/:deckId"
-            component={DeckStudyContainer} />
+            component={DeckStudyContainer}
+            onEnter={_ensureLoggedIn} />
+          <Route
+            path="/deck/:deckId/edit"
+            component={DeckEditFormContainer}
+            onEnter={_ensureLoggedIn} />
         </Route>
       </Router>
     </Provider>
