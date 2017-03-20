@@ -24,11 +24,12 @@ class Card < ApplicationRecord
     :ratings,
     class_name: 'CardRating',
     foreign_key: :card_id,
-    primary_key: :id
+    primary_key: :id,
+    dependent: :destroy
   )
 
   def getUserRating(user_id)
     @rating = self.ratings.find_by(user_id: user_id)
-    @rating.nil? ? 0 : @rating
+    @rating.nil? ? 0 : @rating.rating
   end
 end

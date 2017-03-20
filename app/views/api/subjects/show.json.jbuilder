@@ -8,8 +8,22 @@ json.subjectDetail do
   end
 end
 
+
+
 json.decks @subject.decks.map do |deck|
   json.extract! deck, :id, :title
-  card_count = deck.cards.length
-  json.cardCount card_count
+
+  cards = deck.cards
+
+  json.cardCount cards.length
+
+  mastery = cards.inject(0) do | acc, card |
+    acc + (card.getUserRating(current_user.id))
+  end
+
+  puts mastery
+  puts cards.length
+  puts mastery/(5.0 * cards.length)
+
+  json.mastery mastery/(5.0 * cards.length)
 end
