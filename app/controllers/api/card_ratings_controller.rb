@@ -5,9 +5,8 @@ class Api::CardRatingsController < ApplicationController
     if @rating
       @rating.update(rating: params[:card_rating][:rating])
     else
-      @rating = CardRating.new(card_rating_params)
-      @rating.user_id = current_user.id
-      @rating.save
+      rating_attrs = {user_id: current_user.id}.merge(card_rating_params)
+      @rating = CardRating.create(rating_attrs)
     end
     
     @card = @rating.card

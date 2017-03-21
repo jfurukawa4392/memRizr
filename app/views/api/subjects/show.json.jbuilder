@@ -21,5 +21,5 @@ json.decks @subject.decks.map do |deck|
     acc + (card.getUserRating(current_user.id))
   end
 
-  json.mastery mastery/(5.0 * cards.length)
+  json.mastery (mastery/(5.0 * cards.length)*100).to_i
 end
