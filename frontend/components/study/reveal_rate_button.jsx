@@ -3,10 +3,11 @@ import React from 'react';
 const RevealRateButton = (props) => {
   let { toggleFlip, card, flipped, createCardRating, nextCard } = props;
   let inputBar = <div className="reveal-bar" onClick={() => toggleFlip()}>Reveal Answer</div>;
-  
+
   const rateCard = (rating) => {
     createCardRating(rating);
     nextCard();
+    toggleFlip();
   };
 
   if(card){

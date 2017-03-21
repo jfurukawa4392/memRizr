@@ -19,11 +19,12 @@ class DeckStudy extends React.Component{
   }
 
   nextCard(){
-    console.log(this.props.cardCount);
-    let randomNum = Math.floor(Math.random()*this.props.cardCount);
+    let { cardCount } = this.props.activeDeck;
+    console.log(cardCount);
+    let randomNum = Math.floor(Math.random()*cardCount);
 
     while(randomNum === this.state.currentCard){
-      randomNum = Math.floor(Math.random()*this.props.cardCount);
+      randomNum = Math.floor(Math.random()*cardCount);
     }
 
     this.setState({

@@ -47,6 +47,7 @@ const DeckIndexItem = (props) => {
         </div>
       </div>
       <div className="deck-card-count">
+        {`${Math.floor(deck.mastery)}% mastery of `}
         {deck.cardCount} Cards
       </div>
     </li>
