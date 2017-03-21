@@ -5,7 +5,11 @@ class Api::SubjectsController < ApplicationController
   end
 
   def show
-    @subject = Subject.find(params[:id])
+    @subject = Subject.find_by(id: params[:id])
+
+    unless @subject
+      @subject = Subject.new
+    end
   end
 
   def create
