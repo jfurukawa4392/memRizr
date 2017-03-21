@@ -8,7 +8,7 @@ count = 0
 json.cards @deck.cards.map do |card|
     # json.set! card.id do
     json.extract! card, :id, :question, :answer
-    json.currentRating card.getUserRating(current_user.id)
+    json.rating card.getUserRating(current_user.id)
     # end
     count += 1
 end
