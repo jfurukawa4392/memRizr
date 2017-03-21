@@ -3,6 +3,12 @@ import { fetchSubject } from './subject_actions';
 
 export const RECEIVE_DECK = 'RECEIVE_DECK';
 export const REMOVE_DECK = 'REMOVE_DECK';
+export const RECEIVE_CARD = 'RECEIVE_CARD';
+
+export const createCardRating = (rating) => dispatch => {
+  MainAPIUtil.createRating(rating)
+             .then(card => dispatch(receiveCard(card)));
+};
 
 export const fetchDeck = (id) => (dispatch) => {
   MainAPIUtil.fetchDeck(id)
@@ -27,4 +33,9 @@ export const removeDeck = (deckId) => ({
 export const receiveDeck = (deck) => ({
   type: RECEIVE_DECK,
   deck
+});
+
+export const receiveCard = (card) => ({
+  type: RECEIVE_CARD,
+  card
 });

@@ -1,8 +1,11 @@
-// export const fetchDecks = (subjectId) => (
-//   $.ajax({
-//     url: 'api/decks?'
-//   })
-// );
+export const createRating = (card_rating) => (
+  $.ajax({
+    url: `api/card_ratings`,
+    method: 'POST',
+    data: {card_rating}
+  })
+);
+
 export const deleteDeck = (id) => (
   $.ajax({
     url: `api/decks/${id}`,

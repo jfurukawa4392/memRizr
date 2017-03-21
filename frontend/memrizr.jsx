@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root';
-import { login } from './actions/session_actions';
 import Modal from 'react-modal';
 import * as SubjectActions from './actions/subject_actions';
 import * as DeckActions from './actions/deck_actions';
@@ -19,11 +18,11 @@ document.addEventListener("DOMContentLoaded", () => {
   Modal.setAppElement(root);
   window.store = store;
   window.state = store.getState;
-  window.login = login;
   window.getSubj = SubjectActions.fetchSubject;
   window.getSubjects = SubjectActions.fetchSubjects;
   window.createSubject = SubjectActions.createSubject;
   window.getDeck = DeckActions.fetchDeck;
+  window.createRating = DeckActions.createCardRating;
 
   ReactDOM.render(<Root store={store}/>, root);
 });

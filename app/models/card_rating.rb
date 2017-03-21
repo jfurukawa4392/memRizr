@@ -16,4 +16,10 @@ class CardRating < ApplicationRecord
 
   belongs_to :card
   belongs_to :user
+
+  has_one(
+    :deck,
+    through: :card,
+    source: :deck
+  )
 end
