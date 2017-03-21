@@ -10,25 +10,41 @@ class DeckStudy extends React.Component{
     this.state = {
       currentCard: 0,
     };
+
+    this.nextCard = this.nextCard.bind(this);
   }
 
   componentWillMount(){
     this.props.fetchDeck(this.props.deckId);
   }
 
+  nextCard(){
+    console.log(this.props.cardCount);
+    let randomNum = Math.floor(Math.random()*this.props.cardCount);
+
+    while(randomNum === this.state.currentCard){
+      randomNum = Math.floor(Math.random()*this.props.cardCount);
+    }
+
+    this.setState({
+      currentCard: randomNum
+    });
+  }
+
   render(){
-    let { cardCount, cards, title } = this.props.activeDeck;
+    let { cardCount, cards, title, subjectId } = this.props.activeDeck;
     return(
       <main className="outer-study-main">
         <ProgressSidebar
           cardCount={cardCount}
           cards={cards}
           title={title}
-          lastSubject={this.props.lastSubject}/>
+          subjectId={subjectId}/>
         <CardViewer
           card={cards[this.state.currentCard]}
           currentCardIndex={this.state.currentCard}
-          createCardRating={this.props.createCardRating}/>
+          createCardRating={this.props.createCardRating}
+          nextCard={this.nextCard}/>
       </main>
     );
   }

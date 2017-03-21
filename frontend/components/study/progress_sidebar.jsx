@@ -7,11 +7,13 @@ class ProgressSidebar extends React.Component{
   }
 
   componentDidMount(){
-    let mastery = this.calculateMastery();
   }
 
-  calculateMastery(){
-    let { cardCount, cards } = this.props;
+  componentWillReceiveProps(nextProps){
+  }
+
+  calculateMastery(props){
+    let { cardCount, cards } = props;
     let rawScore = 0;
     cards.forEach((card) => {
       rawScore += parseInt(card.rating);
@@ -20,11 +22,9 @@ class ProgressSidebar extends React.Component{
   }
 
   render(){
-    let { title, lastSubject } = this.props;
-    let stats;
-    if(this.props.cards){
-      stats = this.calculateMastery()*100;
-    }
+    let { title, subjectId } = this.props;
+    let stats = this.calculateMastery(this.props);
+
     return(
       <aside className="progress-sidebar-outer">
         <header className="deck-title-header">
@@ -32,13 +32,13 @@ class ProgressSidebar extends React.Component{
             Studying:<span>{title}</span>
           </span>
         </header>
-        <Link to={`/my-subjects/`}>
+        <Link to={`/my-subjects/${subjectId}`}>
           <div className="progress-nav-buttons">
             Done
           </div>
         </Link>
         <figure className="progress-stats">
-          {`${stats}%`}
+          {`${Math.floor(stats*100)}%`}
         </figure>
       </aside>
     );
