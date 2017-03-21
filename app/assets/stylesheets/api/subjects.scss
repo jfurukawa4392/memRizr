@@ -3,19 +3,19 @@
 .subjects-sidebar{
   display: flex;
   background-color: $off-white;
-  width: 22vw;
+  width: 25vw;
   height: calc(100vh-64px);
   flex-direction: column;
   align-self: flex-start;
   margin-left: 8px;
   ul {
-    padding: 0 10px 0 0;
-    width: 300px;
+    padding: 0 10px 0 10px;
+    width: 90%;
     height: calc(100% - 20px);
     a{
       text-decoration: none;
       display: flex;
-      justify-content: flex-end;
+      justify-content: center;
       li:hover{
         color: $off-white;
         background-color: $lighter-blue;
@@ -96,14 +96,17 @@
 }
 
 .subject-index-item{
-  width: 75%;
+  width: 100%;
   text-align: center;
-  color: $light-blue;
-  padding: 3px 0px 3px 0px;
-  border-bottom: 1px solid gray;
+  color: $lighter-blue;
+  font-size: 26px;
+  padding: 15px 0px 15px 0px;
+  border-bottom: 1px solid $gray;
   a{
     color: $light-blue;
     text-decoration: none;
+    display: flex;
+    justify-content: center;
     &:hover{
 
     }

@@ -35,6 +35,9 @@
       align-self: flex-start;
       font-weight: bold;
       font-family: $nunito;
+      h4{
+        color: $light-blue;
+      }
     }
     .deck-study-button{
       align-self: flex-end;
@@ -85,7 +88,7 @@
       text-decoration: none;
       display: block;
       border: 1px solid black;
-      padding-bottom: 4px;
+      // padding-bottom: 4px;
       display: flex;
       justify-content: center;
       &:hover{
@@ -99,6 +102,9 @@
         text-decoration: none;
         color: black;
         font-size: 11px;
+      }
+      .deck-delete-btn:hover{
+        background-color: $delete-red;
       }
     }
   }

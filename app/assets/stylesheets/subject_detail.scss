@@ -6,7 +6,7 @@
   display: flex;
   align-self: flex-start;
   flex-direction: row;
-  width: 75vw;
+  width: 70vw;
   height: 100%;
   background-color: $white;
   .subject-detail-inner{
@@ -28,7 +28,7 @@
   .current-learners-outer{
     display: flex;
     justify-content: center;
-    width: 60%;
+    width: 45%;
     margin-left: 5px;
     .current-learners{
       // border: 1px solid gray;
@@ -37,8 +37,8 @@
       flex-direction: column;
       ul{
         list-style: none;
-        li>a{
-          color: $light-blue;
+        li{
+          color: $off-black;
         }
       }
     }
