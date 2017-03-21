@@ -8,7 +8,6 @@ class Api::UsersController < ApplicationController
       render 'api/users/show'
     else
       puts "user save failed:"
-      p @user.errors.full_messages
       render json: @user.errors.full_messages, status: 422
     end
   end
