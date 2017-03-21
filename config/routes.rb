@@ -4,7 +4,7 @@ Rails.application.routes.draw do
     resources :users, only: [:create]
     resource :session, only: [:create, :destroy]
     resources :cards, only: [:show, :create, :update, :destroy]
-    resources :decks, only: [:index, :show, :create, :destroy]
+    resources :decks, only: [:index, :show, :create, :update, :destroy]
     resources :subject_follows, only: [:create, :destroy, :index]
     resources :subjects, only: [:show, :index, :create]
     resources :card_ratings, only: [:create]
