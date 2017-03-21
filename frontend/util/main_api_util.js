@@ -6,6 +6,14 @@ export const createRating = (card_rating) => (
   })
 );
 
+export const updateDeck = (id, cards) => (
+  $.ajax({
+    url: `api/decks/${id}`,
+    method: 'PATCH',
+    data: { cards }
+  })
+);
+
 export const deleteDeck = (id) => (
   $.ajax({
     url: `api/decks/${id}`,

@@ -6,16 +6,18 @@ import NavBarContainer from '../navbar_container';
 class DeckEditForm extends React.Component{
   constructor(props){
     super(props);
-    console.log(this.props.deck.cards);
+
     this.state = {
       errors: [],
-      cards: []
+      cards: [],
+      confirmSave: false
     };
 
     this.questionChange = this.questionChange.bind(this);
     this.answerChange = this.answerChange.bind(this);
     this.handleDelete = this.handleDelete.bind(this);
     this.addCardForm = this.addCardForm.bind(this);
+    this.processDeck = this.processDeck.bind(this);
   }
 
   componentWillMount(){
@@ -24,7 +26,7 @@ class DeckEditForm extends React.Component{
 
   componentWillReceiveProps(nextProps){
     if(!isEqual(this.state.cards, nextProps.deck.cards)){
-      this.setState({cards: nextProps.deck.cards});
+      this.setState({cards: nextProps.deck.cards, confirmSave: false});
     }
   }
 
@@ -41,7 +43,7 @@ class DeckEditForm extends React.Component{
     return (e) => {
       e.preventDefault();
       let newCards = this.state.cards.slice();
-      newCards[idx].answer =  e.target.value;
+      newCards[idx].answer = e.target.value;
       this.setState({ cards: newCards });
     };
   }
@@ -61,6 +63,29 @@ class DeckEditForm extends React.Component{
     let newState = merge({}, this.state);
     newState.cards.push({question: "", answer: ""});
     this.setState(newState);
+  }
+
+  processDeck(){
+    let cards = [];
+    let newState;
+    let { deckId, updateDeck } = this.props;
+
+    for (var i = 0; i < this.state.cards.length; i++) {
+
+      if(this.state.cards[i].question.trim() === ""
+        || this.state.cards[i].answer.trim() === ""){
+        newState = merge({}, this.state);
+        newState.errors.push("Question and Answer must both be filled out");
+        this.setState(newState);
+        return;
+      }
+
+      cards.push(this.state.cards[i]);
+    }
+    console.log("cards validated, saving now");
+    console.log(cards);
+    updateDeck(deckId, cards);
+    this.setState({cards: cards, errors: [], confirmSave: true});
   }
 
   render(){
@@ -85,11 +110,17 @@ class DeckEditForm extends React.Component{
       );
     });
 
+    let saveConfirmation;
+    if(this.state.confirmSave){
+      saveConfirmation = <h4>Cards Saved</h4>;
+    }
+
     return(
       <main className="deck-edit-view-outer">
         <NavBarContainer />
         <content className="cards-list-table-wrapper">
           <h1>Edit Deck: {title}</h1>
+          <div>{this.state.errors}</div>
           <table className="cards-list-table-outer">
             <thead className="cards-list-table-head">
               <tr>
@@ -102,9 +133,15 @@ class DeckEditForm extends React.Component{
               {cardsRows}
             </tbody>
           </table>
-          <button onClick={() => this.addCardForm()}>
-            Add Card
-          </button>
+          <div>
+            <button onClick={() => this.addCardForm()}>
+              Add Card
+            </button>
+            <button onClick={() => this.processDeck()}>
+              Save Changes
+            </button>
+          </div>
+          {saveConfirmation}
         </content>
       </main>
     );

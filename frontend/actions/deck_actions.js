@@ -10,6 +10,11 @@ export const createCardRating = (rating) => dispatch => {
              .then(card => dispatch(receiveCard(card)));
 };
 
+export const updateDeck = (id, cards) => dispatch => {
+  MainAPIUtil.updateDeck(id, cards)
+             .then(deck => dispatch(receiveDeck(deck)));
+};
+
 export const fetchDeck = (id) => (dispatch) => {
   MainAPIUtil.fetchDeck(id)
              .then(res => dispatch(receiveDeck(res)));
