@@ -10,6 +10,7 @@ const mapStateToProps = (state, ownProps) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   fetchDeck: (id) => dispatch(fetchDeck(id)),
+  createCardRating: (rating) => dispatch(createCardRating(rating)),
 });
 
 export default connect(

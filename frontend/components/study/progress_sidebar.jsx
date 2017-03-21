@@ -4,7 +4,6 @@ import { Link } from 'react-router';
 class ProgressSidebar extends React.Component{
   constructor(props){
     super(props);
-
   }
 
   componentDidMount(){
@@ -15,7 +14,7 @@ class ProgressSidebar extends React.Component{
     let { cardCount, cards } = this.props;
     let rawScore = 0;
     cards.forEach((card) => {
-      rawScore += parseInt(card.currentRating);
+      rawScore += parseInt(card.rating);
     });
     return (rawScore/(5*cardCount)).toFixed(2);
   }

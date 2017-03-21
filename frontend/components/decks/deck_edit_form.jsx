@@ -15,6 +15,7 @@ class DeckEditForm extends React.Component{
     this.questionChange = this.questionChange.bind(this);
     this.answerChange = this.answerChange.bind(this);
     this.handleDelete = this.handleDelete.bind(this);
+    this.addCardForm = this.addCardForm.bind(this);
   }
 
   componentWillMount(){
@@ -22,24 +23,24 @@ class DeckEditForm extends React.Component{
   }
 
   componentWillReceiveProps(nextProps){
-    if(isEqual(this.props.deck.cards, nextProps.deck.cards)){
+    if(!isEqual(this.state.cards, nextProps.deck.cards)){
       this.setState({cards: nextProps.deck.cards});
     }
   }
 
   questionChange(idx){
-    return function(e) {
+    return (e) => {
       e.preventDefault();
-      let newCards = this.props.cards.slice();
+      let newCards = this.state.cards.slice();
       newCards[idx].question = e.target.value;
       this.setState({ cards: newCards });
     };
   }
 
   answerChange(idx){
-    return function(e) {
+    return (e) => {
       e.preventDefault();
-      let newCards = this.props.cards.slice();
+      let newCards = this.state.cards.slice();
       newCards[idx].answer =  e.target.value;
       this.setState({ cards: newCards });
     };
@@ -48,7 +49,7 @@ class DeckEditForm extends React.Component{
   handleDelete(idx){
     return (e) => {
       e.preventDefault();
-      let newCards = this.props.cards.slice();
+      let newCards = this.state.cards.slice();
       newCards.splice(idx, 1);
       const newState = merge({}, this.state);
       newState.cards = newCards;
@@ -56,7 +57,14 @@ class DeckEditForm extends React.Component{
     };
   }
 
+  addCardForm(){
+    let newState = merge({}, this.state);
+    newState.cards.push({question: "", answer: ""});
+    this.setState(newState);
+  }
+
   render(){
+    let { title } = this.props.deck;
     let cardsRows = <tr>loading data</tr>;
     cardsRows = this.state.cards.map((card, idx) => {
       return(
@@ -81,6 +89,7 @@ class DeckEditForm extends React.Component{
       <main className="deck-edit-view-outer">
         <NavBarContainer />
         <content className="cards-list-table-wrapper">
+          <h1>Edit Deck: {title}</h1>
           <table className="cards-list-table-outer">
             <thead className="cards-list-table-head">
               <tr>
@@ -93,6 +102,9 @@ class DeckEditForm extends React.Component{
               {cardsRows}
             </tbody>
           </table>
+          <button onClick={() => this.addCardForm()}>
+            Add Card
+          </button>
         </content>
       </main>
     );

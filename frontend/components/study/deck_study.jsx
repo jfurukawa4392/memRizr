@@ -27,7 +27,8 @@ class DeckStudy extends React.Component{
           lastSubject={this.props.lastSubject}/>
         <CardViewer
           card={cards[this.state.currentCard]}
-          currentCardIndex={this.state.currentCard}/>
+          currentCardIndex={this.state.currentCard}
+          createCardRating={this.props.createCardRating}/>
       </main>
     );
   }
