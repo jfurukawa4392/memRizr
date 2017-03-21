@@ -17,6 +17,10 @@
   align-items: center;
   background-color: $off-black;
   color: $off-white;
+  >a{
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
   .deck-title-header{
     background-color: $gray;
     align-self: flex-start;
@@ -35,9 +39,53 @@
   }
 }
 
+.card-study-outer{
+  width: 60%;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  header{
+    text-align: right;
+    width: 100%;
+  }
+  main{
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    div{
+      border: 1px solid gray;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      padding: 50px;
+    }
+  }
+}
+
+// .card:active{
+// 	-webkit-animation: flip-2-ver-right-1 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+// 	-moz-animation: flip-2-ver-right-1 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+// 	animation: flip-2-ver-right-1 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+// }
+
+.reveal-rate-btn {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  border: 1px solid gray;
+  width: 100%;
+}
+
 .progress-nav-buttons{
-  margin-top: 15px;
-  margin-bottom: 15px;
   padding: 10px 40px;
   background-color: #29A5DC;
   text-decoration: none;
@@ -56,9 +104,4 @@
   text-align: center;
   font-weight: 100;
   font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-a{
-  text-decoration: none;
-  color: white;
 }

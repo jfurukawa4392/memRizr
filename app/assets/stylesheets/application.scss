@@ -18,8 +18,11 @@
 body{
   font-family: $nunito;
 }
-
-
+a{
+  text-decoration: none;
+  color: white;
+}
+@import "animista";
 @import "navbar";
 @import "sessions";
 @import "home";

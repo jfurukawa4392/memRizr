@@ -3,9 +3,14 @@
 .cards-list-table-wrapper{
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
   margin-top: 64px;
   padding: 10vh 20vw 10vh 20vw;
+  h1{
+    font-size: 35px;
+    margin: 10px;
+  }
   td{
     vertical-align: middle;
     padding: 4px;
