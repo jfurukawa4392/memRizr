@@ -7,6 +7,7 @@
   align-items: center;
   margin-top: 64px;
   padding: 10vh 20vw 10vh 20vw;
+  background-color: $off-white;
   h1{
     font-size: 35px;
     margin: 10px;
@@ -21,6 +22,7 @@
     justify-content: center;
     button{
       margin: 8px;
+      border-radius: 1px;
     }
   }
 }
@@ -36,5 +38,49 @@
     justify-content: center;
     align-items: center;
     border-radius: 3px;
+  }
+}
+
+.tags{
+  align-items: center;
+  flex-wrap: wrap;
+  width: 75%;
+  border-radius: 1px;
+  form{
+    margin: 6px;
+    .tag-form-btn{
+      background-color: $light-blue;
+      border-radius: 1px;
+      padding: 5px 10px 5px 10px;
+      font-family: $nunito;
+      border: 0px;
+      margin: 8px;
+      font-weight: bold;
+    }
+    input{
+      margin: 4px;
+    }
+  }
+  .deck-tag{
+    background-color: $reveal-blue;
+    height: 20px;
+    margin: 5px;
+    padding-right: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    border-radius: 2px;
+    button{
+      background-color: inherit;
+      height: 100%;
+      width: auto;
+      margin: 0;
+      padding: 0;
+      border-radius: inherit;
+      &:hover{
+        background-color: $delete-red;
+      }
+    }
   }
 }

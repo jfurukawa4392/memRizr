@@ -18,7 +18,6 @@ class DeckTags extends React.Component{
 
   handleNewTag(e){
     e.preventDefault();
-    console.log(e.target);
     this.setState({
       newTag: e.target.value
     });
@@ -87,7 +86,7 @@ class DeckTags extends React.Component{
 
     return(
       <div className="tags">
-        Tags
+        Tags: 
         {tagItems}
         {this.state.showTagForm ? tagForm : <button onClick={() => this.toggleShowTagForm()}>Add Tag</button>}
       </div>

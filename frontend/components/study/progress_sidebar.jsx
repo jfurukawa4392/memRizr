@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
+import { Line, Circle } from 'rc-progress';
 
 class ProgressSidebar extends React.Component{
   constructor(props){
@@ -21,9 +22,15 @@ class ProgressSidebar extends React.Component{
     return (rawScore/(5*cardCount));
   }
 
+  calculateDistribution(cards){
+    let scores = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
+
+
+  }
+
   render(){
     let { title, subjectId } = this.props;
-    let stats = this.calculateMastery(this.props);
+    let stats = Math.floor(this.calculateMastery(this.props)*100);
 
     return(
       <aside className="progress-sidebar-outer">
@@ -37,8 +44,9 @@ class ProgressSidebar extends React.Component{
             Done
           </div>
         </Link>
+        <Circle percent={`${stats}`} strokeWidth="4" strokeColor="#40B8DA" />
         <figure className="progress-stats">
-          {`${Math.floor(stats*100)}%`}
+          {`${stats}%`}
         </figure>
       </aside>
     );
