@@ -28,6 +28,13 @@ class Deck < ApplicationRecord
   )
 
   has_many :cards, dependent: :destroy
+  has_many :taggings, dependent: :destroy
+
+  has_many(
+    :tags,
+    through: :taggings,
+    source: :tag
+  )
 
   def getCardRatings(user_id)
     self.cards.left_outer_joins(:ratings).where("card_ratings.user_id = #{user_id}").select('cards.id', 'cards.question', 'cards.answer', :rating)
