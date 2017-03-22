@@ -78,3 +78,12 @@ export const deleteTagging = (tag) => (
     data: { tag }
   })
 );
+
+export const requestResults = (query) => {
+  // parse query string here?
+  return(
+    $.ajax({
+      url: `api/subjects`,
+    })
+  );
+};
