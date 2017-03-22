@@ -35,7 +35,10 @@ const DeckIndexItem = (props) => {
     <li key={deck.id} className="deck-item-outer">
       <div className="deck-item-inner">
         <div className="deck-title">
-          <h4>{deck.title}</h4>
+          <Link
+            to={`/study/${deck.id}`}>
+            <h4>{deck.title}</h4>
+          </Link>
         </div>
         <div className="deck-options">
           <Link

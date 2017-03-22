@@ -20,28 +20,29 @@ class Api::DecksController < ApplicationController
   end
 
   def update
-    puts "in update"
     @deck = Deck.find(params[:id])
     #get ids of previous cards associated with this deck
     prev_card_ids = @deck.cards.map { |card| card.id}
 
     #get ids for new or updated cards
     new_ids = []
-    params[:cards].each do |card|
-      new_or_update_card =  Card.find_by(deck_id: @deck.id, question: card[question], answer: card[answer])
+    params[:deck][:cards].each do |k, card|
+      new_or_update_card =  Card.find_by(deck_id: @deck.id, question: card[:question], answer: card[:answer])
       if(new_or_update_card)
-        new_or_update_card.update(question: card[question], answer: card[answer])
+        new_or_update_card.update(question: card[:question], answer: card[:answer])
         new_ids << new_or_update_card.id
       else
-        new_ids << Card.create(deck_id: @deck.id, question: card[question], answer: card[answer]).id
+        new_ids << Card.create(deck_id: @deck.id, question: card[:question], answer: card[:answer]).id
       end
     end
-    puts "past updating/creating"
-    #card ids that aren't in the new set should be destroyed
-    (new_ids - prev_card_ids).each do |id|
-      Card.find_by(id: id).destroy
-    end
 
+    (prev_card_ids - new_ids).each do |id|
+      card = Card.find_by(id: id)
+      card.destroy
+    end
+    p @deck.cards.last
+    @deck = Deck.find(params[:id])
+    p @deck.cards.last
     render 'api/decks/show'
   end
 
@@ -53,6 +54,6 @@ class Api::DecksController < ApplicationController
 
   private
   def deck_params
-    params.require(:deck).permit(:subject_id, :title)
+    params.require(:deck).permit(:subject_id, :title, :cards)
   end
 end

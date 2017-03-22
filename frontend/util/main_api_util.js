@@ -6,11 +6,11 @@ export const createRating = (card_rating) => (
   })
 );
 
-export const updateDeck = (id, cards) => (
+export const updateDeck = (deck) => (
   $.ajax({
-    url: `api/decks/${id}`,
+    url: `api/decks/${deck.id}`,
     method: 'PATCH',
-    data: { cards }
+    data: { deck }
   })
 );
 

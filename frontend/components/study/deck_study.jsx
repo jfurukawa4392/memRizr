@@ -18,9 +18,12 @@ class DeckStudy extends React.Component{
     this.props.fetchDeck(this.props.deckId);
   }
 
+  componentWillUnmount(){
+    this.props.removeDeck();
+  }
+
   nextCard(){
     let { cardCount } = this.props.activeDeck;
-    console.log(cardCount);
     let randomNum = Math.floor(Math.random()*cardCount);
 
     while(randomNum === this.state.currentCard){

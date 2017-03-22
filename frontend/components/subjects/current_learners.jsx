@@ -8,9 +8,7 @@ const CurrentLearners = ( { subjectDetail } ) => {
 
       return(
         <li key={idx}>
-          <a href="#">
-            { user.username }
-          </a>
+          { user.username }
         </li>
       );
     });

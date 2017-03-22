@@ -1,6 +1,7 @@
 import {
   RECEIVE_DECK,
-  RECEIVE_CARD
+  RECEIVE_CARD,
+  REMOVE_DECK
 } from '../actions/deck_actions';
 import merge from 'lodash/merge';
 
@@ -16,10 +17,9 @@ const DeckReducer = (state = _nullDeck, action) => {
   switch (action.type){
     case(RECEIVE_DECK):
       newState = action.deck;
-      return merge({}, state, newState);
+      return newState;
     case(RECEIVE_CARD):
       newState = merge({}, state);
-      console.log(action.card);
       newState.cards = newState.cards.map((card) => {
         if(card.id === action.card.id){
           return action.card;
@@ -28,6 +28,8 @@ const DeckReducer = (state = _nullDeck, action) => {
         }
       });
       return newState;
+    case(REMOVE_DECK):
+      return merge({}, _nullDeck);
     default:
       return state;
     }

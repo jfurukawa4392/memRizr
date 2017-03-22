@@ -26,7 +26,7 @@ class Home extends React.Component{
           <content className="home-inner">
             <section className="greetHeader">
               <h1>Keep your memory sharp</h1>
-              <h3>Get started below!</h3>
+              <h3>Search flashcards below!</h3>
             </section>
             <form className="search"
               onSubmit={this.handleSubmit}>

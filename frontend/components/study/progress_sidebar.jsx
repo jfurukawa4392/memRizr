@@ -18,7 +18,7 @@ class ProgressSidebar extends React.Component{
     cards.forEach((card) => {
       rawScore += parseInt(card.rating);
     });
-    return (rawScore/(5*cardCount)).toFixed(2);
+    return (rawScore/(5*cardCount));
   }
 
   render(){

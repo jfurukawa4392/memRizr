@@ -10,9 +10,10 @@ export const createCardRating = (rating) => dispatch => {
              .then(card => dispatch(receiveCard(card)));
 };
 
-export const updateDeck = (id, cards) => dispatch => {
-  MainAPIUtil.updateDeck(id, cards)
-             .then(deck => dispatch(receiveDeck(deck)));
+export const updateDeck = (deck) => dispatch => {
+  MainAPIUtil.updateDeck(deck)
+             .then(res => { console.log(res); 
+               dispatch(receiveDeck(res));});
 };
 
 export const fetchDeck = (id) => (dispatch) => {
@@ -30,9 +31,8 @@ export const deleteDeck = (deckId) => (dispatch) => {
              .then(deck => (dispatch(fetchSubject(deck.subject_id))));
 };
 
-export const removeDeck = (deckId) => ({
+export const removeDeck = () => ({
   type: REMOVE_DECK,
-  deckId
 });
 
 export const receiveDeck = (deck) => ({

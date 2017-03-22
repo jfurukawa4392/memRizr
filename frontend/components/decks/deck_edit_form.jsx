@@ -83,8 +83,9 @@ class DeckEditForm extends React.Component{
       cards.push(this.state.cards[i]);
     }
     console.log("cards validated, saving now");
-    console.log(cards);
-    updateDeck(deckId, cards);
+    updateDeck({
+      id: this.props.deckId,
+      cards });
     this.setState({cards: cards, errors: [], confirmSave: true});
   }
 
