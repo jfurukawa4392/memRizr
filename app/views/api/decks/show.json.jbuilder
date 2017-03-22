@@ -1,7 +1,7 @@
 json.id @deck.id
 json.title @deck.title
 json.subjectId @deck.subject_id
-
+json.tags @deck.tags
 # cardArr = @deck.cards.left_outer_joins(:ratings).select('cards.id', 'cards.question', 'cards.answer', :rating)
 # cardArr = @deck.cards.left_outer_joins(:ratings).left_outer_joins(user_id: current_user.id).select('cards.id', 'cards.question', 'cards.answer', :rating)
 count = 0

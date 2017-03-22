@@ -5,6 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+User.destroy_all
+Subject.destroy_all
+SubjectFollower.destroy_all
+Deck.destroy_all
+Card.destroy_all
+CardRating.destroy_all
 
 #Create 20 users
 user_arr = []
@@ -19,10 +25,12 @@ Faker::HarryPotter.unique.clear
 jesse = User.create!(username: "Jesse", password: "password")
 guest = User.create!(username: "Guest", password: "password")
 
+
 #Create Subjects
 subject1 = Subject.create!(title: 'Pokemon', creator_id: guest.id)
 subject2 = Subject.create!(title: 'Harry Potter', creator_id: guest.id)
 subject3 = Subject.create!(title: 'Game of Thrones', creator_id: guest.id)
+
 
 #every user follows every subject
 user_arr.each do |user|
@@ -30,6 +38,7 @@ user_arr.each do |user|
   SubjectFollow.create(user_id: user.id, subject_id: subject2.id)
   SubjectFollow.create(user_id: user.id, subject_id: subject3.id)
 end
+
 
 #Create 4 pokemon decks of 30 cards each under Pokemon subject
 pokemonRegions = %w(Kanto Johto Hoenn Sinnoh)

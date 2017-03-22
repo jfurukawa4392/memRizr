@@ -2,6 +2,7 @@ import merge from 'lodash/merge';
 import isEqual from 'lodash/isEqual';
 import React from 'react';
 import NavBarContainer from '../navbar_container';
+import DeckTags from './deck_tags';
 
 class DeckEditForm extends React.Component{
   constructor(props){
@@ -25,8 +26,11 @@ class DeckEditForm extends React.Component{
   }
 
   componentWillReceiveProps(nextProps){
-    if(!isEqual(this.state.cards, nextProps.deck.cards)){
-      this.setState({cards: nextProps.deck.cards, confirmSave: false});
+    if(!isEqual(this.state.cards, nextProps.deck.cards ||
+       !isEqual(this.props.deck.tags, nextProps.deck.tags))){
+      this.setState({
+        cards: nextProps.deck.cards,
+        confirmSave: false});
     }
   }
 
@@ -82,7 +86,6 @@ class DeckEditForm extends React.Component{
 
       cards.push(this.state.cards[i]);
     }
-    console.log("cards validated, saving now");
     updateDeck({
       id: this.props.deckId,
       cards });
@@ -90,7 +93,7 @@ class DeckEditForm extends React.Component{
   }
 
   render(){
-    let { title } = this.props.deck;
+    let { title, tags } = this.props.deck;
     let cardsRows = <tr>loading data</tr>;
     cardsRows = this.state.cards.map((card, idx) => {
       return(
@@ -143,6 +146,11 @@ class DeckEditForm extends React.Component{
             </button>
           </div>
           {saveConfirmation}
+          <DeckTags
+            createTagging={this.props.createTagging}
+            deleteTagging={this.props.deleteTagging}
+            tags={tags}
+            deckId={this.props.deckId}/>
         </content>
       </main>
     );

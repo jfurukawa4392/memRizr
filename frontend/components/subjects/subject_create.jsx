@@ -26,6 +26,10 @@ class SubjectForm extends React.Component{
       title: this.state.title,
       creator_id: userId
     });
+
+    this.setState({
+      title: ""
+    });
   }
 
   render(){

@@ -12,7 +12,7 @@ export const createCardRating = (rating) => dispatch => {
 
 export const updateDeck = (deck) => dispatch => {
   MainAPIUtil.updateDeck(deck)
-             .then(res => { console.log(res); 
+             .then(res => { console.log(res);
                dispatch(receiveDeck(res));});
 };
 
@@ -28,7 +28,17 @@ export const createDeck = (deck) => (dispatch) => {
 
 export const deleteDeck = (deckId) => (dispatch) => {
   MainAPIUtil.deleteDeck(deckId)
-             .then(deck => (dispatch(fetchSubject(deck.subject_id))));
+             .then(deck => dispatch(fetchSubject(deck.subject_id)));
+};
+
+export const createTagging = (tagging) => (dispatch) => {
+  MainAPIUtil.createTagging(tagging)
+             .then(deck => dispatch(receiveDeck(deck)));
+};
+
+export const deleteTagging = (tag) => (dispatch) => {
+  MainAPIUtil.deleteTagging(tag)
+             .then(deck => dispatch(receiveDeck(deck)));
 };
 
 export const removeDeck = () => ({
