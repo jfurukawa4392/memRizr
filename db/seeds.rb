@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 User.destroy_all
 Subject.destroy_all
-SubjectFollower.destroy_all
+SubjectFollow.destroy_all
 Deck.destroy_all
 Card.destroy_all
 CardRating.destroy_all
