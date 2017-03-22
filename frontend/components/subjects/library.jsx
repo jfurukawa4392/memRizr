@@ -5,6 +5,13 @@ import NavBarContainer from '../navbar_container';
 
 class Library extends React.Component{
   componentDidMount(){
+    if(this.props.params.subjectId){
+      this.props.getSubject(this.props.params.subjectId);
+    } else {
+      if(this.props.subjects) {
+        this.props.getSubject(Object.keys(this.props.subjects)[0]);
+      }
+    }
     this.props.getSubjects(this.props.currentUser);
   }
 

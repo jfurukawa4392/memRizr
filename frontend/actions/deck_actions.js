@@ -12,7 +12,7 @@ export const createCardRating = (rating) => dispatch => {
 
 export const updateDeck = (deck) => dispatch => {
   MainAPIUtil.updateDeck(deck)
-             .then(res => { console.log(res);
+             .then(res => { 
                dispatch(receiveDeck(res));});
 };
 

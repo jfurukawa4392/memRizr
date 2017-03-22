@@ -16,7 +16,11 @@ class SubjectDetail extends React.Component{
 
   componentWillReceiveProps(nextProps){
     if(this.props.params.subjectId !== nextProps.params.subjectId){
-      this.props.fetchSubject(nextProps.params.subjectId);
+      if(!nextProps.params.subjectId && this.props.subjects){
+        this.props.fetchSubject(Object.keys(this.props.subjects)[0]);
+      } else{
+        this.props.fetchSubject(nextProps.params.subjectId);
+      }
     }
   }
 

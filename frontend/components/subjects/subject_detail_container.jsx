@@ -3,10 +3,11 @@ import SubjectDetail from './subject_detail';
 import { fetchSubject } from '../../actions/subject_actions';
 import { createDeck, deleteDeck } from '../../actions/deck_actions';
 
-const mapStateToProps = ({ activeSubject, session }) => ({
+const mapStateToProps = ({ activeSubject, session, subjects }) => ({
   decks: activeSubject.decks,
   subjectDetail: activeSubject.subjectDetail,
-  currentUser: session.currentUser
+  currentUser: session.currentUser,
+  subjects
 });
 
 const mapDispatchToProps = dispatch => ({

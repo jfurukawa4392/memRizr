@@ -41,11 +41,11 @@ export const fetchFollowedSubjects = () => (
   })
 );
 
-export const fetchSubjectDetail = (id) => (
-  $.ajax({
+export const fetchSubjectDetail = (id) => {
+  return $.ajax({
     url: `api/subjects/${id}`
-  })
-);
+  });
+};
 
 export const createSubject = (subject) => (
   $.ajax({
@@ -79,11 +79,11 @@ export const deleteTagging = (tag) => (
   })
 );
 
-export const requestResults = (query) => {
-  // parse query string here?
+export const requestResults = (data) => {
   return(
     $.ajax({
       url: `api/subjects`,
+      data
     })
   );
 };
