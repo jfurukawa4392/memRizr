@@ -7,7 +7,7 @@ import { Router,
 import { Provider } from 'react-redux';
 import App from './app';
 import SessionFormContainer from './session/session_form_container';
-import SearchContainer from './search/search_container';
+import SearchBarContainer from './search/search_bar_container';
 import { receiveErrors } from '../actions/session_actions';
 import LibraryContainer from './subjects/library_container';
 import SubjectDetailContainer from './subjects/subject_detail_container';

@@ -31,7 +31,7 @@ class ProgressSidebar extends React.Component{
   render(){
     let { title, subjectId } = this.props;
     let stats = Math.floor(this.calculateMastery(this.props)*100);
-
+    // <Circle percent="10" strokeWidth="4" strokeColor="#D3D3D3" />
     return(
       <aside className="progress-sidebar-outer">
         <header className="deck-title-header">

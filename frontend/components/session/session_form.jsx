@@ -39,7 +39,7 @@ class SessionForm extends React.Component {
       username: "Guest",
       password: "password"
     };
-    this.props.processForm(user);
+    setTimeout(() => this.props.processForm(user), 0);
   }
 
   update(field) {
