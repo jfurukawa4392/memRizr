@@ -69,10 +69,11 @@ class SearchBar extends React.Component{
           className="search-bar-header-wrapper">
           <div
             className="search-bar-head">
-            <i className="fa fa-search"></i>
+            <i className="fa fa-search fa-lg"></i>
             <input
               type="text"
               value={this.state.query}
+              placeholder="Search all subjects"
               className="search-input-field"
               onChange={(e) => this.handleUpdate(e)} />
             <button

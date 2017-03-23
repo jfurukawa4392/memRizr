@@ -9,8 +9,8 @@ class Api::SubjectFollowsController < ApplicationController
 
     sub_follow = SubjectFollow.new(user_id: current_user.id, subject_id: subject_id)
     if sub_follow.save
-      subject = sub_follow.subject
-      render json: { userFollows: true, subject: subject }
+      @subject = sub_follow.subject
+      render 'api/subjects/show'
     else
       render json: false
     end
@@ -19,8 +19,9 @@ class Api::SubjectFollowsController < ApplicationController
   def destroy
     follow = SubjectFollow.find_by(subject_id: params[:id],
                                    user_id: current_user.id)
+    @subject = follow.subject
     follow.destroy
-    render json: { userFollows: false, subjectId: params[:id] }
+    render json: { userFollows: false, subject: @subject }
   end
 
   private

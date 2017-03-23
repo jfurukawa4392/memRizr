@@ -5,13 +5,15 @@ export const RECEIVE_SUBJECT = 'RECEIVE_SUBJECT';
 export const RECEIVE_SUBJECT_ERRORS = 'RECEIVE_SUBJECT_ERRORS';
 export const RECEIVE_FOLLOW_STATUS = 'RECEIVE_FOLLOW_STATUS';
 export const REMOVE_SUBJECT = 'REMOVE_SUBJECT';
+export const CLEAR_SUBJECT = 'CLEAR_SUBJECT';
+export const CLEAR_SUBJECTS = 'CLEAR_SUBJECTS';
 
 export const fetchSubjects = (user = null) => (dispatch) => {
   if(user){
-    MainAPIUtil.fetchFollowedSubjects()
+    return MainAPIUtil.fetchFollowedSubjects()
                .then(res => dispatch(receiveSubjects(res)));
   } else {
-    MainAPIUtil.fetchAllSubjects()
+    return MainAPIUtil.fetchAllSubjects()
                .then(res => dispatch(receiveSubjects(res)));
   }
 };
@@ -38,13 +40,16 @@ export const createFollow = (subjectId) => (dispatch) => {
                console.log('response is: ');
                console.log(res);
                dispatch(receiveFollowStatus(res.userFollows));
-               dispatch(removeSubject(res.subject.id));
+               dispatch(receiveSubject(res));
              });
 };
 
 export const deleteFollow = (subjectId) => (dispatch) => {
   MainAPIUtil.deleteFollow(subjectId)
-             .then(res => dispatch(receiveFollowStatus(res)));
+             .then(res => {
+               dispatch(receiveFollowStatus(res.userFollows));
+               dispatch(removeSubject(res.subject));
+             });
 };
 
 export const receiveFollowStatus = (status) => ({
@@ -52,9 +57,9 @@ export const receiveFollowStatus = (status) => ({
   status
 });
 
-export const removeSubject = (subjectId) => ({
+export const removeSubject = (subject) => ({
   type: REMOVE_SUBJECT,
-  subjectId
+  subject
 });
 
 export const receiveSubjects = (subjects) => ({
@@ -65,4 +70,12 @@ export const receiveSubjects = (subjects) => ({
 export const receiveSubject = (subject) => ({
   type: RECEIVE_SUBJECT,
   subject
+});
+
+export const clearActiveSubject = () => ({
+  type: CLEAR_SUBJECT
+});
+
+export const clearSubjects = () => ({
+  type: CLEAR_SUBJECTS
 });

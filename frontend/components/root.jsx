@@ -9,6 +9,7 @@ import App from './app';
 import SessionFormContainer from './session/session_form_container';
 import BrowseSubjectsContainer from './search/browse_subjects_container';
 import { receiveErrors } from '../actions/session_actions';
+import { clearActiveSubject, clearSubjects } from '../actions/subject_actions';
 import LibraryContainer from './subjects/library_container';
 import SubjectDetailContainer from './subjects/subject_detail_container';
 import Home from './home';
@@ -35,6 +36,11 @@ const Root = ({store}) => {
     store.dispatch(receiveErrors([]));
   };
 
+  const _clearAllSubjects = () => {
+    store.dispatch(clearActiveSubject());
+    store.dispatch(clearSubjects());
+  };
+
   return (
     <Provider store={store}>
       <Router history={hashHistory}>
@@ -59,7 +65,12 @@ const Root = ({store}) => {
             onEnter={_ensureLoggedIn} />
           <Route
             path="/browse"
-            component={BrowseSubjectsContainer}/>
+            component={BrowseSubjectsContainer}
+            onLeave={_clearAllSubjects}>
+            <Route
+              path="/browse/:subjectId"
+              component={SubjectDetailContainer} />
+          </Route>
         </Route>
       </Router>
     </Provider>

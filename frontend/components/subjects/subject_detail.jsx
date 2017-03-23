@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router';
+import { Link, withRouter } from 'react-router';
 import CurrentLearners from './current_learners';
 import DeckIndex from '../decks/deck_index';
 
@@ -24,6 +24,12 @@ class SubjectDetail extends React.Component{
     }
   }
 
+  componentWillUnmount(){
+    if(this.props.location.pathname.match(/\/my-subjects/)){
+      this.props.clearSubject();
+    }
+  }
+
   toggleFollow(){
     let { userFollows, id } = this.props.subjectDetail;
     if(userFollows){
@@ -36,7 +42,17 @@ class SubjectDetail extends React.Component{
   render() {
     const { subjectDetail, decks, createDeck, deleteDeck, currentUser } = this.props;
     let deckList = <div className="no-decks-found">No Decks Found</div>;
-    let subjectTitle;
+    let subjectTitle = (
+      <div className="no-subjects-message">
+        <h1>
+          No Subjects in your Library
+        </h1>
+        <Link
+          to="/browse">
+          Click here to browse all subjects
+        </Link>
+      </div>
+    );
     let followButton = <div></div>;
     let currentLearners = (<div className="no-learners-div">No Current Learners</div>);
 
@@ -47,19 +63,22 @@ class SubjectDetail extends React.Component{
         createDeck={createDeck}
         deleteDeck={deleteDeck}
         currentUser={currentUser}/>;
-      subjectTitle = subjectDetail.title;
       currentLearners = <CurrentLearners subjectDetail={subjectDetail}/>;
-      followButton = subjectDetail.userFollows ?
-      (<button
-        onClick={() => this.toggleFollow()}
-        className="unfollow-subject-btn">
-        Unfollow
-      </button>) :
-      (<button
-        onClick={() => this.toggleFollow()}
-        className="follow-subject-btn">
-        Follow
-      </button>);
+      if(subjectDetail.title){
+        subjectTitle = subjectDetail.title;
+        followButton = subjectDetail.userFollows ?
+        (<button
+          onClick={() => this.toggleFollow()}
+          className="unfollow-subject-btn">
+          Unfollow
+        </button>) :
+        (<button
+          onClick={() => this.toggleFollow()}
+          className="follow-subject-btn">
+          <i className="fa fa-plus-square-o"></i>
+          Follow
+        </button>);
+      }
     } else {
       deckList = <div className="no-decks-found">No Decks Found</div>;
     }
@@ -68,7 +87,7 @@ class SubjectDetail extends React.Component{
       <article className="subject-detail-outer">
         <div className="subject-detail-inner">
           <header className="subject-title-header">
-            {subjectTitle}
+            <h1>{subjectTitle}</h1>
             {followButton}
           </header>
           <section className="deck-list-container">

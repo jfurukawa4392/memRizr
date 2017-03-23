@@ -28,12 +28,16 @@ class BrowseSubjects extends React.Component{
 
   render(){
     let { subjects } = this.props;
+    let mainWindow = <SubjectsList subjects={this.state.subjectList}/>;
+    if(this.props.params.subjectId){
+      mainWindow = this.props.children;
+    }
 
     return(
       <main className="browse-subjects-outer">
         <NavBarContainer />
         <SearchBarContainer />
-        <SubjectsList subjects={this.state.subjectList}/>
+        {mainWindow}
       </main>
     );
   }

@@ -3,7 +3,8 @@ import SubjectDetail from './subject_detail';
 import {
   fetchSubject,
   createFollow,
-  deleteFollow
+  deleteFollow,
+  clearActiveSubject
 } from '../../actions/subject_actions';
 import { createDeck, deleteDeck } from '../../actions/deck_actions';
 
@@ -19,7 +20,8 @@ const mapDispatchToProps = dispatch => ({
   createDeck: (deck) => dispatch(createDeck(deck)),
   deleteDeck: (deckId) => dispatch(deleteDeck(deckId)),
   createFollow: (subjectId) => dispatch(createFollow(subjectId)),
-  deleteFollow: (subjectId) => dispatch(deleteFollow(subjectId))
+  deleteFollow: (subjectId) => dispatch(deleteFollow(subjectId)),
+  clearSubject: () => dispatch(clearActiveSubject())
 });
 
 export default connect(

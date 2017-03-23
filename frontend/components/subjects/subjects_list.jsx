@@ -11,7 +11,7 @@ const SubjectsList = (props) => {
       return(
         <Link
           key={index}
-          to={`/subjects/${id}`}
+          to={`/browse/${id}`}
           className="subject-list-item">
           <li>
             {subjects[id].title}

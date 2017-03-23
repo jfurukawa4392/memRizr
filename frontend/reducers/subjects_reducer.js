@@ -1,7 +1,8 @@
 import {
   RECEIVE_SUBJECTS,
   RECEIVE_SUBJECT,
-  REMOVE_SUBJECT
+  REMOVE_SUBJECT,
+  CLEAR_SUBJECTS
 } from '../actions/subject_actions';
 import { RECEIVE_RESULTS } from '../actions/search_actions';
 import merge from 'lodash/merge';
@@ -14,16 +15,23 @@ const SubjectsReducer = (state = {}, action) => {
     case(RECEIVE_RESULTS):
       return merge({}, action.subjects);
     case(RECEIVE_SUBJECT):
-      newState = merge({}, state);
-      newState[action.subject.id] = action.subject;
-      return newState;
+      if(action.subject.subjectDetail.id){
+        let id = action.subject.subjectDetail.id;
+        newState = {};
+        newState[id] = {
+                         id,
+                         title: action.subject.subjectDetail.title
+                       };
+        return merge({}, state, newState);
+      } else {
+        return state;
+      }
     case(REMOVE_SUBJECT):
       newState = merge({}, state);
-      console.log('action is: ');
-      console.log(action);
-      delete newState[action.subjectId];
-      console.log(newState);
+      delete newState[action.subject.id];
       return newState;
+    case(CLEAR_SUBJECTS):
+      return {};
     default:
       return state;
   }
