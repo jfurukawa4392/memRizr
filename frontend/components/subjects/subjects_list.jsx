@@ -24,7 +24,8 @@ const SubjectsList = (props) => {
   return(
     <article
       className="subject-list-outer">
-      <div>
+      <div
+        className="subject-list-header">
         <h1>Browse Subjects</h1>
       </div>
       <ul

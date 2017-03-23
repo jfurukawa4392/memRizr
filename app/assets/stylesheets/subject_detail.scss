@@ -50,4 +50,15 @@
   font-size: 36px;
   margin-bottom: 15px;
   margin: 5px 0px 15px 5px;
+  display: flex;
+  justify-content: space-between;
+  button{
+    align-self: flex-end;
+  }
+  .unfollow-subject-btn{
+    background-color: $light-blue;
+  }
+  .follow-subject-btn{
+    background-color: $reveal-blue;
+  }
 }

@@ -24,10 +24,20 @@ class SubjectDetail extends React.Component{
     }
   }
 
+  toggleFollow(){
+    let { userFollows, id } = this.props.subjectDetail;
+    if(userFollows){
+      this.props.deleteFollow(id);
+    } else {
+      this.props.createFollow(id);
+    }
+  }
+
   render() {
     const { subjectDetail, decks, createDeck, deleteDeck, currentUser } = this.props;
     let deckList = <div className="no-decks-found">No Decks Found</div>;
     let subjectTitle;
+    let followButton = <div></div>;
     let currentLearners = (<div className="no-learners-div">No Current Learners</div>);
 
     if(subjectDetail){
@@ -39,6 +49,17 @@ class SubjectDetail extends React.Component{
         currentUser={currentUser}/>;
       subjectTitle = subjectDetail.title;
       currentLearners = <CurrentLearners subjectDetail={subjectDetail}/>;
+      followButton = subjectDetail.userFollows ?
+      (<button
+        onClick={() => this.toggleFollow()}
+        className="unfollow-subject-btn">
+        Unfollow
+      </button>) :
+      (<button
+        onClick={() => this.toggleFollow()}
+        className="follow-subject-btn">
+        Follow
+      </button>);
     } else {
       deckList = <div className="no-decks-found">No Decks Found</div>;
     }
@@ -48,6 +69,7 @@ class SubjectDetail extends React.Component{
         <div className="subject-detail-inner">
           <header className="subject-title-header">
             {subjectTitle}
+            {followButton}
           </header>
           <section className="deck-list-container">
             {deckList}

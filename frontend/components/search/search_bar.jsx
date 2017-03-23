@@ -33,7 +33,7 @@ class SearchBar extends React.Component{
     if(query.trim() === ""){
       APIUtil.fetchAllSubjects()
              .then(results => this.setState({
-               results
+               results: {}
              }));
     } else {
       console.log(query);
@@ -50,7 +50,6 @@ class SearchBar extends React.Component{
     let resultList = [];
     let key;
     for (var i = 0; i < resultKeys.length; i++) {
-      if(i > 4) break;
       key = resultKeys[i];
       resultList.push(
         <Link
@@ -70,6 +69,7 @@ class SearchBar extends React.Component{
           className="search-bar-header-wrapper">
           <div
             className="search-bar-head">
+            <i className="fa fa-search"></i>
             <input
               type="text"
               value={this.state.query}
@@ -80,10 +80,13 @@ class SearchBar extends React.Component{
               onClick={() => this.submitSearch()}>
               Search
             </button>
-            <ul
-              className="search-results-list">
-              {resultList}
-            </ul>
+            <div
+              className="results-list-wrapper">
+              <ul
+                className="search-results-list">
+                {resultList}
+              </ul>
+            </div>
           </div>
         </div>
         <aside
