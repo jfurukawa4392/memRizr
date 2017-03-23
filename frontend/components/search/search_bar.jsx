@@ -24,7 +24,6 @@ class SearchBar extends React.Component{
   }
 
   handleUpdate(e){
-
     let query = e.target.value;
 
     this.setState({
@@ -37,27 +36,64 @@ class SearchBar extends React.Component{
                results
              }));
     } else {
-      this.props.fetchFastResults(query)
-      .then(results => this.setState({
-        results
-      }));
+      console.log(query);
+      APIUtil.requestResults(query)
+             .then(results => this.setState({
+                results
+              }));
     }
   }
 
   render(){
-    let resultList = Object.keys(this.state.results).map((resultId) => (
-        this.state.results.resultId.title
-    ));
+    let resultKeys = Object.keys(this.state.results);
+    console.log(resultKeys);
+    let resultList = [];
+    let key;
+    for (var i = 0; i < resultKeys.length; i++) {
+      if(i > 4) break;
+      key = resultKeys[i];
+      resultList.push(
+        <Link
+          to={`/subjects/${key}`}
+          className="result-item"
+          key={i}>
+          <li>
+            {this.state.results[key].title}
+          </li>
+        </Link>
+      );
+    }
 
     return(
       <div className="search-bar-outer">
-        <form onSubmit={() => this.submitSearch()}>
-          <input
-            type="text"
-            value={this.state.query}
-            onChange={(e) => this.handleUpdate(e)} />
-          <input type="submit" />
-        </form>
+        <div
+          className="search-bar-header-wrapper">
+          <div
+            className="search-bar-head">
+            <input
+              type="text"
+              value={this.state.query}
+              className="search-input-field"
+              onChange={(e) => this.handleUpdate(e)} />
+            <button
+              className="submit-search-btn"
+              onClick={() => this.submitSearch()}>
+              Search
+            </button>
+            <ul
+              className="search-results-list">
+              {resultList}
+            </ul>
+          </div>
+        </div>
+        <aside
+          className="search-bar-side">
+          <article>
+            <h1>
+              The secret to getting ahead is getting started. Time to memRize!
+            </h1>
+          </article>
+        </aside>
       </div>
     );
   }

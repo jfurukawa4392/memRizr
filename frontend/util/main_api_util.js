@@ -79,11 +79,11 @@ export const deleteTagging = (tag) => (
   })
 );
 
-export const requestResults = (data) => {
+export const requestResults = (query) => {
   return(
     $.ajax({
       url: `api/subjects`,
-      data
+      data: { query }
     })
   );
 };

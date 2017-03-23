@@ -5,6 +5,11 @@ class Api::SubjectFollowsController < ApplicationController
   end
 
   def destroy
+    follow = SubjectFollow.find_by(subject_id: params[:id],
+                                   user_id: current_user.id)
+    @subject = follow.subject
+    follow.destroy
+    render 'api/subjects/show'
   end
 
   private
