@@ -1,0 +1,51 @@
+@import "variables";
+
+.browse-subjects-outer{
+  margin-top: 62px;
+  height: calc(100vh - 62px);
+  width: 100vw;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  .search-bar-outer{
+    width: 35vw;
+
+  }
+  .subject-list-outer{
+    width: 65vw;
+    background-color: #F2F2F2;
+    div{
+      padding: 1vw 2.5vw;
+      background-color: #2F2F2F;
+      h1{
+        font-size: 34px;
+        color: $orange;
+        font-weight: light;
+      }
+    }
+    ul{
+      list-style: none;
+      padding: 2vh 2.5vw;
+      line-height: 2;
+      font-size: 18px;
+      font-weight: lighter;
+      -moz-column-count: 4;
+      -moz-column-gap: 20px;
+      -webkit-column-count: 4;
+      -webkit-column-gap: 20px;
+      column-count: 2;
+      column-gap: 20px;
+      overflow: scroll;
+      li{
+        &:hover{
+          color: #1A769F;
+          font-weight: bold;
+          text-decoration: underline;
+        }
+      }
+    }
+    a{
+      color: #00AADE;
+    }
+  }
+}

@@ -23,7 +23,7 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  border-bottom: 4px solid #D96C06;
+  border-bottom: 2px solid $orange;
   height: 60px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.25);
 }
@@ -91,13 +91,14 @@ nav li a{
 }
 
 button {
-  background-color: $light-blue;
+  background-color: #00AADE;;
   font-family: $nunito;
   font-weight: bold;
   padding: 5px 10px 5px 10px;
   padding-left: 10px;
   padding-right: 10px;
   border: 0px;
+  border-radius: 2px;
   &:hover{
     background-color: $lighter-blue;
     cursor: pointer;
