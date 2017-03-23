@@ -5,9 +5,8 @@ export const RECEIVE_FAST_RESULTS = 'RECEIVE_FAST_RESULTS';
 
 export const fetchResults = (query, now = null) => dispatch => {
   if(now){
-    // go to state.currentResults
-    MainAPIUtil.requestResults(query)
-               .then(results => dispatch(receiveFastResults(results)));
+    // go to component as promise to chain setState on
+    return MainAPIUtil.requestResults(query);
   } else {
     // go to state.subjects
     MainAPIUtil.requestResults(query)
@@ -15,9 +14,9 @@ export const fetchResults = (query, now = null) => dispatch => {
   }
 };
 
-export const receiveResults = (results) => ({
+export const receiveResults = (subjects) => ({
   type: RECEIVE_RESULTS,
-  results
+  subjects
 });
 
 export const receiveFastResults = (results) => ({

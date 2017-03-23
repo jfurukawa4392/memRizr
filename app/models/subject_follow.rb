@@ -10,7 +10,8 @@
 #
 
 class SubjectFollow < ApplicationRecord
-  validates :user_id, :subject_id, null: false
+  validates :user_id, :subject_id, presence: true
+  validates :user_id, uniqueness: { scope: :subject_id }
 
   belongs_to :user
   belongs_to :subject

@@ -38,4 +38,8 @@ class Subject < ApplicationRecord
     through: :subject_follows,
     source: :user
   )
+
+  def is_followed_by?(user)
+    self.followers.include?(user)
+  end
 end

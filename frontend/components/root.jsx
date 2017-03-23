@@ -7,7 +7,7 @@ import { Router,
 import { Provider } from 'react-redux';
 import App from './app';
 import SessionFormContainer from './session/session_form_container';
-import SearchBarContainer from './search/search_bar_container';
+import BrowseSubjectsContainer from './search/browse_subjects_container';
 import { receiveErrors } from '../actions/session_actions';
 import LibraryContainer from './subjects/library_container';
 import SubjectDetailContainer from './subjects/subject_detail_container';
@@ -27,7 +27,7 @@ const Root = ({store}) => {
   const _redirectIfLoggedIn = (nextState, replace) => {
     const currentUser = store.getState().session.currentUser;
     if (currentUser) {
-      replace('/');
+      replace('/my-subjects');
     }
   };
 
@@ -57,6 +57,9 @@ const Root = ({store}) => {
             path="/deck/:deckId/edit"
             component={DeckEditFormContainer}
             onEnter={_ensureLoggedIn} />
+          <Route
+            path="/browse"
+            component={BrowseSubjectsContainer}/>
         </Route>
       </Router>
     </Provider>

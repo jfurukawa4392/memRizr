@@ -1,7 +1,15 @@
 class Api::SubjectsController < ApplicationController
 
   def index
-    @subjects = Subject.all
+    params.permit(:query)
+    query = params[:query]
+    p query
+    if query
+      search_table = Subject.left_outer_joins(decks: { taggings: :tag })
+      @subjects = search_table.where("subjects.title like :query or decks.title like :query or tags.tag_name like :query", { query: "#{query}%"})
+    else
+      @subjects = Subject.all
+    end
   end
 
   def show

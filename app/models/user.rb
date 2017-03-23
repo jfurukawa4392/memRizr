@@ -84,6 +84,10 @@ class User < ActiveRecord::Base
     self.session_token
   end
 
+  def follows?(subject)
+    self.followed_subjects.include?(subject)
+  end
+
   private
   def ensure_session_token
     self.session_token ||= self.reset_session_token!

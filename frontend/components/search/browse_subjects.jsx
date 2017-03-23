@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from  'react-redux';
 import NavBarContainer from '../navbar_container';
-import SearchContainer from './search_container';
+import SearchBarContainer from './search_bar_container';
 import SubjectsList from '../subjects/subjects_list';
 import isEqual from 'lodash/isEqual';
 
@@ -12,6 +12,10 @@ class BrowseSubjects extends React.Component{
     this.state = {
       subjectList: {}
     };
+  }
+
+  componentWillMount(){
+    this.props.fetchSubjects();
   }
 
   componentWillReceiveProps(nextProps){
@@ -28,7 +32,7 @@ class BrowseSubjects extends React.Component{
     return(
       <main className="browse-subjects-outer">
         <NavBarContainer />
-        <SearchContainer />
+        <SearchBarContainer />
         <SubjectsList subjects={this.state.subjectList}/>
       </main>
     );
