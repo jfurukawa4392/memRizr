@@ -1,6 +1,7 @@
 import {
   RECEIVE_SUBJECT,
-  RECEIVE_SUBJECT_ERRORS
+  RECEIVE_SUBJECT_ERRORS,
+  RECEIVE_FOLLOW_STATUS
 } from '../actions/subject_actions';
 import {
   REMOVE_DECK
@@ -9,7 +10,12 @@ import merge from 'lodash/merge';
 
 const _nullSubject = {
   decks: [],
-  subjectDetail: null,
+  subjectDetail: {
+    id: null,
+    title: "",
+    creator: null,
+    userFollows: false
+  },
   errors: []
 };
 
@@ -31,6 +37,10 @@ const SubjectDetailReducer = (state = _nullSubject, action) => {
       });
       newState = { decks: newDecks };
       return merge({}, state, newState);
+    case(RECEIVE_FOLLOW_STATUS):
+      newState = merge({}, state);
+      newState.subjectDetail.userFollows = action.status;
+      return newState;
     default:
       return state;
   }

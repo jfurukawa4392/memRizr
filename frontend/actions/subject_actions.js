@@ -3,6 +3,8 @@ import * as MainAPIUtil from '../util/main_api_util';
 export const RECEIVE_SUBJECTS = 'RECEIVE_SUBJECTS';
 export const RECEIVE_SUBJECT = 'RECEIVE_SUBJECT';
 export const RECEIVE_SUBJECT_ERRORS = 'RECEIVE_SUBJECT_ERRORS';
+export const RECEIVE_FOLLOW_STATUS = 'RECEIVE_FOLLOW_STATUS';
+export const REMOVE_SUBJECT = 'REMOVE_SUBJECT';
 
 export const fetchSubjects = (user = null) => (dispatch) => {
   if(user){
@@ -29,6 +31,31 @@ export const createSubject = (subject) => (dispatch) => {
                           });
              });
 };
+
+export const createFollow = (subjectId) => (dispatch) => {
+  MainAPIUtil.createFollow(subjectId)
+             .then(res => {
+               console.log('response is: ');
+               console.log(res);
+               dispatch(receiveFollowStatus(res.userFollows));
+               dispatch(removeSubject(res.subject.id));
+             });
+};
+
+export const deleteFollow = (subjectId) => (dispatch) => {
+  MainAPIUtil.deleteFollow(subjectId)
+             .then(res => dispatch(receiveFollowStatus(res)));
+};
+
+export const receiveFollowStatus = (status) => ({
+  type: RECEIVE_FOLLOW_STATUS,
+  status
+});
+
+export const removeSubject = (subjectId) => ({
+  type: REMOVE_SUBJECT,
+  subjectId
+});
 
 export const receiveSubjects = (subjects) => ({
   type: RECEIVE_SUBJECTS,

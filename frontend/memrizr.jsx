@@ -20,6 +20,8 @@ document.addEventListener("DOMContentLoaded", () => {
   window.store = store;
   window.state = store.getState;
   window.requestResults = SearchActions.fetchResults;
+  window.createFollow = SubjectActions.createFollow;
+  window.deleteFollow = SubjectActions.deleteFollow;
 
   ReactDOM.render(<Root store={store}/>, root);
 });

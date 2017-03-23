@@ -4,12 +4,23 @@ class Api::SubjectFollowsController < ApplicationController
     render 'api/subjects/index'
   end
 
+  def create
+    subject_id = params.permit(:subjectId)[:subjectId]
+
+    sub_follow = SubjectFollow.new(user_id: current_user.id, subject_id: subject_id)
+    if sub_follow.save
+      subject = sub_follow.subject
+      render json: { userFollows: true, subject: subject }
+    else
+      render json: false
+    end
+  end
+
   def destroy
     follow = SubjectFollow.find_by(subject_id: params[:id],
                                    user_id: current_user.id)
-    @subject = follow.subject
     follow.destroy
-    render 'api/subjects/show'
+    render json: { userFollows: false, subjectId: params[:id] }
   end
 
   private

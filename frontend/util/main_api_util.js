@@ -87,3 +87,19 @@ export const requestResults = (query) => {
     })
   );
 };
+
+export const createFollow = (subjectId) => (
+  $.ajax({
+    url: `api/subject_follows`,
+    method: 'POST',
+    data: { subjectId }
+  })
+);
+
+export const deleteFollow = (subjectId) => (
+  $.ajax({
+    url: `api/subject_follows/${subjectId}`,
+    method: 'DELETE',
+    data: { subjectId }
+  })
+);
