@@ -21,23 +21,30 @@
         align-items: center;
         width: 100%;
         font-weight: normal;
+        border-radius: 2px;
+        i{
+          position: absolute;
+          color: #006BA2;
+          padding: 0px 20px;
+        }
         input{
           box-sizing: border-box;
           width: 70%;
           height: 100%;
           border: 0;
-          padding: 10px 25px;
+          padding: 10px 5px 10px 50px;
           background-color: #888888;
           color: white;
           font-size: 18px;
           font-weight: 200;
+          text-overflow: ellipsis;
         }
         button{
           width: 30%;
           height: 100%;
           font-size: auto;
           background-color: black;
-          color: $reveal-blue;
+          color: $light-blue;
           font-size: 16px;
         }
         .results-list-wrapper{

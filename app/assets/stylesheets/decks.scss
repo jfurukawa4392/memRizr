@@ -8,6 +8,9 @@
   border-bottom: 2px solid $off-black;
   .deck-list-options{
     padding-bottom: 4px;
+    button{
+      color: white;
+    }
   }
   .deck-header{
     display: flex;
@@ -77,22 +80,27 @@
     border-radius: 2px;
     border: none;
     cursor: pointer;
+    background-color: $light-blue;
+    color: white;
   }
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: $light-blue;
+    left: 30px;
+    top: -4px;
     z-index: 1;
     .deck-link-wrapper{
-      color: black;
+      color: $off-white;
       text-decoration: none;
       display: block;
-      border: 1px solid black;
-      // padding-bottom: 4px;
+      // border: 1px solid black;
       display: flex;
       justify-content: center;
+      background-color: $light-blue;
+      transition: all 0.3s ease 0s;
       &:hover{
-        background-color: $lighter-blue;
+        background-color: #1E86B4;
+        color: white;
       }
       a{
         padding: 5px;
@@ -100,11 +108,15 @@
         font-weight: bold;
         text-align: center;
         text-decoration: none;
-        color: black;
+        color: white;
         font-size: 11px;
       }
-      .deck-delete-btn:hover{
-        background-color: $delete-red;
+      .deck-delete-btn{
+        color: $off-white;
+        &:hover{
+          color: white;
+          background-color: $delete-red;
+        }
       }
     }
   }
@@ -112,6 +124,7 @@
 
 .dropdown:hover .dropdown-content {
   display: block;
+
 }
 
 .deck-item-outer{

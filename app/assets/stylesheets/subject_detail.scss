@@ -9,13 +9,25 @@
   width: 70vw;
   height: 100%;
   background-color: $white;
+  box-sizing: border-box;
   .subject-detail-inner{
     display: flex;
     flex-direction: column;
     width: 100%;
+    .deck-title{
+      width: 65%;
+    }
+    .no-subjects-message{
+      a{
+        font-size: 16px;
+        color: $reveal-blue;
+        text-decoration: underline;
+      }
+    }
     .deck-options{
       border-radius: 2px;
       background-color: $light-blue;
+      color: white;
       .deck-link-wrapper{
         color: $light-blue;
         &:hover{
@@ -46,19 +58,39 @@
 }
 
 .subject-title-header{
-  color: $orange;
-  font-size: 36px;
-  margin-bottom: 15px;
-  margin: 5px 0px 15px 5px;
   display: flex;
   justify-content: space-between;
+  h1{
+    color: $orange;
+    font-size: 36px;
+    margin: 5px 0px 15px 5px;
+  }
   button{
-    align-self: flex-end;
+    align-self: center;
+    color: white;
+    &:hover{
+      background-color: #1E86B4;
+    }
   }
   .unfollow-subject-btn{
-    background-color: $light-blue;
+    background-color: $lighter-blue;
+    box-shadow: 0 3px 3px $light-blue;
+    top: 3px;
   }
   .follow-subject-btn{
-    background-color: $reveal-blue;
+    background-color: $light-blue;
+    color: white;
+    transition: all 0.3s ease 0s;
+    box-shadow: 0 2px 3px $light-blue;
+    top: 3px;
+    i{
+      align-self: center;
+      padding-right: 5px;
+    }
+    &:hover{
+      background-color: #1E86B4;
+    }
+    &:active{
+    }
   }
 }
