@@ -7,8 +7,7 @@
   bottom: 60px;
   width: 90vw;
   padding: 2vh 5vw 2vh 5vw;
-  background-color: black;
-  opacity: .9;
+  background-color: rgba(0, 0, 0, 0.9);
 }
 
 .home-outer {
@@ -17,7 +16,6 @@
     -moz-background-size: cover;
     background-size: cover;
     display: flex;
-    opacity: .7;
     justify-content: center;
     align-items: center;
     margin-top: 62px;

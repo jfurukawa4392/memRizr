@@ -3,12 +3,22 @@
 .site-logo {
   height: 30px;
   width: 30px;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
   position: relative;
-  top: 10px;
-  left: 10px;
+  left: 34px;
+  top: 3px;
+  i{
+    color: $reveal-blue;
+    height: 30px;
+    width: 30px;
+  };
+}
+
+.fa-rotate-35 {
+    -webkit-transform: rotate(35deg);
+    -moz-transform: rotate(35deg);
+    -ms-transform: rotate(35deg);
+    -o-transform: rotate(35deg);
+    transform: rotate(35deg);
 }
 
 #auth-modal{
@@ -40,6 +50,7 @@ nav{
 nav.left{
   display: flex;
   justify-content: flex-start;
+  align-items: center;
 }
 
 .site-title {
@@ -72,6 +83,13 @@ nav li:hover {
   padding: inherit;
   color: white;
   text-decoration: none;
+}
+
+.browse-link{
+  margin-left: 5px;
+  i{
+    padding-right: 3px;
+  }
 }
 
 nav li div {
