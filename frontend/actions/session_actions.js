@@ -8,7 +8,7 @@ const CLEAR_STATE = 'CLEAR_STATE';
 export const login = (user) => (dispatch) => (
   SessionAPI.login(user)
             .then(res => dispatch(receiveCurrentUser(res)))
-            .fail(res => dispatch(receiveErrors(res.responseJSON)))
+            .fail(res => dispatch(receiveErrors(res.responseJSON)));
 );
 
 export const logout = () => (dispatch) => (
