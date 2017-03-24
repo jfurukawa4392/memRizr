@@ -17,7 +17,7 @@ class Home extends React.Component{
                 to='/browse'
                 className="browse-cards-link">
                 <h3>
-                  Browse available flashcards
+                  Browse available flashcards here
                 </h3>
               </Link>
             </section>

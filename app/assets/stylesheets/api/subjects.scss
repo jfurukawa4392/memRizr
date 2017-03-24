@@ -6,9 +6,10 @@
   width: 25vw;
   height: 450px;
   overflow-y: scroll;
+  overflow-x: hidden;
   flex-direction: column;
   align-self: flex-start;
-  margin: 0px 5px 15px 8px;
+  margin: 0px 0px 15px 8px;
   ul {
     padding: 0 10px 0 10px;
     width: 90%;

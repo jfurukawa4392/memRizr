@@ -6,18 +6,11 @@ import DeckIndex from '../decks/deck_index';
 class SubjectDetail extends React.Component{
   constructor(props){
     super(props);
-
-    this.state = {
-      fetching: true
-    };
   }
 
   componentDidMount(){
     if(this.props.params.subjectId){
-      this.props.fetchSubject(this.props.params.subjectId)
-          .then(res => this.setState({
-            fetching: false
-          }));
+      this.props.fetchSubject(this.props.params.subjectId);
     }
   }
 
@@ -35,10 +28,10 @@ class SubjectDetail extends React.Component{
     let { userFollows, id } = this.props.subjectDetail;
     if(userFollows){
       this.props.deleteFollow(id)
-          .then(res => this.props.router.push('/my-subjects'));
+          .then(res => this.props.fetchSubject(Object.keys(this.props.subjects)[0]));
     } else {
       this.props.createFollow(id)
-          .then(res => this.props.router.push('/my-subjects'));;
+          .then(res => this.props.router.push('/my-subjects'));
     }
   }
 
@@ -59,7 +52,7 @@ class SubjectDetail extends React.Component{
     let followButton = <div></div>;
     let currentLearners = (<div className="no-learners-div">No Current Learners</div>);
 
-    if(!this.state.fetching){
+    if(subjectDetail){
       deckList = <DeckIndex
         subjectDetail={subjectDetail}
         decks={decks}
