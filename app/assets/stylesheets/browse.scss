@@ -9,6 +9,22 @@
   flex-direction: row;
   .search-bar-outer{
     width: 30vw;
+    aside{
+      height: calc(100vh - 162px);
+      position: absolute;
+      width: 30vw;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      article>h1{
+        text-align: center;
+        color: $reveal-blue;
+        font-size: 28px;
+        line-height: 2;
+      }
+    }
     .search-bar-header-wrapper{
       box-sizing: border-box;
       display: flex;
@@ -26,6 +42,7 @@
           position: absolute;
           color: #006BA2;
           padding: 0px 20px;
+          z-index: 500;
         }
         input{
           box-sizing: border-box;

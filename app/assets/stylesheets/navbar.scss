@@ -66,6 +66,8 @@ nav.right{
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  position: relative;
+  top: 9px;
 }
 
 nav li {
