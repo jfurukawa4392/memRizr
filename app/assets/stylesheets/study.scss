@@ -91,23 +91,23 @@
     box-shadow: 0 3px 4px rgba(0,0,0,0.25);
     color: $reveal-blue;
     .rating-1{
-      background-color: $rating-one-color;
+      background-color: $rating-1-color;
       color: $off-white;
     }
     .rating-2{
-      background-color: $rating-two-color;
+      background-color: $rating-2-color;
       color: $off-white;
     }
     .rating-3{
-      background-color: $rating-three-color;
+      background-color: $rating-3-color;
       color: $off-white;
     }
     .rating-4{
-      background-color: $rating-four-color;
+      background-color: $rating-4-color;
       color: $off-white;
     }
     .rating-5{
-      background-color: $rating-five-color;
+      background-color: $rating-5-color;
       color: $off-white;
     }
   }
@@ -132,15 +132,73 @@
 .rc-progress-circle{
   width: 70%;
   padding: 5vh 20px;
-  
 }
 
 .progress-stats{
   width: 50%;
   position: relative;
-  bottom: 33vh;
+  bottom: 30vh;
+  left: 11px;
   font-size: 48px;
   text-align: center;
-  font-weight: 100;
+  font-weight: lighter;
   font-family: $nunito;
+}
+
+.card-buckets{
+  width: 100%;
+  height: 25vh;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  div{
+    width: 100%;
+    height: 20%;
+  }
+}
+
+.mastered-fraction-container{
+  display: flex;
+  justify-content: space-between;
+  width: 65%;
+  font-weight: lighter;
+  padding: 20px 50px;
+  background-color: $gray;
+  .level-1{
+    color: $rating-1-color;
+  }
+  .level-2{
+    color: $rating-2-color;
+  }
+  .level-3{
+    color: $rating-3-color;
+  }
+  .level-4{
+    color: $rating-4-color;
+  }
+  .level-5{
+    color: $rating-5-color;
+  }
+  div{
+    display: flex;
+    flex-direction: row;
+    small{
+      font-size: 12px;
+      position: relative;
+      top: 5px;
+    }
+    .denominator{
+      position: relative;
+      bottom: 3px;
+      left: 8px;
+    }
+  }
+  p{
+    font-size: 48px;
+    font-family: $nunito;
+    font-weight: lighter;
+  }
+  strong{
+    font-size: 48px;
+  }
 }

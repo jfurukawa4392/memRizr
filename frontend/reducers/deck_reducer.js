@@ -32,7 +32,7 @@ const DeckReducer = (state = _nullDeck, action) => {
       return merge({}, _nullDeck);
     default:
       return state;
-    }
-  };
+  }
+};
 
 export default DeckReducer;

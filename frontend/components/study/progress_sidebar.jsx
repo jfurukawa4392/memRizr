@@ -21,27 +21,63 @@ class ProgressSidebar extends React.Component{
   }
 
   calculateDistribution(cards){
-    let newState = { scores: { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 }};
-    let mastered = 0;
+    let newState = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
     cards.forEach((card, idx) => {
       newState[card.rating] += 1;
-      if(card.rating === 5){
-        mastered += 1;
-      }
     });
 
-    newState.mastered = mastered;
     return newState;
   }
 
   render(){
-    let { title, subjectId, fetching } = this.props;
+    let { title, subjectId, fetching, cardCount } = this.props;
     let stats = Math.floor(this.calculateMastery(this.props)*100);
     let buckets = this.calculateDistribution(this.props.cards);
+    let numeratorClass = "level-1";
+
+    if(stats >= 80) {
+      numeratorClass = "level-5";
+    } else if(stats >= 60) {
+      numeratorClass = "level-4";
+    } else if(stats >= 40) {
+      numeratorClass = "level-3";
+    } else if(stats >= 20){
+      numeratorClass = "level-2";
+    }
+
+    let bars = Object.keys(buckets).map((level, idx) => {
+      return(
+        <div
+          key={idx}
+          className={`level-${level}`}>
+          <span>{level}</span>
+          <Line
+            percent={(buckets[level] / (cardCount === 0 ? 1 : cardCount))}
+            strokeWidth="4"
+            strokeColor="#D3D3D3"/>
+        </div>
+      );
+    });
+
+    bars = (
+      <div
+        className="card-buckets">
+        {bars}
+      </div>
+    );
+
     let cardsMastered = (
       <div
         className="mastered-fraction-container">
-        <p>{buckets.mastered}</p> <small>Cards<br/>Mastered</small><strong>/</strong> <p>{this.props.cardCount}</p> <small>Total<br/>Cards</small>
+        <div
+          className={numeratorClass}>
+          <p>{buckets[5]}</p> <small>Cards<br/>Mastered</small>
+        </div>
+        <strong>/</strong>
+        <div
+          className="denominator">
+          <p>{this.props.cardCount}</p> <small>Total<br/>Cards</small>
+        </div>
       </div>
     );
 
@@ -65,7 +101,8 @@ class ProgressSidebar extends React.Component{
         <figure className="progress-stats">
           {fetching ? '0%' : `${stats}%`}
         </figure>
-        { fetching ? <div><p>Looking for cards...</p></div> : cardsMastered}
+        { fetching ? <div><p>Looking for cards...</p></div> : cardsMastered }
+        { fetching ? <div></div> : bars }
       </aside>
     );
   }
