@@ -37,8 +37,6 @@ export const createSubject = (subject) => (dispatch) => {
 export const createFollow = (subjectId) => (dispatch) => {
   MainAPIUtil.createFollow(subjectId)
              .then(res => {
-               console.log('response is: ');
-               console.log(res);
                dispatch(receiveFollowStatus(res.userFollows));
                dispatch(receiveSubject(res));
              });

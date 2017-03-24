@@ -30,17 +30,12 @@ class SearchBar extends React.Component{
       query
     });
 
-    if(query.trim() === ""){
-      APIUtil.fetchAllSubjects()
-             .then(results => this.setState({
-               results: {}
-             }));
-    } else {
+    if(query.trim().length > 2){
       APIUtil.requestResults(query)
              .then(results => this.setState({
                 results
               }));
-    }
+    } 
   }
 
   render(){

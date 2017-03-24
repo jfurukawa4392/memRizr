@@ -4,20 +4,6 @@ import { Link } from 'react-router';
 
 class Home extends React.Component{
 
-  constructor(){
-    super();
-    this.state = {searchString: ""};
-  }
-
-  handleSubmit(){
-    //temporary no-op function until search is implemented
-    this.setState(this.state);
-  }
-
-  handleChange(){
-    this.setState(this.state);
-  }
-
   render(){
     return (
       <div>
@@ -28,22 +14,13 @@ class Home extends React.Component{
             <section className="greetHeader">
               <h1>Keep your memory sharp</h1>
               <Link
-                to='/browse'>
+                to='/browse'
+                className="browse-cards-link">
                 <h3>
-                  Search available flashcards
+                  Browse available flashcards
                 </h3>
               </Link>
             </section>
-            <form className="search"
-              onSubmit={this.handleSubmit}>
-              <input type="text"
-                onChange={this.handleChange}
-                value={this.state.searchString}
-                className="search-input"/>
-              <input type="submit"
-                value="Search"
-                className="search-button"/>
-            </form>
           </content>
         </main>
       </div>

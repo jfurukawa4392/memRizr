@@ -8,22 +8,16 @@ class ProgressSidebar extends React.Component{
     super(props);
   }
 
-  componentDidMount(){
-  }
-
-  componentWillReceiveProps(nextProps){
-    // if(!_.isEqual(this.props.cards, nextProps.cards)){
-    //   this.calculateDistribution(nextProps.cards);
-    // }
-  }
-
   calculateMastery(props){
     let { cardCount, cards } = props;
     let rawScore = 0;
+    let mastery;
     cards.forEach((card) => {
       rawScore += parseInt(card.rating);
     });
-    return (rawScore/(5*cardCount));
+
+    mastery = (rawScore/(5*cardCount));
+    return isNaN(mastery) ? 0 : mastery;
   }
 
   calculateDistribution(cards){
@@ -41,7 +35,7 @@ class ProgressSidebar extends React.Component{
   }
 
   render(){
-    let { title, subjectId } = this.props;
+    let { title, subjectId, fetching } = this.props;
     let stats = Math.floor(this.calculateMastery(this.props)*100);
     let buckets = this.calculateDistribution(this.props.cards);
     let cardsMastered = (
@@ -50,7 +44,7 @@ class ProgressSidebar extends React.Component{
         <p>{buckets.mastered}</p> <small>Cards<br/>Mastered</small><strong>/</strong> <p>{this.props.cardCount}</p> <small>Total<br/>Cards</small>
       </div>
     );
-    // <Circle percent="10" strokeWidth="4" strokeColor="#D3D3D3" />
+
     return(
       <aside className="progress-sidebar-outer">
         <header className="deck-title-header">
@@ -64,14 +58,14 @@ class ProgressSidebar extends React.Component{
           </div>
         </Link>
         <Circle
-          percent={`${stats}`}
+          percent={fetching ? '0' : `${stats}`}
           strokeWidth="4"
           className="progess-circle-figure"
           strokeColor="#40B8DA"/>
         <figure className="progress-stats">
-          {`${stats}%`}
+          {fetching ? '0%' : `${stats}%`}
         </figure>
-        {cardsMastered}
+        { fetching ? <div><p>Looking for cards...</p></div> : cardsMastered}
       </aside>
     );
   }

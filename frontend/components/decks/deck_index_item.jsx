@@ -42,7 +42,7 @@ const DeckIndexItem = (props) => {
         </div>
         <div className="deck-options">
           <Link
-            to={deck.cardCount > 0 ? `/study/${deck.id}` : `/my-subjects`}>
+            to={`/study/${deck.id}`}>
             <i className="fa fa-play-circle-o"></i>
             Study
           </Link>
