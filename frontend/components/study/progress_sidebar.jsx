@@ -45,16 +45,36 @@ class ProgressSidebar extends React.Component{
       numeratorClass = "level-2";
     }
 
+    let color;
     let bars = Object.keys(buckets).map((level, idx) => {
+      switch(Number(level)){
+        case(5):
+          color = "#00A8D7";
+          break;
+        case(4):
+          color = "#7FAE2E";
+          break;
+        case(3):
+          color = "#FFDD00";
+          break;
+        case(2):
+          color = "#FF8A47";
+          break;
+        case(1):
+          color = "#AA0080";
+          break;
+        default:
+          color = "#FEFEFE";
+      }
+
       return(
         <div
-          key={idx}
-          className={`level-${level}`}>
+          key={idx}>
           <span>{level}</span>
           <Line
-            percent={(buckets[level] / (cardCount === 0 ? 1 : cardCount))}
-            strokeWidth="4"
-            strokeColor="#D3D3D3"/>
+            percent={(buckets[level]*100 / (cardCount === 0 ? 1 : cardCount))}
+            strokeWidth="1"
+            strokeColor={color}/>
         </div>
       );
     });
