@@ -35,7 +35,11 @@ class SearchBar extends React.Component{
              .then(results => this.setState({
                 results
               }));
-    } 
+    } else {
+      this.setState({
+        results: {}
+      });
+    }
   }
 
   render(){
@@ -66,7 +70,7 @@ class SearchBar extends React.Component{
             <input
               type="text"
               value={this.state.query}
-              placeholder="Search all subjects"
+              placeholder="Search subject titles"
               className="search-input-field"
               onChange={(e) => this.handleUpdate(e)} />
             <button
