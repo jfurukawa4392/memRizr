@@ -157,7 +157,7 @@ Bonjour	Good morning / Good afternoon / Hello
 Bonsoir	Good evening
 Salut	Hi / bye
 Au revoir	Goodbye
-à bientôt.	see you soon&lt;br /&gt;see you&lt;br /&gt;goodbye&lt;br /&gt;bye for now&lt;br /&gt;bye&lt;br /&gt;bye-bye
+à bientôt.	see you soon<br />see you<br />goodbye<br />bye for now<br />bye<br />bye-bye
 ? tout à l'heure.	See you later.
 ? la prochaine.	Until next time.
 Bonne journée.	Have a nice day.

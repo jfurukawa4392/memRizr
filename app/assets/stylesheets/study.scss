@@ -129,10 +129,18 @@
   }
 }
 
+.rc-progress-circle{
+  width: 70%;
+  padding: 5vh 20px;
+  
+}
+
 .progress-stats{
   width: 50%;
+  position: relative;
+  bottom: 33vh;
   font-size: 48px;
   text-align: center;
   font-weight: 100;
-  font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $nunito;
 }

@@ -4,36 +4,36 @@ Show changed files in working directory	git status
 Show changes to tracked files	git diff
 Show changes to staged files	git diff --staged
 Add all current changes to next commit	git add .
-Add change in &lt;file&gt; to next commit	git add -p &lt;file&gt;
+Add change in <file> to next commit	git add -p <file>
 Commit all local changes in tracked files	git commit -a
 Commit staged changes	git commit
-Commit staged changes with message	git commit -m &lt;message&gt;
+Commit staged changes with message	git commit -m <message>
 Change the last commit (only if not yet pushed!)	git commit --amend
 Show all commits, starting with newest	git log
-Show changes over time for a specific file	git log -p &lt;file&gt;
-Show who changed what and when in &lt;file&gt;	git blame &lt;file&gt;
+Show changes over time for a specific file	git log -p <file>
+Show who changed what and when in <file>	git blame <file>
 List all existing branches	git branch -av
-Switch to existing branch &lt;branch&gt;	git checkout &lt;branch&gt;
-Switch to new branch &lt;new_branch&gt;	git checkout -b &lt;new_branch&gt;
-Create new branch &lt;new_branch&gt; from current HEAD	git branch &lt;new_branch&gt;
-Create a new tracking branch based on a remote branch	git checkout --track &lt;remote/branch&gt;
-Delete a local branch	git branch -d &lt;branch&gt;
-Mark the current commit with a tag	git tag &lt;tag_name&gt;
+Switch to existing branch <branch>	git checkout <branch>
+Switch to new branch <new_branch>	git checkout -b <new_branch>
+Create new branch <new_branch> from current HEAD	git branch <new_branch>
+Create a new tracking branch based on a remote branch	git checkout --track <remote/branch>
+Delete a local branch	git branch -d <branch>
+Mark the current commit with a tag	git tag <tag_name>
 List all currently configured remotes with URL	git remote -v
-Show information about a remote	git remote show &lt;remote&gt;
-Add a new remote repository	git remote add &lt;shortname&gt; &lt;url&gt;
-Download all changes from &lt;remote&gt;, but don't change HEAD	git fetch &lt;remote&gt;
-Download changes from &lt;remote&gt; and directly merge/integrate into HEAD	git pull &lt;remote&gt;
-Push local changes of current branch to remote	git push &lt;remote&gt;
+Show information about a remote	git remote show <remote>
+Add a new remote repository	git remote add <shortname> <url>
+Download all changes from <remote>, but don't change HEAD	git fetch <remote>
+Download changes from <remote> and directly merge/integrate into HEAD	git pull <remote>
+Push local changes of current branch to remote	git push <remote>
 Publish tags	git push --tags
-Merge &lt;branch&gt; into HEAD	git merge &lt;branch&gt;
-Rebase current HEAD onto &lt;branch&gt; (only if not yet published!)	git rebase &lt;branch&gt;
+Merge <branch> into HEAD	git merge <branch>
+Rebase current HEAD onto <branch> (only if not yet published!)	git rebase <branch>
 Abort a rebase	git rebase --abort
 Continue a rebase after resolving conflicts	git rebase --continue
 Use your configured mergetool to resolve conflicts	git mergetool
 Discard all local changes in your workind directory	git reset --hard HEAD
-Discard local changes in a specific file	git checkout HEAD &lt;file&gt;
-Unstage a file	git reset &lt;file&gt;
-Revert a commit (by producing a new revert commit)	git revert &lt;commit-sha1&gt;
-Reset your HEAD pointer to a previous commit (and discard all changes since then)	git reset --hard &lt;commit-sha1&gt;
-Reset your HEAD pointer to a previous commit (and preserve all changes)	git reset &lt;commit-sha1&gt;
+Discard local changes in a specific file	git checkout HEAD <file>
+Unstage a file	git reset <file>
+Revert a commit (by producing a new revert commit)	git revert <commit-sha1>
+Reset your HEAD pointer to a previous commit (and discard all changes since then)	git reset --hard <commit-sha1>
+Reset your HEAD pointer to a previous commit (and preserve all changes)	git reset <commit-sha1>

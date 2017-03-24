@@ -29,8 +29,8 @@ Whole numbers	Formed by adding 0 to the set of natural numbers. {0,1,2,3,4,5...}
 Integers	Formed by adding negatives of natural numbers to the set of while numbers. {...-3,-2,-1,0,1,2,3...}
 All numbers that can be expressed in the form A/B where A and B are integers and B is not 0. Can be expressed as terminating or repeating decimals.	Rational numbers. -17,-5,0,5,17, -17/1, -5/1, 2/5=0.4, -2/3=-0.666=-0.6 repeating
 All numbers whose decimal representations are neither terminating nor repeating. Irrational numbers can not be expressed as a quotient of integers.	Square root of 2 is approximately equal to 1.414214<div>Square root of -3 is approximately equal to -1.73205</div><div>Pie is approximately equal to 3.142</div><div>Negative pie divided by 2 is approximately equal to -1.571</div>
-&lt;	Less than
-&gt;	Greater than
+<	Less than
+>	Greater than
 Algebraic expression	Combines numbers and variables.<div>7x + 3</div><div>7 is the coefficient.</div><div>7x and 3 are both terms.</div><div>7 and x are factors of the term.</div>
 T/F: Factors of a term are multiplied together.	True: 7x + 3, 7 and x are multiplied together.
 T/F: Coefficients are constant factors that multiply a variable or powers of a variable.	True
