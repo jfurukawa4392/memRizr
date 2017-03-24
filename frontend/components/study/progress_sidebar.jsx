@@ -108,7 +108,7 @@ class ProgressSidebar extends React.Component{
             Studying:<span>{title}</span>
           </span>
         </header>
-        <Link to={`/my-subjects/${subjectId}`}>
+        <Link to={fetching ? '/my-subjects' : `/my-subjects/${subjectId}`}>
           <div className="progress-nav-buttons">
             Done
           </div>
