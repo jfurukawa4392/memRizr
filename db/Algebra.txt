@@ -1,0 +1,78 @@
+Equation	"Statement that two algebraic expressions are equal. Always contains an ""="" sign.<div>6x+16=46</div>"
+Solution	The solution of an equation is value of a variable that make the equation a true statement.<div>6x+16=46</div><div>If x=5 then x is a solution.</div>
+Formula	An equation that expresses a relationship between two or more variables.<div>T=0.3n+40</div><div>T = Temperature, n = number of crickets.</div>
+Mixed number	Consists of the sum of a natural number and a fraction, expressed &nbsp;without the use of an addition sign.<div>3 4/5, 3 = natural number, 4/5 = fraction.</div><div>This means 3+4/5.</div>
+Improper fraction	Fraction whose numerator is greater than its denominator.<div>19/5 = 3 4/5, (5x3+4)/5 = 19/5</div>
+Improper fraction to a mixed number	19/5: 5 goes in to 19 3 times with a remainder of 4. 3 is the quotient, 4 is the numerator and 5 is the original denominator. So 19/5 = 3 4/5.
+Prime number	Natural number greater than 1 that has only itself and 1 as factors.
+First 10 prime numbers	2, 3, 5, 7, 11, 13, 17, 19, 23, 29
+Composite number	Natural number greater than 1 that is not a prime number.
+T/F: Every composite number can be expressed as the product of prime numbers.	True: 45 = 3x3x5.
+Prime factorization	Expressing a composite number as the product of prime numbers.
+Equivalent	Two fractions that represent the same value.
+Product	The result of multiplying two or more numbers.
+Quotient	The result of dividing two or more numbers.
+Sum	The result of adding two or more numbers.
+Difference	The result of subtracting two or more numbers.
+Reciperocal	Two fractions that are reciperocals, or multiplicative inverse, of each other. Used for dividing fractions.<div>4/5 / 1/10 = 4/5 x 10/1</div>
+Adding and subtracting fractions with unlike denominators.	1/2 + 1/3 = 1(3)/2(3) + 1(2)/3(2) = 3/6 +2/6
+Algabraic representation: Rewrite the following formula as a phrase.<div>1/3*(x+5)=1/2</div>	One third of a number increased by 5 is one half of that number.
+Set	Collection of objects whose contents can be clearly determined.<div>{1,2,3...}</div>
+Elements	The objects in a set.<div>{1,2,3,4,5...}</div>
+Set of integers	{...,-4,-3,-2,-1,0,1,2,3,4...}
+Rational numbers	Any number that can be expressed as the quotient or fraction p/q of two integers, a numerator p and a non-zero denominator q. Since q may be equal to 1, every integer is a rational number.
+T/F: Every integer is a rational number.	True. 5/1 = 5
+Irrational number&nbsp;	Any number that can be represented on the number line that is not a rational number.<div>pie (3.14..) is an irrational number, there is no last digit.</div><div>The square root of 2 and 3 are also irrational numbers.</div><div>Not all squares are irrational. The square root of 25, 5, for example.</div>
+Real numbers	All numbers that can be represented by points on a number line.
+Natural numbers	Used for counting. {1,2,3,4,5...} Another example: 2,3,5,17 are all natural numbers.
+Whole numbers	Formed by adding 0 to the set of natural numbers. {0,1,2,3,4,5...}
+Integers	Formed by adding negatives of natural numbers to the set of while numbers. {...-3,-2,-1,0,1,2,3...}
+All numbers that can be expressed in the form A/B where A and B are integers and B is not 0. Can be expressed as terminating or repeating decimals.	Rational numbers. -17,-5,0,5,17, -17/1, -5/1, 2/5=0.4, -2/3=-0.666=-0.6 repeating
+All numbers whose decimal representations are neither terminating nor repeating. Irrational numbers can not be expressed as a quotient of integers.	Square root of 2 is approximately equal to 1.414214<div>Square root of -3 is approximately equal to -1.73205</div><div>Pie is approximately equal to 3.142</div><div>Negative pie divided by 2 is approximately equal to -1.571</div>
+&lt;	Less than
+&gt;	Greater than
+Algabraic expression	Combines numbers and variables.<div>7x + 3</div><div>7 is the coefficient.</div><div>7x and 3 are both terms.</div><div>7 and x are factors of the term.</div>
+T/F: Factors of a term are multiplied together.	True: 7x + 3, 7 and x are multiplied together.
+T/F: Coefficients are constant factors that multiply a variable or powers of a variable.	True
+T/F: Math has a lot of rules.	Very true.
+Absolute zero	A real number denoted by A, |A|, is the distance from zero to A.
+Like terms	Terms of an algebraic expression that have exactly the same variable factors. 7x and 3x - these terms have the same variable factor x and can be combined.
+Constant term	Term that consists of just a number. 7x + 3, 3 is the constant term.
+Associative properties	In general, the way in which numbers are grouped and that there sum or product does not change
+Distributive property	An algebra property which is used to multiply a single term and two or more terms inside a set of parenthesis. Involves both multiplication and addition.<div>4(7+3) = 4(10) = 40</div><div>7(4)+3(4) = 28+12 = 40</div>
+T/F: An algebraic expression is simplified when its parenthesis have been removed.	True
+Combining like terms.	The distributive property in action:<div>a(b+c) = ab + bc</div><div>3x + 7x = 10x</div>
+Additive inverses	Numbers that differ only in sign: 3 and -3.<div>Also called opposites, are pairs of real numbers that are the same number of units from zero on the number line.</div>
+Inverse property of addition	In general the sum of any real number and its additive inverse is zero.<div>a + (-a) = 0</div>
+Identity property of addtion	Zero can be deleted from a sum.<div>a + 0 = a, 0 + a = a</div>
+Least Common Denominator (LCD)	Found by using the greatest number of times each factor appears in any prime factorization.<div>1/15 + 7/24</div><div>15 = 5 * 3</div><div>24 = 8 * 3 = 2 * 2 * 2 * 3</div><div>The different prime factors are: 5, 3 and 2.</div>
+Factors	Two or more natural numbers being multiplied.<div>3 * 7 = 21</div><div>Natural numbers: {1,2,3,4,5...}</div>
+Associative property of addition	<div>Changing grouping does not affect the sum.</div>(a + b) + c = a + (b + c)
+Associative property of multiplication	<div>Changing grouping does not affect the product or outcome.</div>(ab)c = a(bc)
+Commutative properties	The addition or multiplication of two real numbers can be don in any order.<div>3 + 5 = 5 + 3</div><div>3 * 5 = 5 * 3</div>
+Terms	Parts of an algebraic expression seperated by addition.<div>7x + 3, 7x and 3 are the terms</div>
+Coefficient	The numeric part of the term.<div>7x + 3, 7 is the coefficient</div>
+Factors of the term	The parts of each term that are multiplied.<div>7x + 3, 7 and x are the factors.</div>
+Term that consists of just a number	Constant
+Multiplicative inverse, or reciperocals	Two numbers whose product is 1, the number 0 has no multiplicative inverse.<div>1/2 = 1/2 * 2/1 = 2/2 = 1</div>
+Indetity property of multiplication	1 can be deleted from the product.<div>a * 1 = a, 1 * a = a</div>
+Inverse property of multiplication	The product of a non-zero number and its multiplicative inverse, or reciperocal, gives 1, the multiplicative indentity.<div>a * 1/a = a</div>
+Multiplicative property of -1	-1 time A is the opposite, or additive inverse, of A.<div>-1 * a = -a</div>
+Double negative property	The opposite of -A is A.<div>-(-A) = A</div>
+Order of operations	1.) Perform all operations within grouping symbols<div>2.) Evaluate all exponential expressions</div><div>3.) Multiply and divide in the order in which they occur, from left to right</div><div>4.) Add and subtract</div>
+The negative exponent rule	If B is any real number other than 0 and N is a natural number then:<div>b^-n = 1/b^n</div><div>Negative exponents in the denominator get moved to the numerator and become positive exponents. Only move the negative exponents.</div>
+Finding the square of a binomial sum	(A + B)^2 = A^2 + 2AB + B^2
+The product of the sum and difference of two terms.	(A + B)(A - B) = A^2 - B^2
+T/F: Only like terms can be added or subtracted but unlike terms can be multiplied.	True
+Polynomials	A single term or the sum of two or more terms containing variables with whole number exponents
+Subtracting polynomials	Subtract real numbers by adding the additive inverse.<div>(7x^2+3x-4)-(-4x^2-6x-7) =</div><div>(7x^2+3x-4)+(4x^2+6x+7)</div>
+Monomial	A simplified polynomial that has exactly one term.
+Binomial	A simplified polynomial that has two terms.
+Trinomial	A simplified polynomial that has three terms.<div>7x^5+3x^3-8</div>
+Multiplying a monomial and a polynomial that is not a monomial.	Use the distributive property.<div>2x(x+4) = 2x^2+8x</div>
+Multiplying polynomials when neither is a monomial.	Multiply each term of one polynomial by each term of the other polynomial.<div>(2x+3)(x^2+4x+5) =</div><div>2x(x^2+4x+5) = 2x^3+8x^2+10x</div><div>3(x^2+4x+5) = 6x^2+12x+15</div><div>Sum: 2x^3+14x^2+22x+15</div><div>Always write terms from greatest to least, left to right.&nbsp;</div>
+Simplify b^3 * b^4	b^3+4 = b^7
+Simplify 3^2 * 3^4	3^2+4 = 3^6
+Simplify(x^5)^3	x^5*3 = x^15
+Simplify&nbsp;(4x)^3	(4x)^3 = 4^3x^3 = 64x^3
+Product rule of exponents	When multiplying exponential expressions with the same base, add the exponents.<div>b^m * b^n = b^mn</div><div>2^2 * 2^3 = 2^5 = 32</div>

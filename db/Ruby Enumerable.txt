@@ -1,0 +1,50 @@
+all? { |el| block }	Passes each element to the block. Returns false if the block returns a falsey value (false, nil) with any element. Otherwise returns true.	
+any? { |el| block }	Passes each element to the block. Returns false if the block returns a falsey value (false or nil) with <i>every</i>&nbsp;element. Returns true if the block returns a non-falsey value for any element.<div>e.g. If the block returns true for any element, this method will return true.</div>	
+chunk { |el| block }	Returns an Enumerable object where consecutive elements which share the same return value are grouped together.	
+collect { |el| block } or map { |el| block }	Returns a new array, replacing each element with the result of the block run with that element.	
+count or count() or count { |el| block }	Returns the number of elements if no argument is given. Returns the number of elements that match the argument. Will accept a block if a more complicated match is required.	
+cycle(n=nil) { |el| block }	Executes a block with the given element a designated number of times if <i>n</i> is given or infinitely if <i>n</i> is not given.	
+detect(ifnone = nil) { |el| block } <i>or</i><div>find(ifnone = nil) { |el| block }</div>	Returns the first element where the block returns a truthy value.	
+drop(n)	Returns a new array without the first <i>n</i>&nbsp;elements of the original enumerable.	
+drop_while { |el| block }	Drops elements starting at the beginning until the block returns a falsey statement. Returns the remainder as a new array. Does not modify the original enumerator.	
+each_cons(n) { |n_elements_arr| block }	For each element, creates an array of consecutive <i>n</i>&nbsp;elements, and then passes that array to the block.<div><br /></div><div>Returns an enumerable if no block is given or <i>nil</i>&nbsp;if a block is given.</div>	
+each_entry { |el| block }	Passes each element in <i>self</i>&nbsp;to the block.<div>Example:</div><div><div>class Foo</div><div>&nbsp; include Enumerable</div><div>&nbsp; def each</div><div>&nbsp; &nbsp; yield 1</div><div>&nbsp; &nbsp; yield 1, 2</div><div>&nbsp; &nbsp; yield</div><div>&nbsp; end</div><div>end</div><div>Foo.new.each_entry{ |o| p o }</div></div><div><br /></div><div><div>#=&gt; 1</div><div>&nbsp; =&gt; [1, 2]</div><div>&nbsp; =&gt; nil</div></div>	
+each_slice(n) { |el| block }	Creates slices of length <i>n</i>&nbsp;out of the original enumerable and passes each slice to the block.<div><br /></div><div>Example:</div><div><div>(1..10).each_slice(3) { |a| p a }</div><div><br /></div><div>#=&gt; [1, 2, 3]</div><div>&nbsp; =&gt; [4, 5, 6]</div><div>&nbsp; =&gt; [7, 8, 9]</div><div>&nbsp; =&gt; [10]</div></div>	
+each_with_index(*args) { |el, idx| block }	Passes each element and its respective index to the block.	
+each_with_object(object) { |el, obj| block }	Passes each element to the block, along with a given object. Returns the object.<div><br /></div><div>Example:</div><div><div>(1..10).each_with_object([]) { |i, a| a &lt;&lt; i*2 }</div><div><br /></div><div>#=&gt; [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]</div></div>	
+entries	Returns an array of all the elements of the enumerable.	
+find_all { |el| block }	Returns an array of all elements which cause the block to return a truthy value.	
+find_index(val) <i>or</i><div>find_index { |el| block }</div>	Returns the <i>index</i> of the first element that matches a given <i>val </i>or that causes the block to return a truthy value.	
+first(n)	Returns an array of the first <i>n</i>&nbsp;elements.	
+flat_map { |el| block }	Creates a new array with results of passing each element into the block. Concatenates the results and returns the array.	
+grep(pattern) { |el| optional_block }	Returns an array with each element that matches the pattern. If a block is supplied, the array is filled with the result of passing each matching element to the block.	
+grep_v(pattern) { |el| optional_block }	Returns an array with each element that <b>does NOT &nbsp;</b>match&nbsp;the pattern. If a block is supplied, the array is filled with the result of passing each <b>non-matching</b> element to the block.	
+group_by { |el| block }	Returns a new hash where the keys are the results of passing the elements to the block, and the values are the elements that cause the block to equal the key.	
+include?(obj)	Returns true if any element == the passed obj.	
+inject(initial, symbol) <i>or</i><div>inject(symbol) <i>or</i></div><div>inject(initial) { |accum, el| block } <i>or</i></div><div>inject { |accum, el| block }</div>	Combines all the elements according to a supplied symbol or block. An initial value can be supplied in lieu of using the first element in the enumerable.	
+map { |el| block }	Returns a new array with the results of passing each element into the block.	
+max <i>or</i><div>max(n) <i>or</i></div><div>max { |a,b| block } <i>or</i></div><div>max(n) { |a,b| block }</div>	Returns the element with the maximum value.<div><br /></div><div>An optional <i>n</i>&nbsp;will cause an array with a max of <i>n</i>&nbsp;values to be returned.</div><div><br /></div><div>An optional block allows for customizing the comparison between elements.</div>	
+max_by { |el| block } <i>or</i><div>max_by(n) { |el| block }</div>	Passes each element to the block and returns the element that gives the highest value from the block.<div><br /></div><div>Can take an optional <i>n</i>&nbsp;which will cause this to return an array up to length <i>n</i>&nbsp;in decending order.</div>	
+min<div>min(n)<br /><div>min { |a, b| block }</div></div><div>min(n) { |a, b| block }</div>	Returns the element with the lowest value.<div><br /></div><div>If <i>n</i>&nbsp;is provided, this will return an array of elements of length <i>n</i> in ascending order.</div><div><br /></div><div>Takes an optional block to specify the comparison.</div>	
+min_by { |el| block }<div>min_by(n) { |el| block }</div>	Returns the element which gives the lowest value when passed to the block.<div><br /></div><div>If&nbsp;<i>n</i>&nbsp;is provided, this will return an array of elements of length&nbsp;<i>n</i>&nbsp;in ascending order.</div>	
+minimax<div>minimax { |a, b| block }</div>	Returns an array of the maximum and minimum values: [max, min]<div><br /></div><div>Takes an optional block to specify the comparison between elements.</div>	
+minimax_by { |el| block }	Passes each element into the block and returns an array with the highest and lowest given values.	
+none? { |el| block }	Passes each element to the block. Returns true if the block never gives a truthy value. Returns false if any of the values are truthy.	
+one? { |el| block }	Passes each element to the block. Returns true if <b>exactly <i>one</i>&nbsp;</b>truthy value is given out of all values given. Returns false if more than one or no truthy values are obtained.	
+partition { |el| block }	Passes all elements into the block, looking for a truthy or falsey value.<div>Returns an array of 2 arrays: the first array holds all the elements that gave a truthy value and the second array holds all the elements that gave a falsey value.</div>	
+reduce	alias for inject	
+reject { |el| block }	Returns and array of all elements that give a falsey value when passed to the block.	
+reverse_each { |el| block }	Iterates over an enumerable in <b>reverse</b> order, passing each element to the block.	
+select { |el| block }	Passes all elements to the block, looking for truthy or falsey values. Returns an array of all the elements that gave a truthy value when passed to the block.	
+slice_after(pattern)<div>slice_after { |el| block }</div>	Breaks the enumerable into chunks, seperating them <b>after</b> the element that matches the pattern or that returns true when passed to the block.	
+slice_before(pattern)<div>slice_before { |elt| block }</div>	Breaks an enumerable into chunks, seperating <b>before</b>&nbsp;the element that matches the pattern or that causes the block to return true.	
+slice_when { |el_before, el_after| block }	Breaks an enumerator into chunks, passing the two adjacent elements to the block and separating when the block gives a truthy value.	
+sort<div>sort { |a, b| block }</div>	Returns an array of elements sorted by the combined comparison operator (&lt;=&gt;) or by an optional block which should return -1, 0, or 1 when comparing two elements.<div>Defaults to smallest to biggest.</div>	
+sort_by { |el| block }	Returns an array of sorted elements, by the value given when passing each element to the block.	
+take(n)	Returns the first <i>n</i>&nbsp;elements as an array.	
+take_while { |el| block }	Passes each element to the block. Returns an array with the elements from the beginning of the enumerable until the block returns a falsey value.	
+to_a	Returns an array with the elements in the enumerable.	
+to_h	Returns a hash of key - value pairs.	
+zip<div>zip { |arr| block }</div>	<div>Takes an element from the enumerable and merges it with corresponding elements from each argument.</div><div><br /></div>Example:<div>[1, 2, 3].____([4, 5, 6]) #=&gt; [[1, 4], [2, 5], [3, 6]]</div><div>[1, 2, 3].____([4, 5, 6], [7, 8, 9])<br />#=&gt; [[1, 4, 7], [2, 5, 8], [3, 6, 9]]</div>	
+tr	"Returns a copy of str with the characters in from_str replaced by the corresponding characters in to_str. If to_str is shorter than from_str, it is padded with its last character in order to maintain the correspondence.<div><br /></div><div>""hello"".tr('el','ip') #=&gt; ""hippo""</div><div>""hello"".tr('a-y','b-z') #=&gt; ""ifmmp""</div>"	
+Integer#lcm	Returns the least common multiple (always positive). 0.lcm(x) and x.lcm(0) return zero.<div><br /></div><div><div>2.lcm(2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;#=&gt; 2</div><div>3.lcm(-7) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; #=&gt; 21</div></div>	

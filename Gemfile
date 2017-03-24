@@ -7,6 +7,7 @@ end
 
 gem 'figaro'
 gem 'faker'
+gem 'sanitize'
 gem 'pry-rails'
 gem 'font-awesome-sass'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

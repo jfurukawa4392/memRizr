@@ -1,0 +1,1367 @@
+je	I
+tu	you
+il	he
+elle	she
+nous	we
+vous	you
+ills (m)	they
+elles (f)	they
+acheter	buy
+zéro	0
+un	1
+deux	2
+trois	3
+quatre	4
+cinq	5
+six	6
+sept	7
+huit	8
+neuf	9
+dix	10
+onze	11
+douze	12
+treize	13
+quatorze	14
+quinze	15
+seize	16
+dix-sept	17
+dix-huit	18
+dix-neuf	19
+vingt	20
+vingt et un	21
+vingt-deux	22
+vingt-trois	23
+trente	30
+trente et un	31
+trente-deux	32
+quarante	40
+cinquante	50
+soixante	60
+soixante-dix	70
+soixante et onze	71
+soixante-douze	72
+soixante-dix-huit	78
+quatre-vingts	80
+quatre-vingt-un	81
+quatre-vingt-deux	82
+quatre-vingt-dix	90
+quatre-vingt-onze	91
+quatre-vingt-douze	92
+cent	100
+cent un	101
+deux cents	200
+deux cent un	201
+trois cents	300
+quatre cents	400
+cinq cents	500
+six cents	600
+sept cents	700
+huit cents	800
+neuf cents	900
+mille	1
+mille cent un	1.101
+dix mille	10.000
+un million	1.000.000
+deux millions	2.000.000
+un milliard	1.000.000.000
+un billion	1.000.000.000.000
+premier, -ière	1st
+deuxième, second(e)	2nd
+troisième	3rd
+quatrième	4th
+cinquième	5th
+sixième	6th
+septième	7th
+huitième	8th
+neuvième	9th
+dixième	10th
+vingtième	20th
+vingt et unième	21st
+centième	100th
+deux cent unième	201st
+millième	1000th
+la moitié; un(e) demi(e)	½
+zéro virgule cinq	0,5
+un tiers	03-Jan
+un quart	¼
+trois quarts	¾
+trois deux tiers	3 2/3
+trois ans et demi	3½ years
+Quelle est la date aujourd'hui?	What is today's dateي
+C'est&nbsp;&nbsp;le premier mai	It is May 1st
+C'est&nbsp;&nbsp;le deux mars	It is&nbsp;&nbsp;March 2nd
+C'est&nbsp;&nbsp;le trente et un octobre	It is&nbsp;&nbsp;October 31st
+aujourd'hui	today
+hier	yesterday
+demain	tomorrow
+avant-hier	day before yesterday
+après-demain	day after tomorrow
+lundi	Monday
+mardi	Tuesday
+mercredi	Wednesday
+jeudi	Thursday
+vendredi	Friday
+samedi	Saturday
+dimanche	Sunday
+C'est lundi.	It's Monday.
+Quel jour sommes-nous?	What day of the week is itي
+janvier	January
+février	February
+mars	March
+avril	April
+mai	May
+juin	June
+juillet	July
+août	August
+septembre	September
+octobre	October
+novembre	November
+décembre	December
+les Saisons (f)	Seasons
+l'hiver (m)	winter
+le printemps	spring
+l'été (m)	summer
+l'automne (m)	autumn
+la semaine	week
+la semaine dernière	last week
+la semaine prochaine	next week
+dans huit jours	in a week
+dans quinze jours	in two weeks
+hebdomadaire	weekly
+le week-end, la fin de la semaine	weekend
+le mois	month
+l'an (m), l'année (f)	year
+il y a trois ans	three years ago
+l'année dernière	last year
+la décennie	decade
+dans les années cinquante	in the fifties
+le siècle	century
+les Fêtes (f)	Holidays
+Noël (m)	Christmas
+la veille de Noël	Christmas Eve
+le jour de l'an	New Year's Day
+Pâques (f.pl)	Easter
+les Mois (m)	Months
+les Jours (m) de la Semaine	Days of the Week
+les Dates (f)	Dates
+en hiver	in the winter
+au printemps	in the spring
+en été	in the summer
+en automne	in the fall
+s'il vous plaît / s'il te plaît (fam)	please
+merci	thank you
+Je vous en prie.	You're welcome.
+De rien. Il n'y a pas de quoi.	No problem.
+Bienvenu	Welcome to...
+Bonjour	Good morning / Good afternoon / Hello
+Bonsoir	Good evening
+Salut	Hi / bye
+Au revoir	Goodbye
+à bientôt.	see you soon&lt;br /&gt;see you&lt;br /&gt;goodbye&lt;br /&gt;bye for now&lt;br /&gt;bye&lt;br /&gt;bye-bye
+? tout à l'heure.	See you later.
+? la prochaine.	Until next time.
+Bonne journée.	Have a nice day.
+Comment allez-vous? Comment vas-tu? (fam)	How are you doingي
+Je vais...	I'm...
+[très] bien	[very] well
+[très] mal	[very] bad
+comme-ci, comme-ça	so-so
+(Comment) ça va?	How's it goingي
+?a va.	It's okay.
+?a va bien.	It's going well.
+...mal.	...badly.
+Pas mal.	Not bad
+Quoi de neuf?	What's newي
+Rien de speciale.	Nothing much.
+oui	yes
+non	no
+peût-être	maybe
+Comment vous-appelez vous? Comment t'appelles-tu? (fam)	What's your nameي
+Je m'appelle...	My name is...
+Enchanté(e).	Pleased to meet you.
+Je vous présente...	I'd like you to meet...
+Voici...	This is...
+le prénom	first name
+le nom (de famille)	last name
+Mademoiselle (pl. Mesdemoiselles)	Miss
+Monsieur (pl. Messieurs)	Mr., Sir
+Madame (pl. Mesdames)	Mrs., Ma'am
+l'Heure (f)	Time
+Quelle heure est-il?	What time is itي
+Avez-vous l'heure?	Do you have the timeي Do you know what time it isي
+? quelle heure est le concert?	What time is the concertي
+Il est...	It is...
+une heure	1:00
+deux heures	2:00
+deux heures dix	2:10
+deux heures et quart	2:15
+deux heures et demie	2:30
+trois heures moins le quart	2:45
+trois heures moins dix	2:50
+midi	noon
+minuit	midnight
+de la nuit	...at night
+du matin	...in the morning
+de l'après-midi	...in the afternoon
+du soir	...in the evening
+15h30 (3:30 p.m.) reads quinze heures trente.	3:30 p.m.
+le matin	morning
+l'aube (f), l'aurore (f)	dawn
+le lever du soleil	sunrise
+le jour, la journée	day
+l'après-midi (m)	afternoon
+le soir	evening
+le crépuscule	dusk
+le coucher du soleil	sunset
+la nuit	night
+l'heure (f)	hour
+la minute	minute
+la seconde	second
+la mâchoire	jaw
+la gorge	throat
+les taches de rousseur	freckles
+la moustache	moustache
+la barbe	beard
+le sein	bosom, breast
+le ventre	belly
+la *hanche	hip
+la peau	skin
+l'os (m)	bone
+le sang	blood
+le crâne	skull
+le poumon	lung
+les Directions (f)	Directions
+le nord	north
+le sud	south
+l'est (m)	east
+l'ouest (m)	west
+le nord-est	northeast
+le nord-ouest	northwest
+le sud-est	southeast
+le sud-ouest	southwest
+à gauche	left
+à droite	right
+tout droit	straight ahead
+Tournez à droite.	Turn right.
+...dans le bon sens	...in the right direction
+...dans le mauvais sens	...in the wrong direction
+les Couleurs (f)	Colors
+blanc(he)	white
+jaune	yellow
+rose	pink
+rouge	red
+orange	orange
+vert(e)	green
+bleu(e)	blue
+violet(te)	purple
+brun(e)	brown
+gris(e)	gray
+noir(e)	black
+doré(e)	gold
+argenté(e)	silver
+bleu clair	light blue
+bleu foncé	dark blue
+les Rapports (m)	Relationships
+la Famille	Family
+les parents (m)	parents, relatives
+la mère	mother
+la maman	mom
+le père	father
+le papa	dad
+le mari	husband
+la femme	wife
+l'époux (-se)	spouse
+le fils	son
+la fille	daughter
+le frère	brother
+la sœur	sister
+l'enfant unique (m, f)	only child
+cadet(te)	younger
+aîné(e)	older
+le jumeau (la jumelle)	twin
+la tante	aunt
+l'oncle (m)	uncle
+le neveu	nephew
+la nièce	niece
+le/la cousin(e)	cousin
+les grands-parents (m)	grandparents
+le grand-père	grandfather
+la grand-mère (pl. grands-mères)	grandmother
+l'arrière-grand-père	great-grandfather
+les petits-enfants	grandchildren
+le petit-fils	grandson
+la petite-fille	granddaughter
+l'arrière-petite-fille (f)	great-grand-daughter
+le beau-père	father-in-law, stepfather
+la belle-mère	mother-in-law, stepmother
+la belle-fille	daughter-in-law, stepdaughter
+le beau-fils	stepson
+le gendre	son-in-law
+le beau-frère	brother-in-law, stepbrother
+la belle-sœur	sister-in-law, stepsister
+le demi-frère	half-brother
+la demi-sœur	half-sister
+les Amis (m)	Friends
+l'ami(e)	friend
+le/la meilleur(e) ami(e)	best friend
+le copain (la copine)	friend (pal)
+le petit ami (la petite amie)	boy/girlfriend
+possessive + copain/copine	boy/girlfriend (for adult)
+mon copain	my boyfriend
+ma copine	my girlfriend
+un copain à moi, un de mes copains	my (male) friend
+l'amant (m)	lover
+hétéro-/ homosexuel (-elle)	hetero-/homosexual
+le parrain	godfather
+la marraine	godmother
+le filleul	godson
+la filleule	goddaughter
+le Cycle de la Vie	Cycle of Life
+la naissance	birth
+être né(e)	to be born
+le bébé	baby
+le garçon	boy
+l'enfant (m, f)	child
+grandir	to grow up
+les jeunes	young people
+l'homme (m)	man
+célibataire	single
+sortir ensemble	to be dating
+coucher ensemble	to sleep together
+se fiancer	to get engaged
+les fiançailles (f)	engagement
+se marier	to get married
+le mariage	wedding
+les noces (f)	reception
+nom de jeune fille	maiden name
+la lune de miel	honeymoon
+enceinte	pregnant
+le divorce	divorce
+la mort	death
+mourir	to die
+le veuf	widow
+la veuve	widower
+le deuil	mourning
+l'orphelin(e)	orphan
+les ?motions (f)	Emotions
+l'amour (m)	love
+la haïne	hate
+l'amitié (m)	friendship
+le respect	respect
+les Adjectifs (m)	Adjectives
+énervant(e)	annoying
+sportif (sportive)	athletic
+mauvais(e)+	bad
+beaux (bel, belle)+	beautiful, handsome
+grand(e)+	big, tall
+blond(e)	blond, fair-haired
+ennuyeux (ennuyeuse)	boring
+occupé(e)	busy
+bavard(e)	chatty, talkative
+bon marché	cheap
+propre	clean
+fermé(e)	closed
+frais (fraîche)	cool (not warm)
+mignon(ne)	cute
+cher (chère)+	dear
+différent(e)	different
+sale	dirty
+sec (sèche)	dry
+facile	easy
+vide	empty
+vite	fast
+gros (grosse)+	fat
+gratuit(e)	free (no charge)
+libre	free (unconstrained)
+libre, disponible	free (available)
+plein(e)	full
+drôle, amusant(e)	funny
+doux (douce)	gentle
+bon (bonne)+	good
+heureux (heureuse)	happy
+difficile, dur(e)	hard, difficult
+lourd(e)	heavy
+haut	high
+chaud(e)	hot
+intelligent(e)	intelligent
+intéressant(e)	interesting
+gentil(le)	kind, nice
+dernier (-ière)+	last
+paresseux (paresseuse)	lazy
+gauche	left (not right), clumsy
+léger (légère)	light (not heavy)
+clair(e)	light (not dark)
+long (longue)	long
+méchant(e)	mean
+nouveau (nouvelle)+	new (to the speaker)
+neuf (neuve)	new (brand-new)
+vieux (vieille)+	old
+ouvert(e)	open
+sympathique	pleasant, agreeable
+joli(e)+	pretty
+tranquille	quiet, peaceful
+roux (rousse)	red-haired
+droit(e)	right (not left)
+juste, bon(ne)	right (not wrong)
+triste	sad
+court(e)	short (not long)
+petit(e)+	short (not tall)
+timide	shy
+pareil(le)	similar
+silencieux (silencieuse)	silent
+maigre	skinny
+lent(e)	slow
+fort(e)	strong, plump
+bête	stupid
+mince	thin
+vrai(e)	TRUE
+laid(e)	ugly
+faible	weak
+mouillé(e)	wet
+large	wide, broad
+faux (fausse)	wrong, false
+jeune+	young
+les Verbes (m)	Verbs
+permettre+ [à qqn] [de faire qqch]	to allow [someone] [to do something]
+répondre	to answer
+arrivere	to arrive
+demander [qqch] [à qqn]	to ask [smth] [smbdy]
+être+	to be
+pouvoir+	to be able to
+devenir+	to become
+commencer, se mettre+ à	to begin
+croire+	to believe
+emprunter	to borrow
+naître+e	to be born
+amener	to bring [smbdy]
+apporter	to bring [smth]
+choisir	to choose
+montere	to climb, go up
+venir+	to come
+revenir+	to come back
+pleurer	to cry
+descendree	to descend, go down
+entrere	to enter
+tombere	to fall
+craindre+	to fear
+sentir+	to feel
+finir	to finish
+oublier	to forget
+se lever	to get up
+donner	to give
+allere	to go
+se coucher	to go to bed
+détester	to hate
+s'amuser	to have fun
+devoir+	to have to, owe
+entendre	to hear
+aider	to help
+éspérer	to hope
+savoir+	to know (fact, skill)
+connaître+	to know (person, place)
+rire+	to laugh
+partir+e	to leave
+prêter	to lend
+mentir+	to lie
+aimer bien	to like
+écouter	to listen to
+vivre	to live (exist)
+habiter	to live (dwell in)
+regarder	to look at
+chercher	to look for
+perdre+	to lose
+aimer	to love
+rater	to miss (train)
+obéir [à qqn]	to obey [smbdy]
+ouvrir+	to open
+passere [par qqch]	to pass [by something]
+préférer	to prefer
+promettre+ [qqch à qqn]	to promise [something to somebody]
+mettre+	to put
+lire+	to read
+s'apercevoir+ [de qqch]	to realize [something]
+recevoir+	to receive
+se souvenir+ [de qqch]	to remember [something]
+rappeller [qqch à qqn]	to remind [somebody of something]
+rentrere, retournere	to return
+courir+	to run
+dire+	to say
+voir+	to see
+paraître+	to seem, appear
+montrer	to show
+se taire+	to shut up, be quiet
+chanter	to sing
+s'asseoir+	to sit down
+dormir+	to sleep
+s'endormir	to fall asleep
+sourire+	to smile
+parler	to speak
+restere	to stay, remain
+prendre+	to take
+emmener	to take [smbdy] along
+emporter	to take [smth] away
+raconter [une histoire]	to tell [a story]
+penser [à qqch]	to think [about smth]
+jeter	to throw (away)
+comprendre+	to understand
+se réveiller	to wake up
+marcher	to walk
+vouloir+	to wish, want
+s'inquiéter [de qqch]	to worry [about something]
+écrire+	to write
+le Travail	Work
+travailler	to work
+le métier	job (trade)
+le travail, l'emploi (m)	job (employment)
+le boulot (slang)	job (task)
+faire une demande [d'emploi]	to apply for [a job]
+l'entretien (m)	job interview
+le formulaire, le dossier	application (form)
+au chômage	unemployed
+en retraite	retired
+le syndicat	(trade) union
+la grève	strike
+faire la grève	to strike
+gagner	to earn
+le salaire	wages, salary
+les impôts (m)	taxes
+le patron (la patronne)	boss
+l'entreprise (f), la firme	company
+le bureau	office
+la réunion	meeting
+le/la stagiaire	intern
+l'usine (f)	factory
+les Professions (f)	Occupations
+Elle est avocate.	She is a lawyer.
+Elle est (femme) ingénieur.	She is an engineer.
+comptable (m, f)	accountant
+acteur (actrice)	actor
+artiste (m, f)	artist
+boulanger (-ère)	baker
+homme/femme d'affaires	businessman/woman
+fonctionnaire (m, f)	civil servant
+informaticien(ne)	computer specialist
+cuisinier (-ière)	cook
+danseur (-euse)	dancer
+dentiste (m, f)	dentist
+médecin (m), docteur (m)	doctor
+chauffeur (m)	driver
+chauffeur routier	truck driver
+éditeur (-trice), rédacteur (-trice)	editor
+ingénieur (m)	engineer
+fermier (-ière)	farmer
+pompier (m)	fireman
+coiffeur (-euse)	hairdresser
+journaliste (m, f)	journalist
+avocat(e)	lawyer
+bibilothécaire (m, f)	librarian
+facteur (-trice)	mailman
+musicien(ne)	musician
+infirmier (-ière)	nurse
+pilote (m, f)	pilot
+photographe	photographer
+plombier (m)	plumber
+policier (m), gendarme (m)	policeman
+vendeur (-euse)	salesperson
+secrétaire (m, f)	secretary
+gardien(ne)	security guard
+chanteur (-euse)	singer
+étudiant(e)	student
+soldat (m)	soldier
+professeur (m)	teacher
+ouvrier (-ière)	worker (in factory)
+écrivain (m)	writer
+la Santé	Health
+Comment vous sentez-vous?	How are you feelingي
+Je ne me sens pas bien.	I don't feel well.
+Je me sens...	I feel...
+...bien.	...well.
+...mieux.	...better.
+...pire.	...worse.
+?a fait mal.	It hurts.
+J'ai mal au cœur.	I feel nauseated.
+J'ai mal...	I have...
+...à la tête.	...a headache.
+...à la gorge.	...a sore throat.
+...aux dents.	...a toothache.
+...à l'oreille.	...an earache.
+...au dos.	...a backache.
+...au ventre.	...a stomach-ache.
+Je suis enrhumé(e).	I have a cold.
+avoir chaud	to be hot
+avoir froid	to be cold
+avoir une allergie [à]	to be allergic [to]
+se casser le bras	to break an arm
+éternuer	to sneeze
+tousser	to cough
+s'évanouir	to faint
+malade	sick
+en bonne santé	healthy, fit
+fatigué(e)	tired
+aveugle	blind
+sourd(e)	deaf
+la maladie	disease, illness
+la douleur	pain
+la toux	cough
+le rhume	cold
+la fièvre	fever
+la grippe	flu
+la varicelle	chicken pox
+[le bras] cassé	broken [arm]
+la blessure	wound
+la cicatrice	scar
+le SIDA	AIDS
+séropositif (-ve)	HIV-positive
+la crise cardiaque	heart attack
+le médecin, le docteur	doctor
+l'infirmier (-ière)	nurse
+le médicament	medicine (i.e., drug)
+le pansement	bandage
+le sparadrap	Band-Aid
+un comprimé	a pill
+la pilule	the Pill
+les gouttes (f)	drops
+le fauteuil roulant	wheelchair
+le régime	diet
+perdre/prendre du poids	to lose/ gain weight
+maigrir	to get thinner
+grossir	to get fatter
+jeûner	to fast
+l'Hygiène (f) et la Toilette	Hygiene and Grooming
+le savon	soap
+le rasoir	razor
+le shampooing	shampoo
+le dentifrice	toothpaste
+la brosse à dents	toothbrush
+le peigne	comb
+la brosse à cheveux	hairbrush
+le maquillage	makeup
+le rouge à lèvres	lipstick
+le bouton	pimple
+le point noir	blackhead
+[se] laver	to wash [self]
+se laver les mains	to wash (one's) hands
+se baigner	to bathe
+se raser	to shave
+se brosser les dents	to brush (one's) teeth
+se brosser les cheveux	to brush (one's) hair
+se peigner	to comb (self)
+se maquiller	to put on makeup
+les Vêtements (m)	Clothing
+porter	to wear/carry
+mettre	to put on
+enlever	to take off
+s'habiller	to get dressed
+se déshabiller	to get undressed
+Cette jupe te va bien.	This skirt fits you well.
+coudre	to sew
+le fil	thread
+l'aiguille (f)	needle
+les ciseaux (m)	scissors
+repasser	to iron
+nettoyer	to clean
+la manche	sleeve
+la poche	pocket
+long(ue)	long
+la dentelle	lace
+la soie	silk
+la fourrure	fur
+le cuir	leather
+à carreaux	checked
+à pois	polka-dotted
+à rayures	striped
+à la mode	fashionable
+le Restaurant	Restaurant
+Qu'est-ce que vous voudriez?	What would you likeي
+Je prends...	I'll have...
+Où sont les toilettes?	Where is the restroomي
+Je n'en peux plus. J'ai trop mangé.	I'm (too) full.
+la carte	menu
+service compris	tip included
+le serveur/ la serveuse	waiter/ waitress
+le couvert	place setting
+la carafe d'eau	water pitcher
+plein(e), rempli(e)	full (not empty)
+commander	to order
+partager	to share
+sur place	eat-in
+à emporter	take-out
+l'addition (f)	check, bill
+le pourboire	tip
+les Plats (m)	Courses
+les *hors-d'œuvres (m)	appetizers, starters
+l'entrée (f)	first course
+le plat principal	main course, entrée
+le dessert	dessert
+le Manger	Food
+manger	to eat
+boire	to drink
+avoir faim	to be hungry
+avoir soif	to be thirsty
+cuisiner	to cook (intr.)
+cuire	to cook (tr.)
+chauffer	to heat
+goûter	to taste
+les Repas (m)	Meals
+le petit déjeuner	breakfast
+le déjeuner	lunch
+le dîner	dinner
+le souper	supper
+le goûter	snack
+la Préparation	Preparation
+cru(e)	raw
+cuit(e)	cooked
+cuit(e) au four	baked
+frit(e)	fried
+cuit(e) à la vapeur	steamed
+rôti	roasted
+grillé(e)	grilled
+le Gout	Taste
+amer (amère)	bitter
+aigre	sour
+sucré(e)	sweet
+salé(e)	salty
+épicé(e)	spicy
+délicieux	tasty, delicious
+les Produits (m) laitiers	Dairy Products
+le lait	milk
+...écrémé	skim...
+...demi-écrémé	2-percent...
+le beurre	butter
+le fromage	cheese
+la crème	cream
+la crème fraîche	sour cream
+le yaourt	yogurt
+les Céréales (f)	Grains
+la céréale	cereal
+le pain	bread
+...complet	whole wheat
+...de seigle	rye
+les Condiments (m)	Condiments
+la sauce	sauce
+l'épice (f)	spice
+le vinaigre	vinegar
+le sel	salt
+le sucre	sugar
+le poivre	pepper (spice)
+l'ail (m)	garlic
+l'huile (f) [d'olive]	[olive] oil
+la mayonnaise	mayonnaise
+la moutarde	mustard
+la confiture	jam
+les Desserts (m)	Dessert
+le gâteau	cake
+la glace	ice cream
+le biscuit	cookie
+la chantilly	whipped cream
+le chocolat	chocolate
+la crêpe [sucrée]	[sweet] crepe
+les Casse-Croûtes	Light Meals
+l'œuf (m)	egg
+la salade	salad
+l'assiette (f) de crudités (f)	vegetable plate
+la vinaigrette	dressing
+le sandwich	sandwich
+la charcuterie	cold cuts (deli)
+la Viande	Meat
+le bœuf	beef
+le jambon	ham
+l'agneau (m)	lamb
+le porc	pork
+le veau	veal
+les escargots (m)	snails
+les Fruits (m) de mer	Seafood
+le *homard	lobster
+le crabe	crab
+la crevette	shrimp
+les crustacés (m)	shellfish
+les moules (f)	mussels
+le poisson	fish
+le thon	tuna(fish)
+le saumon	salmon
+la Volaille	Poultry
+le poulet	chicken
+la dinde	turkey
+le canard	duck
+l'oie (f)	goose
+le foie	liver
+les Fruits (m)	Fruit
+les fruits (m) secs	dried fruit
+la pomme	apple
+la banane	banana
+le raisin	grape
+le raisin sec	raisin
+le pamplemousse	grapefruit
+le citron	lemon
+le melon	melon
+l'orange (f)	orange
+la pêche	peach
+la poire	pear
+la prune	plum
+l'ananas (m)	pineapple
+la pastèque	watermelon
+les Baies (f)	Berries
+le cassis	blackcurrant
+l'airelle (f), la myrtille	blueberry
+la cerise	cherry
+la framboise	raspberry
+la fraise	strawberry
+les Légumes (m)	Vegetables
+la pomme de terre	potato
+la tomate	tomato
+le concombre	cucumber
+le poivron	pepper (veg.)
+l'oignon (m)	onion
+le poireau	leek
+la carotte	carrot
+la laitue	lettuce
+le chou	cabbage
+le chou-fleur	cauliflower
+les épinards (m)	spinach
+les *haricots [verts]	[green] beans
+les petits pois	peas
+le maïs	corn
+l'aubergine (f)	eggplant
+le champignon	mushroom
+l'asperge (f)	asparagus
+la noix	nut, walnut
+la noisette	hazelnut
+la cacahuète	peanut
+les Boissons (f)	Beverages
+le café	coffee
+le thé	tea
+avec du lait	with milk
+la tisane, l'infusion (f)	herbal tea
+le chocolat (chaud)	hot chocolate
+le jus	juice
+le jus d'orange	orange juice
+le coca	Coke
+l'eau (f)	water
+les glaçons (m)	ice cubes
+l'Alcool	Alcohol
+le vin	wine
+le cidre	hard cider
+la bière	beer
+...blonde	light...
+...brune	dark...
+ivre	drunk
+les Ustensiles (m)	Utensils
+le couteau	knife
+la fourchette	fork
+la cuillère	spoon
+l'assiette (f)	plate
+le bol	bowl
+la tasse	cup
+une tasse de thé	a cup of tea
+le verre	glass
+la serviette	napkin
+la poêle à frire	frying pan
+l'ouvre- bouteille (m)	bottle opener
+le tire-bouchon	corkscrew
+la cafetière	coffee pot
+l'ouvre-boîte (m)	can opener
+le Ménage	Household
+la Maison	House
+l'appartement (m)	apartment
+l'immeuble (m)	apartment building
+HLM (Habitation à Loyer Modéré)	subsidized housing
+le jardin	back yard, garden
+la pelouse	lawn
+le garage	garage
+le toit	roof
+le mur	wall
+le plancher	floor
+le plafond	ceiling
+la fenêtre	window
+le balcon	balcony
+l'étage (m)	floor (level)
+le rez de chaussée	ground fl.
+le premier étage	second fl.
+le grenier	attic
+le sous-sol	basement
+l'escalier (m)	stairs
+l'ascenseur (m)	elevator
+la porte	door
+la sonnette	bell
+la clef, la clé	key
+les Pièces (f) et le Mobilier	Rooms and Furnishings
+les meubles (m)	furniture
+le salon	living room
+le canapé	couch
+le fauteuil	armchair
+le téléviseur	TV (set)
+regarder la télé	to watch TV
+l'étagère (f)	shelf
+le rideau	curtain
+le tapis	rug
+l'horloge (f)	clock
+la salle à manger	dining room
+la table	table
+la chaise	chair
+la chambre	bedroom
+le lit	bed
+le matelas	mattress
+le drap	sheet
+la couverture	blanket
+l'oreiller (m)	pillow
+la commode	dresser
+le tiroir	drawer
+le miroir	mirror
+l'armoire (f)	closet
+la salle de bains	bathroom
+la baignoire	bathtub
+la douche	shower
+les toilettes (f)	toilet
+le lavabo	sink
+la cuisine	kitchen
+le frigo	refrigerator
+le four	oven
+le micro-ondes	microwave
+le lave-vaisselle	dishwasher
+le tabouret	stool
+le placard	linen closet
+l'aspirateur (m)	vacuum
+le Téléphone	Telephone
+l'appel (m) téléphonique	phone call
+le numéro de téléphone	phone number
+décrocher	to pick up
+composer	to dial
+accrocher	to hang up
+le portable	cell phone
+Dans la Vill	Around Town
+l'adresse (f)	address
+la rue	street
+le centre-ville	town center
+les Institutions Publiques (f)	Public Institutions
+la poste	post office
+le courrier	mail
+la lettre	letter
+envoyer	to send
+le timbre	stamp
+la mairie, l'hôtel de ville	town hall
+l'hôpital (m)	hospital
+l'église (f)	church
+la bibliothèque	library
+la piscine	pool
+le parc	park
+l'Argent (m)	Money
+?a coûte combien? C'est combien?	How much does it costي
+vendre	to sell
+le prix	price
+payer	to pay
+en espèces (f)	in cash
+par chèque (m)	by check
+par carte (f) de crédit	by credit card
+le reçu	receipt
+la monnaie	change (from a purchase)
+la caisse	cash register
+la banque	bank
+le distributeur	ATM
+les Courses (f)	Shopping
+faire les courses (f)	to run errands, to go shopping
+le marché	market
+le centre commercial	mall
+le magasin	store
+le grand magasin	department store
+les soldes (m)	sale
+la boulangerie	bakery
+la librairie	bookstore
+la boucherie	butcher shop
+l'épicerie (f)	grocery store
+le supermarché	supermarket
+la laverie	laundromat
+les Loisirs (m)	Leisure
+le divertissement	entertainment
+le passe-temps	hobby
+le musée	museum
+l'exposition (f)	exhibition
+le spectacle	show
+le concert	concert
+le cinéma	movie theater
+le film	movie
+le théâtre	theater
+la pièce	play
+l'opéra (m)	opera
+le cirque	circus
+la représentation, la séance	performance
+le bar	bar, pub
+le club	club
+la boîte (de nuit)	nightclub
+aller en boîte	to go clubbing
+la soirée, la fête	party
+le Sport	Sports
+faire du sport	to play sports
+faire du tennis jouer au tennis	to play tennis
+faire du ski	to go skiing
+le base-ball	baseball
+le basket	basketball
+la danse	dancing
+l'escrime (f)	fencing
+le football américain	football
+le hockey	hockey
+monter à cheval	to go horse-back riding
+le patin à glace	ice skating
+patiner	to skate
+la voile	sailing
+le ski	ski
+le foot	soccer
+la natation	swimming
+nager	to swim
+le tennis	tennis
+jouer...	to play...
+aux cartes (f)	cards
+aux dames (f)	checkers
+aux échecs (m)	chess
+au billiard	pool
+la partie	round, hand
+le jeu vidéo	video game
+la Musique	Music
+de la flûte	the flute
+de la guitare	the guitar
+du piano	the piano
+du violon	the violin
+l'Education (f)	Education
+apprendre	to learn
+étudier	to study
+[à qqn]	[smbdy]
+[de faire qqch]	to teach [to do smth]
+enseigner	to teach
+[qqch] [à qqn]	[smbdy] [smth]
+l'?cole (f)	School
+l'école (f) maternelle	nursery school
+l'école (f) primaire	elementary school
+le collège	junior high school
+le lycée	high school
+l'université (f)	college, university
+la classe	grade (level)
+la note	grade (mark)
+le cours, la leçon	class (lesson)
+la récréation, la récré	recess
+la cantine	cafeteria
+l'élève (m, f)	pupil (through collège)
+le/la lycéen(ne)	student (lycée)
+l'étudiant(e)	student (university)
+le professeur, le prof	teacher, professor
+l'instituteur (-trice)	elementary school teacher
+le maître (la maîtresse)	from pupil's perspective
+l'Année scolaire	School Year
+les vacances (f)	vacation
+les grandes vacances	summer vacation
+le jour de congé	day off
+la rentrée	first day of school
+les Matières (f)	Subjects
+la lecture	reading
+l'écriture	writing
+l'orthographe (f)	spelling
+les maths (f. pl.)	mathematics
+l'art (m)	art
+les beaux-arts	fine arts
+la musique	music
+la géographie	geography
+l'histoire (f)	history
+la science	science
+la biologie	biology
+la chimie	chemistry
+la physique	physics
+l'informatique (f)	computer science
+la science politique	political science
+la (science) economique	economics
+la philosophie	philosophy
+la psychologie	psychology
+la littérature	literature
+la langue étrangère	foreign language
+l'anglais (m)	English
+le français	French
+l'espagnol (m)	Spanish
+l'italien (m)	Italian
+l'allemand (m)	German
+l'Attirail (m)	School Supplies
+le classeur	binder
+le carnet	notebook
+le cahier	workbook
+le livre	book
+la colle	glue
+le papier	paper
+la feuille (de papier)	sheet of paper
+le stylo	pen
+le crayon	pencil
+l'agrafeuse (f)	stapler
+la craie	chalk
+Dans la Salle de Classe	In the Classroom
+la question	question
+lever la main	to raise (one's) hand
+la réponse	answer
+l'exercice (m)	exercise
+la rédaction, la composition	essay
+les devoirs (m)	homework
+faire les devoirs	to do homework
+l'examen (m)	test
+passer...	to take a...
+réussir...	to pass a...
+échouer...	to fail a...
+le tableau (noir)	chalkboard, blackboard
+effacer	to erase
+le pupitre	desk (pupil's)
+l'Université (f)	University
+la faculté, la fac	department
+la médecine	medicine
+la faculté de médecine	medical school
+le droit	law
+le diplôme	diploma
+être diplômé(e) en...	to have a diploma in...
+la licence	degree
+le/la licencié(e) ès lettres	bachelor of arts (BA)
+le/la licencié(e) ès sciences	bachelor of science (BS)
+la maîtrise	master's degree
+Sur la Route	On the Road
+conduire	to drive
+le permis de conduire	driver's license
+le chauffeur	driver
+le passager (la passagère)	passenger
+monter dans [la véhicule]	to get into [the vehicle]
+descendre de	to get out of (a vehicle)
+le piéton	pedestrian
+la Voiture	Car
+le vitre	window (esp. windshield)
+la roue	wheel (of car)
+le pneu	tire
+le volant	steering wheel
+la ceinture de sécurité	seatbelt
+le phare	headlight
+le clignotant	turn signal
+l'essuie-glace (m)	windshield wiper
+l'essence (f)	gasoline
+la station-service	gas station
+le moteur	engine
+l'huile (f)	oil
+la frêne	brake
+la panne	breakdown
+être en panne	to be broken, not working
+Voyager	Travel
+les vacances	vacation
+aller en vacances	to go on vacation
+voyage d'affaires	business travel
+le voyage	trip
+visiter [une endroit]	to visit [a place]
+rendre visite [à quelqu'un]	to visit [someone]
+le bagage (m)	luggage
+la valise	suitcase
+faire les valises	to pack
+l'hôtel (m)	hotel
+le séjour	stay
+les renseignements (m)	information
+le passeport	passport
+le visa	visa
+la douane	customs
+le plan	(city) map
+le Bus	Bus
+le conducteur, le chauffeur	bus driver
+la gare routière	bus station
+l'arrêt	[bus] stop
+la place	seat
+le Train	Train
+la gare	station
+le guichet	ticket window
+l'horaire (m)	timetable
+le billet	ticket
+l'aller simple	one-way
+l'aller retour	round trip
+le tarif	(ticket) price
+le quai	platform
+la voie	track
+la sortie	exit
+l'arrivée (f)	arrival
+le départ	departure
+le retard, le delai	delay
+la couchette	sleeper berth
+la correspondance	connection
+l'Avion (m)	Airplane
+l'aéroport (m)	airport
+le vol	flight
+le décollage	takeoff
+l'atterrissage (m)	landing
+Autres Véhicules (f)	Other Vehicles
+le bateau	boat
+le vélo, la bicyclette	bike, bicycle
+la moto	motorcycle
+le métro	subway
+le jeton	token
+le taxi	taxi
+la Géographie	Geography
+le pays	country
+la ville	city
+la campagne	countryside
+l'île (f)	island
+les Masses (f) d'eau	Bodies of Water
+l'océan (m)	ocean
+la mer	sea
+le lac	lake
+le fleuve	river
+le ruisseau	stream
+le marais	marsh, swamp
+le Paysage	Landscape
+la montagne	mountain
+le rocher	rock (boulder)
+la colline	hill
+la vallée	valley
+le champ	field
+la forêt	forest
+la fleur	flower
+l'arbre (m)	tree
+le désert	desert
+les Continents (m)	Continents
+l'Afrique (f)	Africa
+l'Amérique (f)	America
+...du Nord	(North)
+...du Sud	(South)
+l'Asie (f)	Asia
+l'Australie (f)	Australia
+l'Europe (f)	Europe
+les Pays (m)	Countries
+l'Algérie (f)	Algeria
+la Belgique	Belgium
+le Brésil	Brazil
+le Canada	Canada
+la Chine	China
+l'?gypte (f)	Egypt
+l'Angleterre (f)	England
+la France	France
+l'Allemagne (f)	Germany
+la Grèce	Greece
+l'Inde (f)	India
+l'Irlande (f)	Ireland
+l'Israël (m)	Israel
+l'Italie (f)	Italy
+le Japon	Japan
+la Corée	Korea
+le Mexique	Mexico
+le Maroc	Morocco
+les Hollandes (f)	Netherlands
+la Russie	Russia
+l'Espagne (f)	Spain
+la Suisse	Switzerland
+la Thaïlande	Thailand
+la Tunisie	Tunisia
+les ?tats-Unis (m)	United States
+les Animaux (m)	Animals
+la ferme	farm
+le zoo	zoo
+la bête	beast
+la corne	horn
+la patte	paw
+la queue	tail
+chasser	to hunt
+les Animaux Domestiques	Domestic Animals
+le chat (la chatte)	cat
+le chien (la chienne)	dog
+la poule	hen
+le coq	rooster
+la vache	cow
+le taureau	bull
+le cheval	horse
+l'âne (m)	donkey
+le mouton	sheep
+le bélier	ram
+la chèvre	goat
+le cochon	pig
+le porcelet	piglet
+les Animaux Sauvages	Wild Animals
+le renard	fox
+le loup	wolf
+le cerf	deer
+le lion	lion
+le tigre	tiger
+l'ours (m)	bear
+le sanglier	wild boar
+l'éléphant (m)	elephant
+le chameau	camel
+la girafe	giraffe
+le zèbre	zebra
+le singe	monkey
+la souris	mouse
+le rat	rat
+le lapin	rabbit
+l'écureuil (m)	squirrel
+la grenouille	frog
+la tortue	turtle
+le lézard	lizard
+le serpent	snake
+le ver (de terre)	worm
+la Vie Aquatique	Marine Life
+le requin	shark
+la baleine	whale
+le dauphin	dolphin
+la méduse	jellyfish
+la pieuvre	octopus
+le calmar	squid
+les Oiseaux (m)	Birds
+le nid	nest
+l'aile (f)	wing
+l'aigle (m)	eagle
+le faucon	hawk
+la colombe	dove
+le pigeon	pigeon
+le moineau	sparrow
+le corbeau	crow
+le perroquet	parrot
+la cigogne	stork
+le *hibou	owl
+le rossignol	nightingale
+le paon	peacock
+le cygne	swan
+les Insectes (m)	Insects
+la fourmi	ant
+l'abeille (f)	bee
+le papillon	butterfly
+le cafard	cockroach
+la mouche	fly
+le moustique	mosquito
+l'araignée (f)	spider
+les Adverbes et les Prépositions (f)	Adverbs and Prepositions
+presque	almost
+peut-être	maybe
+seulement	only
+très	very
+loin	far
+près	near, close
+à côté de	next to
+en face de	across from
+derrière	behind
+devant	in front of
+entre	between
+au-dessus de	above
+au-dessous de	below
+dedans	inside
+à l'intérieur de	...of
+dehors	outside
+à l'extérieur de	...of
+ici	here
+là	there
+là-bas	over there
+après	after
+avant	before
+encore	again
+pas encore	not yet
+tôt	early
+tard	late
+à l'heure	on time
+maintenant	now
+déjà	already
+jamais	never
+une fois	once
+de temps en temps	from time to time
+quelquefois	sometimes
+souvent	often
+toujours	always
+bien	well
+mal	badly
+mieux	better
+pire	worse
+assez	enough
+pas assez	not enough
+plus, davantage	more
+moins	less
+beaucoup	much
+peu	little
+aussi... [que]	as... [as]
+دانلود کتاب ها و نرم افزارها? فرانسه	www.Francais.persianblog.ir
