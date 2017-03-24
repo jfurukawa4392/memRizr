@@ -8,8 +8,12 @@ json.decks @subject.decks.map do |deck|
 
   json.cardCount cards.length
 
-  mastery = cards.inject(0) do | acc, card |
-    acc + (card.getUserRating(current_user.id))
+  if current_user
+    mastery = cards.inject(0) do | acc, card |
+      acc + (card.getUserRating(current_user.id))
+    end
+  else
+    mastery = 0
   end
 
   json.mastery (cards.length > 0 ? (mastery/(5.0 * cards.length)*100) : 0)
@@ -25,5 +29,9 @@ json.subjectDetail do
     json.username learner.username
   end
 
-  json.userFollows current_user.follows?(@subject)
+  if current_user
+    json.userFollows current_user.follows?(@subject)
+  else
+    json.userFollows false
+  end
 end
