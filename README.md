@@ -14,17 +14,17 @@ A user can browse the current offerings of subjects and decks through the search
 
 Search queries are processed on the back-end by the subjects controller. The search bar has dropdown functionality as show below to populate results quickly after the user enters at least 2 characters.
 
-![Searchbar](/screenshots/Search.png)
+![Searchbar](docs/screenshots/Search.png)
 
 The searchbar component uses a separate slice of application state to populate the drop down with results. It hits the same API endpoint on the back end, but chains off of the promise to dispatch a different action than when the user hits the submit button. When the user submits a query, the list to the right of the screen re-renders with the search results. All results in both the dropdown and subject list are links to the subject detail view where the user can follow or study the available subject or decks respectively as shown below:
 
-![Subject Detail in Search](/screenshots/Search_Subject_detail.png)
+![Subject Detail in Search](docs/screenshots/Search_Subject_detail.png)
 
 ### Studying and ConfidenceRatings
 A User can study a deck. The User can flip the same card repeatedly by clicking on the card, and move on to the next card by rating it. The card ratings are used to determine the user's overall mastery of the deck and subject.
 
-![Card ScreenShot](/screenshots/Question.png)
-![Answer Reveal ScreenShot](/screenshots/RevealedCard.png)
+![Card ScreenShot](docs/screenshots/Question.png)
+![Answer Reveal ScreenShot](docs/screenshots/RevealedCard.png)
 
 Mastery calculation code snippet:
 ```javascript
