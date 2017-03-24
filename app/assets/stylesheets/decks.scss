@@ -96,7 +96,6 @@
   display: inline-block;
   margin-left: 4px;
   .dropdown-btn{
-    border-radius: 2px;
     border: none;
     cursor: pointer;
     background-color: $light-blue;
@@ -110,6 +109,7 @@
     z-index: 1;
     .deck-link-wrapper{
       color: $off-white;
+      border-radius: 2px;
       text-decoration: none;
       display: block;
       height: 30px;
