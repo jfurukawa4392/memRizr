@@ -31,7 +31,8 @@ class SessionForm extends React.Component {
         username: "",
         password: ""
     });
-    this.props.processForm(user);
+    this.props.processForm(user)
+      .then(() => this.props.router.push('/my-subjects'));
   }
 
   guestLogin(e){
@@ -40,7 +41,8 @@ class SessionForm extends React.Component {
       username: "Guest",
       password: "password"
     };
-    setTimeout(() => this.props.processForm(user), 0);
+    this.props.processForm(user)
+      .then(() => this.props.router.push('/my-subjects'));
   }
 
   update(field) {

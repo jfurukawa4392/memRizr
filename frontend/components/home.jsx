@@ -1,5 +1,6 @@
 import React from 'react';
 import NavBarContainer from './navbar_container';
+import { Link } from 'react-router';
 
 class Home extends React.Component{
 
@@ -26,7 +27,12 @@ class Home extends React.Component{
           <content className="home-inner">
             <section className="greetHeader">
               <h1>Keep your memory sharp</h1>
-              <h3>Search flashcards below!</h3>
+              <Link
+                to='/browse'>
+                <h3>
+                  Search available flashcards
+                </h3>
+              </Link>
             </section>
             <form className="search"
               onSubmit={this.handleSubmit}>

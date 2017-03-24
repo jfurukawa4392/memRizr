@@ -1,5 +1,10 @@
 @import "variables";
 
+.deck-list-container{
+  display: flex;
+  margin: 20px 10px;
+}
+
 .deck-list-header{
   color: $light-blue;
   display: flex;
@@ -22,6 +27,12 @@
   padding: 3px;
   position: relative;
   top: 10px;
+  transition: all 0.3s ease 0s;
+  height: 100%;
+  &:hover{
+    background-color: $lighter-blue;
+    text-decoration: underline;
+  }
 }
 
 .deck-list-ul{
@@ -34,6 +45,12 @@
     border-bottom: 1px solid gray;
     display: flex;
     justify-content: space-between;
+    padding: 0 8px 0 8px;
+    transition: all 0.2s ease 0s;
+    &:hover{
+      background-color: $off-white;
+      color: $reveal-blue;
+    }
     .deck-title{
       align-self: flex-start;
       font-weight: bold;
@@ -76,6 +93,7 @@
   position: relative;
   display: inline-block;
   margin-left: 4px;
+  z-index: 1;
   .dropdown-btn{
     border-radius: 2px;
     border: none;
@@ -93,7 +111,8 @@
       color: $off-white;
       text-decoration: none;
       display: block;
-      // border: 1px solid black;
+      height: 30px;
+      width: 30px;
       display: flex;
       justify-content: center;
       background-color: $light-blue;
@@ -110,9 +129,12 @@
         text-decoration: none;
         color: white;
         font-size: 11px;
+        display: flex;
+        align-items: center;
       }
       .deck-delete-btn{
         color: $off-white;
+        width: 100%;
         &:hover{
           color: white;
           background-color: $delete-red;
@@ -124,7 +146,6 @@
 
 .dropdown:hover .dropdown-content {
   display: block;
-
 }
 
 .deck-item-outer{

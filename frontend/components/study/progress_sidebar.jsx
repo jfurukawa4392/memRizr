@@ -25,12 +25,15 @@ class ProgressSidebar extends React.Component{
   calculateDistribution(cards){
     let scores = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
 
+    cards.forEach((card, idx) => {
 
+    });
   }
 
   render(){
     let { title, subjectId } = this.props;
     let stats = Math.floor(this.calculateMastery(this.props)*100);
+    let cardBuckets =
     // <Circle percent="10" strokeWidth="4" strokeColor="#D3D3D3" />
     return(
       <aside className="progress-sidebar-outer">
