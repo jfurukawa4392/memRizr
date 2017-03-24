@@ -1,0 +1,300 @@
+je	I
+tu	you
+il	he
+elle	she
+nous	we
+vous	you
+ills (m)	they
+elles (f)	they
+acheter	buy
+zéro	0
+un	1
+deux	2
+trois	3
+quatre	4
+cinq	5
+six	6
+sept	7
+huit	8
+neuf	9
+dix	10
+onze	11
+douze	12
+treize	13
+quatorze	14
+quinze	15
+seize	16
+dix-sept	17
+dix-huit	18
+dix-neuf	19
+vingt	20
+vingt et un	21
+vingt-deux	22
+vingt-trois	23
+trente	30
+trente et un	31
+trente-deux	32
+quarante	40
+cinquante	50
+soixante	60
+soixante-dix	70
+soixante et onze	71
+soixante-douze	72
+soixante-dix-huit	78
+quatre-vingts	80
+quatre-vingt-un	81
+quatre-vingt-deux	82
+quatre-vingt-dix	90
+quatre-vingt-onze	91
+quatre-vingt-douze	92
+cent	100
+cent un	101
+deux cents	200
+deux cent un	201
+trois cents	300
+quatre cents	400
+cinq cents	500
+six cents	600
+sept cents	700
+huit cents	800
+neuf cents	900
+mille	1
+mille cent un	1.101
+dix mille	10.000
+un million	1.000.000
+deux millions	2.000.000
+un milliard	1.000.000.000
+un billion	1.000.000.000.000
+premier, -ière	1st
+deuxième, second(e)	2nd
+troisième	3rd
+quatrième	4th
+cinquième	5th
+sixième	6th
+septième	7th
+huitième	8th
+neuvième	9th
+dixième	10th
+vingtième	20th
+vingt et unième	21st
+centième	100th
+deux cent unième	201st
+millième	1000th
+la moitié; un(e) demi(e)	½
+zéro virgule cinq	0,5
+un tiers	03-Jan
+un quart	¼
+trois quarts	¾
+trois deux tiers	3 2/3
+trois ans et demi	3½ years
+Quelle est la date aujourd'hui?	What is today's dateي
+C'est&nbsp;&nbsp;le premier mai	It is May 1st
+C'est&nbsp;&nbsp;le deux mars	It is&nbsp;&nbsp;March 2nd
+C'est&nbsp;&nbsp;le trente et un octobre	It is&nbsp;&nbsp;October 31st
+aujourd'hui	today
+hier	yesterday
+demain	tomorrow
+avant-hier	day before yesterday
+après-demain	day after tomorrow
+lundi	Monday
+mardi	Tuesday
+mercredi	Wednesday
+jeudi	Thursday
+vendredi	Friday
+samedi	Saturday
+dimanche	Sunday
+C'est lundi.	It's Monday.
+Quel jour sommes-nous?	What day of the week is itي
+janvier	January
+février	February
+mars	March
+avril	April
+mai	May
+juin	June
+juillet	July
+août	August
+septembre	September
+octobre	October
+novembre	November
+décembre	December
+les Saisons (f)	Seasons
+l'hiver (m)	winter
+le printemps	spring
+l'été (m)	summer
+l'automne (m)	autumn
+la semaine	week
+la semaine dernière	last week
+la semaine prochaine	next week
+dans huit jours	in a week
+dans quinze jours	in two weeks
+hebdomadaire	weekly
+le week-end, la fin de la semaine	weekend
+le mois	month
+l'an (m), l'année (f)	year
+il y a trois ans	three years ago
+l'année dernière	last year
+la décennie	decade
+dans les années cinquante	in the fifties
+le siècle	century
+les Fêtes (f)	Holidays
+Noël (m)	Christmas
+la veille de Noël	Christmas Eve
+le jour de l'an	New Year's Day
+Pâques (f.pl)	Easter
+les Mois (m)	Months
+les Jours (m) de la Semaine	Days of the Week
+les Dates (f)	Dates
+en hiver	in the winter
+au printemps	in the spring
+en été	in the summer
+en automne	in the fall
+s'il vous plaît / s'il te plaît (fam)	please
+merci	thank you
+Je vous en prie.	You're welcome.
+De rien. Il n'y a pas de quoi.	No problem.
+Bienvenu	Welcome to...
+Bonjour	Good morning / Good afternoon / Hello
+Bonsoir	Good evening
+Salut	Hi / bye
+Au revoir	Goodbye
+à bientôt.	see you soon&lt;br /&gt;see you&lt;br /&gt;goodbye&lt;br /&gt;bye for now&lt;br /&gt;bye&lt;br /&gt;bye-bye
+? tout à l'heure.	See you later.
+? la prochaine.	Until next time.
+Bonne journée.	Have a nice day.
+Comment allez-vous? Comment vas-tu? (fam)	How are you doingي
+Je vais...	I'm...
+[très] bien	[very] well
+[très] mal	[very] bad
+comme-ci, comme-ça	so-so
+(Comment) ça va?	How's it goingي
+?a va.	It's okay.
+?a va bien.	It's going well.
+...mal.	...badly.
+Pas mal.	Not bad
+Quoi de neuf?	What's newي
+Rien de speciale.	Nothing much.
+oui	yes
+non	no
+peût-être	maybe
+Comment vous-appelez vous? Comment t'appelles-tu? (fam)	What's your nameي
+Je m'appelle...	My name is...
+Enchanté(e).	Pleased to meet you.
+Je vous présente...	I'd like you to meet...
+Voici...	This is...
+le prénom	first name
+le nom (de famille)	last name
+Mademoiselle (pl. Mesdemoiselles)	Miss
+Monsieur (pl. Messieurs)	Mr., Sir
+Madame (pl. Mesdames)	Mrs., Ma'am
+l'Heure (f)	Time
+Quelle heure est-il?	What time is itي
+Avez-vous l'heure?	Do you have the timeي Do you know what time it isي
+? quelle heure est le concert?	What time is the concertي
+Il est...	It is...
+une heure	1:00
+deux heures	2:00
+deux heures dix	2:10
+deux heures et quart	2:15
+deux heures et demie	2:30
+trois heures moins le quart	2:45
+trois heures moins dix	2:50
+midi	noon
+minuit	midnight
+de la nuit	...at night
+du matin	...in the morning
+de l'après-midi	...in the afternoon
+du soir	...in the evening
+15h30 (3:30 p.m.) reads quinze heures trente.	3:30 p.m.
+le matin	morning
+l'aube (f), l'aurore (f)	dawn
+le lever du soleil	sunrise
+le jour, la journée	day
+l'après-midi (m)	afternoon
+le soir	evening
+le crépuscule	dusk
+le coucher du soleil	sunset
+la nuit	night
+l'heure (f)	hour
+la minute	minute
+la seconde	second
+la mâchoire	jaw
+la gorge	throat
+les taches de rousseur	freckles
+la moustache	moustache
+la barbe	beard
+le sein	bosom, breast
+le ventre	belly
+la *hanche	hip
+la peau	skin
+l'os (m)	bone
+le sang	blood
+le crâne	skull
+le poumon	lung
+les Directions (f)	Directions
+le nord	north
+le sud	south
+l'est (m)	east
+l'ouest (m)	west
+le nord-est	northeast
+le nord-ouest	northwest
+le sud-est	southeast
+le sud-ouest	southwest
+à gauche	left
+à droite	right
+tout droit	straight ahead
+Tournez à droite.	Turn right.
+...dans le bon sens	...in the right direction
+...dans le mauvais sens	...in the wrong direction
+les Couleurs (f)	Colors
+blanc(he)	white
+jaune	yellow
+rose	pink
+rouge	red
+orange	orange
+vert(e)	green
+bleu(e)	blue
+violet(te)	purple
+brun(e)	brown
+gris(e)	gray
+noir(e)	black
+doré(e)	gold
+argenté(e)	silver
+bleu clair	light blue
+bleu foncé	dark blue
+les Rapports (m)	Relationships
+la Famille	Family
+les parents (m)	parents, relatives
+la mère	mother
+la maman	mom
+le père	father
+le papa	dad
+le mari	husband
+la femme	wife
+l'époux (-se)	spouse
+le fils	son
+la fille	daughter
+le frère	brother
+la sœur	sister
+l'enfant unique (m, f)	only child
+cadet(te)	younger
+aîné(e)	older
+le jumeau (la jumelle)	twin
+la tante	aunt
+l'oncle (m)	uncle
+le neveu	nephew
+la nièce	niece
+le/la cousin(e)	cousin
+les grands-parents (m)	grandparents
+le grand-père	grandfather
+la grand-mère (pl. grands-mères)	grandmother
+l'arrière-grand-père	great-grandfather
+les petits-enfants	grandchildren
+le petit-fils	grandson
+la petite-fille	granddaughter
+l'arrière-petite-fille (f)	great-grand-daughter
+le beau-père	father-in-law, stepfather
+la belle-mère	mother-in-law, stepmother
+la belle-fille	daughter-in-law, stepdaughter
+le beau-fils	stepson
+le gendre	son-in-law
+le beau-frère	brother-in-law, stepbrother

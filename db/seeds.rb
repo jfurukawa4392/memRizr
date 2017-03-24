@@ -205,6 +205,31 @@ decks.each do |deck|
     index += 1
   end
 end
+
+
+chapters = ['Beginner Vocab', 'Intermediate Vocab', 'Advanced Vocab', 'Daily words', 'Grammar', 'Food and Drink',
+            'Sports Vocab', 'Business Vocab', 'Political Vocab']
+decks = []
+chapters.each do |chp|
+  decks << Deck.create!(author_id: guest.id, subject_id: subject10.id, title: chp)
+end
+
+cards = read_cards('db/French.txt')
+decks.each do |deck|
+  index = 0
+  random = (25..30).to_a.sample
+  random.times do |num|
+    tmp = cards[index]
+    q = tmp.keys.first
+    a = tmp[q]
+    card = Card.create!(deck_id: deck.id, question: q, answer: a)
+    if index < 55
+      CardRating.create!(user_id: guest.id, card_id: card.id, rating: (1..5).to_a.sample)
+    end
+    index += 1
+  end
+end
+
 ### subject1 = Subject.create!(title: 'Pokemon', creator_id: guest.id)
 ### subject2 = Subject.create!(title: 'Harry Potter', creator_id: guest.id)
 ### subject3 = Subject.create!(title: 'Game of Thrones', creator_id: jesse.id)
@@ -214,7 +239,7 @@ end
 ### subject7 = Subject.create!(title: 'Git', creator_id: jesse.id)
 ### subject8 = Subject.create!(title: 'Spanish', creator_id: jesse.id)
 ### subject9 = Subject.create!(title: 'Algebra', creator_id: jesse.id)
-# subject10 = Subject.create!(title: 'French', creator_id: jesse.id)
+### subject10 = Subject.create!(title: 'French', creator_id: jesse.id)
 # subject11 = Subject.create!(title: 'Chemistry', creator_id: jesse.id)
 SubjectFollow.create(user_id: jesse.id, subject_id: subject2.id)
 SubjectFollow.create(user_id: jesse.id, subject_id: subject1.id)
