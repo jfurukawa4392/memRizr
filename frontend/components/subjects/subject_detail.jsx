@@ -25,9 +25,9 @@ class SubjectDetail extends React.Component{
   }
 
   componentWillUnmount(){
-    if(this.props.location.pathname.match(/\/my-subjects/)){
-      this.props.clearSubject();
-    }
+    // if(this.props.location.pathname.match(/\/my-subjects/)){
+    //   this.props.clearSubject();
+    // }
   }
 
   toggleFollow(){
@@ -66,18 +66,20 @@ class SubjectDetail extends React.Component{
       currentLearners = <CurrentLearners subjectDetail={subjectDetail}/>;
       if(subjectDetail.title){
         subjectTitle = subjectDetail.title;
-        followButton = subjectDetail.userFollows ?
-        (<button
-          onClick={() => this.toggleFollow()}
-          className="unfollow-subject-btn">
-          Unfollow
-        </button>) :
-        (<button
-          onClick={() => this.toggleFollow()}
-          className="follow-subject-btn">
-          <i className="fa fa-plus-square-o"></i>
-          Follow
-        </button>);
+        if(currentUser){
+          followButton = subjectDetail.userFollows ?
+          (<button
+            onClick={() => this.toggleFollow()}
+            className="unfollow-subject-btn">
+            Unfollow
+          </button>) :
+          (<button
+            onClick={() => this.toggleFollow()}
+            className="follow-subject-btn">
+            <i className="fa fa-plus-square-o"></i>
+            Follow
+          </button>);
+        }
       }
     } else {
       deckList = <div className="no-decks-found">No Decks Found</div>;

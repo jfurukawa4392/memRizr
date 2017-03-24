@@ -29,7 +29,7 @@ class DeckIndex extends React.Component{
     let { decks, createDeck, subjectDetail, deleteDeck, currentUser } = this.props;
     let deckList = <div className="no-decks-found">No Decks Found</div>;
     let deckForm = <div className="new-deck-form-placeholder"></div>;
-    let admin = (currentUser.id === subjectDetail.creator);
+    let admin = currentUser ? (currentUser.id === subjectDetail.creator) : false;
     let optionsBtn = null;
 
     if(admin){

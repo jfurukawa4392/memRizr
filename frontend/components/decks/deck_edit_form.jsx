@@ -3,6 +3,7 @@ import isEqual from 'lodash/isEqual';
 import React from 'react';
 import NavBarContainer from '../navbar_container';
 import DeckTags from './deck_tags';
+import { Link } from 'react-router';
 
 class DeckEditForm extends React.Component{
   constructor(props){
@@ -93,7 +94,8 @@ class DeckEditForm extends React.Component{
   }
 
   render(){
-    let { title, tags } = this.props.deck;
+    let { title, tags, activeSubjectId } = this.props.deck;
+    let saveConfirmation, backToSubject;
     let cardsRows = <tr>loading data</tr>;
     cardsRows = this.state.cards.map((card, idx) => {
       return(
@@ -114,9 +116,26 @@ class DeckEditForm extends React.Component{
       );
     });
 
-    let saveConfirmation;
     if(this.state.confirmSave){
       saveConfirmation = <h4>Cards Saved</h4>;
+    }
+
+    if(activeSubjectId){
+      backToSubject =
+      <Link
+        className="back-link"
+        to={`my-subjects/${activeSubjectId}`}>
+        <i className="fa fa-chevron-left"></i>
+        Back
+      </Link>;
+    } else {
+      backToSubject =
+      <Link
+        className="back-link"
+        to={`my-subjects/`}>
+        <i className="fa fa-chevron-left"></i>
+        Back
+      </Link>;
     }
 
     return(
@@ -124,6 +143,7 @@ class DeckEditForm extends React.Component{
         <NavBarContainer />
         <content className="cards-list-table-wrapper">
           <h1>Edit Deck: {title}</h1>
+          {backToSubject}
           <div>{this.state.errors}</div>
           <table className="cards-list-table-outer">
             <thead className="cards-list-table-head">
@@ -139,10 +159,10 @@ class DeckEditForm extends React.Component{
           </table>
           <div>
             <button onClick={() => this.addCardForm()}>
-              Add Card
+              New Card
             </button>
             <button onClick={() => this.processDeck()}>
-              Save Changes
+              Save Cards
             </button>
           </div>
           {saveConfirmation}

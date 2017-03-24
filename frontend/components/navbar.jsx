@@ -116,14 +116,21 @@ class NavBar extends React.Component {
         <nav className="left">
           <ul>
             <li>
-              <div className="">
-                <img className="site-logo" src="http://res.cloudinary.com/dq4hfogl5/image/upload/v1489785890/brain_jhirqr.jpg"/>
+              <div className="site-logo">
+                <i className="fa fa-lightbulb-o fa-2x fa-rotate-35">
+                </i>
               </div>
             </li>
             <li>
               <Link to='/' className="site-title">memRizr</Link>
             </li>
             {myLib}
+            <li>
+              <Link to='/browse' className="browse-link">
+                <i className="fa fa-search"></i>
+                Browse
+              </Link>
+            </li>
           </ul>
         </nav>
         <div id="auth-modal">

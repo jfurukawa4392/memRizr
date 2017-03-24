@@ -36,7 +36,6 @@ class SearchBar extends React.Component{
                results: {}
              }));
     } else {
-      console.log(query);
       APIUtil.requestResults(query)
              .then(results => this.setState({
                 results
@@ -46,7 +45,6 @@ class SearchBar extends React.Component{
 
   render(){
     let resultKeys = Object.keys(this.state.results);
-    console.log(resultKeys);
     let resultList = [];
     let key;
     for (var i = 0; i < resultKeys.length; i++) {

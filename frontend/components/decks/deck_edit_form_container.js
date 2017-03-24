@@ -10,7 +10,8 @@ import {
 const mapStateToProps = (state, ownProps) => {
   return {
     deck: state.activeDeck,
-    deckId: ownProps.params.deckId
+    deckId: ownProps.params.deckId,
+    activeSubjectId: state.activeSubject.subjectDetail.id
   };
 };
 
