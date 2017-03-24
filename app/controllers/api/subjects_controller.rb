@@ -6,7 +6,7 @@ class Api::SubjectsController < ApplicationController
 
     if query
       search_table = Subject.left_outer_joins(decks: { taggings: :tag })
-      @subjects = search_table.select(:title, :id).where("subjects.title like :query or decks.title like :query or tags.tag_name like :query", { query: "%#{query}%"}).distinct
+      @subjects = search_table.select(:title, :id).where("subjects.title ilike :query or decks.title ilike :query or tags.tag_name ilike :query", { query: "%#{query}%"}).distinct
     else
       @subjects = Subject.all
     end
