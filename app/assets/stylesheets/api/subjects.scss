@@ -43,13 +43,14 @@
 
 .render-newSubject-btn{
   margin-top: 5px;
-  padding: 0;
+  padding: 1px 0 0 0;
   height: 15px;
   width: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 2px;
+  color: white;
 }
 
 .subject-list-title{
@@ -85,7 +86,6 @@
         box-sizing: border-box;
         border-style: outset;
         margin: 5px;
-        border: 2px solid;
         font-family: $nunito;
         font-weight: normal;
       }
@@ -99,7 +99,7 @@
   color: $lighter-blue;
   font-size: 26px;
   padding: 15px 0px 15px 0px;
-  border-bottom: 1px solid $gray;
+  border-bottom: 3px solid #E8E8E8;
   a{
     color: $light-blue;
     text-decoration: none;

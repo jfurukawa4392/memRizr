@@ -3,6 +3,9 @@
 .deck-list-container{
   display: flex;
   margin: 20px 10px;
+  content{
+    width: 100%;
+  }
 }
 
 .deck-list-header{
@@ -29,8 +32,7 @@
   top: 10px;
   transition: all 0.3s ease 0s;
   height: 100%;
-  &:hover{
-    background-color: $lighter-blue;
+  a:hover{
     text-decoration: underline;
   }
 }
@@ -42,7 +44,7 @@
   color: $light-blue;
   width: 100%;
   li{
-    border-bottom: 1px solid gray;
+    border-bottom: 3px solid #E8E8E8;
     display: flex;
     justify-content: space-between;
     padding: 0 8px 0 8px;
@@ -93,7 +95,6 @@
   position: relative;
   display: inline-block;
   margin-left: 4px;
-  z-index: 1;
   .dropdown-btn{
     border-radius: 2px;
     border: none;
