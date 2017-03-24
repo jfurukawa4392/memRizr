@@ -34,7 +34,8 @@ class DeckIndex extends React.Component{
 
     if(admin){
       optionsBtn = <button onClick={() => this.showForm()}>
-        New Deck
+        <i className="fa fa-plus"></i>
+        Deck
       </button>;
     }
 

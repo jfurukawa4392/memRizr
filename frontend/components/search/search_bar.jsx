@@ -51,7 +51,7 @@ class SearchBar extends React.Component{
       key = resultKeys[i];
       resultList.push(
         <Link
-          to={`/subjects/${key}`}
+          to={`/browse/${key}`}
           className="result-item"
           key={i}>
           <li>

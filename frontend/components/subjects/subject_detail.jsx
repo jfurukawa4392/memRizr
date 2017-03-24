@@ -25,9 +25,6 @@ class SubjectDetail extends React.Component{
   }
 
   componentWillUnmount(){
-    // if(this.props.location.pathname.match(/\/my-subjects/)){
-    //   this.props.clearSubject();
-    // }
   }
 
   toggleFollow(){

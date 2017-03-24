@@ -9,14 +9,18 @@ const SubjectsList = (props) => {
   if(!_.isEmpty(subjects)){
     subjectList = Object.keys(subjects).map((id, index) => {
       return(
-        <Link
-          key={index}
-          to={`/browse/${id}`}
-          className="subject-list-item">
-          <li>
-            {subjects[id].title}
-          </li>
-        </Link>
+          <Link
+            key={index}
+            to={`/browse/${id}`}
+            className="subject-list-item">
+            <div
+              className="subject-list-item-wrapper">
+              <li>
+                <h2>{subjects[id].title}</h2>
+                <h3>{subjects[id].deckCount} decks</h3>
+              </li>
+            </div>
+          </Link>
       );
     });
   }
