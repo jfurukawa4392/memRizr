@@ -18,10 +18,10 @@ export const fetchSubjects = (user = null) => (dispatch) => {
   }
 };
 
-export const fetchSubject = (id) => (dispatch) => {
+export const fetchSubject = (id) => (dispatch) => (
   MainAPIUtil.fetchSubjectDetail(id)
-             .then(res => dispatch(receiveSubject(res)));
-};
+             .then(res => dispatch(receiveSubject(res)))
+);
 
 export const createSubject = (subject) => (dispatch) => {
   MainAPIUtil.createSubject(subject)
@@ -34,21 +34,21 @@ export const createSubject = (subject) => (dispatch) => {
              });
 };
 
-export const createFollow = (subjectId) => (dispatch) => {
+export const createFollow = (subjectId) => (dispatch) => (
   MainAPIUtil.createFollow(subjectId)
              .then(res => {
                dispatch(receiveFollowStatus(res.userFollows));
                dispatch(receiveSubject(res));
-             });
-};
+             })
+);
 
-export const deleteFollow = (subjectId) => (dispatch) => {
+export const deleteFollow = (subjectId) => (dispatch) => (
   MainAPIUtil.deleteFollow(subjectId)
              .then(res => {
                dispatch(receiveFollowStatus(res.userFollows));
                dispatch(removeSubject(res.subject));
-             });
-};
+             })
+);
 
 export const receiveFollowStatus = (status) => ({
   type: RECEIVE_FOLLOW_STATUS,

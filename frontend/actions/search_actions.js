@@ -9,10 +9,8 @@ export const fetchResults = (query, now = null) => dispatch => {
     return MainAPIUtil.requestResults(query);
   } else {
     // go to state.subjects
-    console.log(query);
     MainAPIUtil.requestResults(query)
                .then(results => {
-                 console.log(results);
                  dispatch(receiveResults(results));
                });
   }

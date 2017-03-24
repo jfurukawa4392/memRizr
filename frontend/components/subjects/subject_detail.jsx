@@ -6,11 +6,18 @@ import DeckIndex from '../decks/deck_index';
 class SubjectDetail extends React.Component{
   constructor(props){
     super(props);
+
+    this.state = {
+      fetching: true
+    };
   }
 
   componentDidMount(){
     if(this.props.params.subjectId){
-      this.props.fetchSubject(this.props.params.subjectId);
+      this.props.fetchSubject(this.props.params.subjectId)
+          .then(res => this.setState({
+            fetching: false
+          }));
     }
   }
 
@@ -24,25 +31,24 @@ class SubjectDetail extends React.Component{
     }
   }
 
-  componentWillUnmount(){
-  }
-
   toggleFollow(){
     let { userFollows, id } = this.props.subjectDetail;
     if(userFollows){
-      this.props.deleteFollow(id);
+      this.props.deleteFollow(id)
+          .then(res => this.props.router.push('/my-subjects'));
     } else {
-      this.props.createFollow(id);
+      this.props.createFollow(id)
+          .then(res => this.props.router.push('/my-subjects'));;
     }
   }
 
   render() {
     const { subjectDetail, decks, createDeck, deleteDeck, currentUser } = this.props;
-    let deckList = <div className="no-decks-found">No Decks Found</div>;
+    let deckList = <div className="no-decks-found">Loading...</div>;
     let subjectTitle = (
       <div className="no-subjects-message">
         <h1>
-          No Subjects in your Library
+          Looking for subjects in your library...
         </h1>
         <Link
           to="/browse">
@@ -53,7 +59,7 @@ class SubjectDetail extends React.Component{
     let followButton = <div></div>;
     let currentLearners = (<div className="no-learners-div">No Current Learners</div>);
 
-    if(subjectDetail){
+    if(!this.state.fetching){
       deckList = <DeckIndex
         subjectDetail={subjectDetail}
         decks={decks}
@@ -104,4 +110,4 @@ class SubjectDetail extends React.Component{
 
 }
 
-export default SubjectDetail;
+export default withRouter(SubjectDetail);

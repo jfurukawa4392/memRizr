@@ -11,7 +11,7 @@ const CurrentLearners = ( { subjectDetail } ) => {
           { user.username }
         </li>
       );
-    });
+    }).slice(0,10);
   }
 
   return(
