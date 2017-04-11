@@ -8,34 +8,12 @@ const DeckIndexItem = (props) => {
     <div className="deck-item-inner">
       <div className="deck-title">
         <Link
-          to={`/study/${deck.id}`}>
+          to={`/browse/${subjectDetail.id}`}>
           <h4>{deck.title}</h4>
         </Link>
       </div>
-      <div className="deck-options">
-        <Link
-          to={`/study/${deck.id}`}>
-          <i className="fa fa-play-circle-o"></i>
-          Study
-        </Link>
-        {options}
-      </div>
     </div>
   );
-
-  if(!currentUser){
-    deckItemInner = (
-      <div className="deck-item-inner">
-        <div className="deck-title">
-          <Link
-            to={`/browse/${subjectDetail.id}`}>
-            <h4>{deck.title}</h4>
-          </Link>
-        </div>
-        
-      </div>
-    );
-  }
 
   if(admin){
     options = (
@@ -58,6 +36,27 @@ const DeckIndexItem = (props) => {
               <i className="fa fa-trash fa-lg"></i>
             </button>
           </div>
+        </div>
+      </div>
+    );
+  }
+
+  if(currentUser!==null){
+    deckItemInner = (
+      <div className="deck-item-inner">
+        <div className="deck-title">
+          <Link
+            to={`/study/${deck.id}`}>
+            <h4>{deck.title}</h4>
+          </Link>
+        </div>
+        <div className="deck-options">
+          <Link
+            to={`/study/${deck.id}`}>
+            <i className="fa fa-play-circle-o"></i>
+            Study
+          </Link>
+          {options}
         </div>
       </div>
     );
