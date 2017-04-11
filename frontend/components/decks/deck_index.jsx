@@ -51,6 +51,7 @@ class DeckIndex extends React.Component{
         return <DeckIndexItem
           key={idx}
           deck={deck}
+          subjectDetail={this.props.subjectDetail}
           deleteDeck={deleteDeck}
           admin={admin}/>;
       });

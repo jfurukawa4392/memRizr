@@ -6,6 +6,7 @@ import {
 
 const mapStateToProps = (state) => ({
   subjects: state.subjects,
+  loggedIn: state.session.currentUser
 });
 
 const mapDispatchToProps = (dispatch) => ({

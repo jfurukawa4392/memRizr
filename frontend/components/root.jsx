@@ -2,7 +2,8 @@ import React from 'react';
 import { Router,
          Route,
          IndexRoute,
-         hashHistory
+         hashHistory,
+         withRouter
        } from 'react-router';
 import { Provider } from 'react-redux';
 import App from './app';
@@ -21,7 +22,8 @@ const Root = ({store}) => {
   const _ensureLoggedIn = (nextState, replace) => {
     const currentUser = store.getState().session.currentUser;
     if (!currentUser) {
-      replace('/');
+      alert("Anonymous users cannot perform that action \n Please Login");
+      hashHistory.push('/browse');
     }
   };
 
