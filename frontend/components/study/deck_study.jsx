@@ -35,7 +35,7 @@ class DeckStudy extends React.Component{
     let { cardCount } = this.props.activeDeck;
     let randomNum = Math.floor(Math.random()*cardCount);
 
-    while(randomNum === this.state.currentCard){
+    while(randomNum === this.state.currentCard && cardCount > 1){
       randomNum = Math.floor(Math.random()*cardCount);
     }
     this.setState({
