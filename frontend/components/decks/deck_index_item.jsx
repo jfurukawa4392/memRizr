@@ -23,7 +23,7 @@ const DeckIndexItem = (props) => {
             <button
               className="deck-delete-btn"
               onClick={() => deleteDeck(deck.id)}>
-              <i className="fa fa-trash"></i>
+              <i className="fa fa-trash fa-lg"></i>
             </button>
           </div>
         </div>
