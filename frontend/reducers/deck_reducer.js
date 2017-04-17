@@ -4,6 +4,7 @@ import {
   REMOVE_DECK
 } from '../actions/deck_actions';
 import merge from 'lodash/merge';
+import Heap from 'heap';
 
 const _nullDeck = {
   id: null,
@@ -17,6 +18,7 @@ const DeckReducer = (state = _nullDeck, action) => {
   switch (action.type){
     case(RECEIVE_DECK):
       newState = action.deck;
+      // newState.cards = Heap.heapify(newState.cards);
       return newState;
     case(RECEIVE_CARD):
       newState = merge({}, state);
