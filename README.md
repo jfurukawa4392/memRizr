@@ -54,7 +54,7 @@ Currently the cards are loaded at random to be rated by the user. Their values a
 
 ## Future Improvements
 ### Improved SRS algorithm
-Implementing different type of structure to hold the cards being studied would allow for more effective selection of cards to show. Possible structures to implement could include a priority queue or a min heap.
+Implementing different type of structure to hold the cards being studied would allow for more effective selection of cards to show. Possible structures to implement could include a priority queue min heap.
 ### Sharing ownership of subjects with other users
 This would allow for a subject to have many contributors as opposed to just one, which would facilitate more comprehensive coverage of a subject through more content creation and curation.
 ### Multimedia Flashcards
