@@ -117,7 +117,9 @@ class NavBar extends React.Component {
           <ul>
             <li>
               <div className="site-logo">
-                <i className="fa fa-lightbulb-o fa-2x fa-rotate-35">
+                <i
+                  className="fa fa-lightbulb-o fa-2x fa-rotate-35"
+                  id="bulb">
                 </i>
               </div>
             </li>

@@ -60,6 +60,9 @@ nav.left{
   font-weight: bolder;
   margin-left: 10px;
   margin-right: 10px;
+  &:hover ~ i#bulb:after{
+    color: #f6ff00;
+  }
 }
 
 nav.right{
