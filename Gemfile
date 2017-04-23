@@ -10,6 +10,7 @@ gem 'faker'
 gem 'sanitize'
 gem 'pry-rails'
 gem 'font-awesome-sass'
+gem 'newrelic_rpm'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.2'
 # Use postgresql as the database for Active Record
