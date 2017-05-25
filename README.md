@@ -4,7 +4,7 @@
 memRizr is a web application that facilitates community learning through the creation, sharing and curation of flashcard decks. It was built using Ruby on Rails, React/Redux, and PostgreSQL.
 
 ## Technologies
-Rails is a back-end MVC web framework that was used for data fetching and storage with a connection to a PostGreSQL database. Rails potential to get up and running as a simple RESTful API was part of its appeal as a back end. The front end application was written using javascript's React library for reuseable, modular code. It was use in conjunction with the Redux framework to add in the benefits of a unidirectional dataflow which made the application easier to debug.
+Rails is a back-end MVC web framework that was used for data fetching and storage with a connection to a PostGreSQL database. Rails potential to get up and running as a simple RESTful API was part of its appeal as a back end. The front end application was written using javascript's React library for reuseable, modular code. It was used in conjunction with the Redux framework to add in the benefits of a unidirectional dataflow which made the application easier to debug.
 
 ## Features & Implementation
 ### Subjects, Following, and Searching
